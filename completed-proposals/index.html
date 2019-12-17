@@ -1,0 +1,36 @@
+---
+layout: customnt 
+title: Completed Tasks
+---
+
+<div class="container ffs-breadcrumbs">
+   <div class="row">
+      <div class="col-xs-12">
+          <p><a href="/">Zcoin Crowdfunding System</a></p>
+          <p class="bread-active">{{page.title}}</p>
+      </div>
+   </div>
+</div>
+
+<section class="container complete-proposal">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{{page.title}}</h1>
+        </div>
+            {% for toplevel in site.data.completed-proposals %}
+                    {% for proposal in toplevel.proposals%}
+                        <div class="col-xs-12">
+                            <a href="{{proposal.local-url}}" class="row middle-xs ffs-idea">
+                                <div class="col-xs-12">
+                                    <h3>{{proposal.name}}</h3>
+                                    <p class="author-list">{{proposal.author}}</p>
+                                    <p class="date-list">{{proposal.date}}</p>
+                                    <p class="progress-number-goal">{{proposal.amount}} XZC</p>
+                                    <p class="date-list contributor">{{proposal.contributions}} contributors</p>
+                                </div>
+                            </a>
+                        </div>
+                    {%endfor%}
+            {%endfor%}
+    </div>
+</section>

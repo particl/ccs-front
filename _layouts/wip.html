@@ -1,0 +1,103 @@
+---
+layout: base
+---
+<div class="site-wrap ffs-proposal ffs-wip"> 
+    
+<div class="container ffs-breadcrumbs">
+   <div class="row">
+      <div class="col-xs-12">
+          <p><a href="/">Zcoin Crowdfunding System</a></p>
+          <p><a href="/work-in-progress/">Work in Progress</a></p>
+        <p class="bread-active">{{page.title}}</p>
+      </div>
+   </div>
+</div> 
+
+    <!-- FULL WIDTH BLOCK -->
+        <section class="container full"> 
+                <div class="info-block">
+                   <div class="row">
+                        <div class="col-xs-12">
+                           {% for toplevel in site.data.proposals %}
+                             {% if toplevel.stage == "Work in Progress" %}
+                                {% for proposal in toplevel.proposals%}
+                                  {% if proposal.name == {{page.title}} %}
+                            <h2>{{page.title}}</h2>
+                            <p class="author-list">{{page.author}}</p>
+                            <p class="date-list">{{page.date}}</p>
+                            <p class="progress-number-goal">{{proposal.amount}} XZC</p>
+                            <p class="date-list contributor">{{proposal.contributions}} contributors</p>
+                            <p class="bar-work-status">Completed <span class="progress-number-funded">{{proposal.milestones-completed}}</span> of <span class="progress-number-goal">{{proposal.milestones}}</span> milestones</p>
+                            <div class="progress-bar">
+                                <span class="work-progress" style="width: {{proposal.milestones-percentage}}%"></span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+        </section>
+                   
+        <section class="container full">
+                <div class="">
+                    <div class="row between-xs">
+                       <div class="col-xs-12">
+                            <div class="tabs">
+                                  <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+                                  <label class="label" for="tab-1">Proposal</label>
+                                  <div class="panel col-xs-12">
+                                       <div class="panel-segment">
+                                           {{content}}
+                                           <div class="gldiscuss">
+                                               <h3>Community Discussion and Updates</h3>
+                                               <p><a href="{{proposal.gitlab-url}}">View community discussion, comments, and proposal updates on GitLab</a></p>
+                                           </div>{%endif%}
+                            {%endfor%}
+                            {%endif%}
+                            {%endfor%}
+                                       </div>
+                                  </div>
+                                  <input class="input" name="tabs" type="radio" id="tab-2"/>
+                                  <label class="label" for="tab-2">Milestones</label>
+                                  <div class="panel col-xs-12">
+                                    {% if page.milestones != nil %}
+                                        {% for milestones in page.milestones %}
+                                           <div class="milestone panel-segment">
+                                                <span class="{{milestones.status}} ms-{{milestones.status}}"></span>
+                                                <h3>{{milestones.name}}</h3>
+                                                <p><span>To be paid:</span> {{milestones.funds}}</p>
+                                                <p><span>Completion date:</span> {{milestones.done}}</p>
+                                           </div>
+                                        {%endfor%}
+                                        {%else%}
+                                            <div class="panel-segment">
+                                                <p>No milestones</p>
+                                            </div>
+                                    {%endif%}
+                                  </div>
+                                  <input class="input" name="tabs" type="radio" id="tab-3"/>
+                                  <label class="label" for="tab-3">Payouts</label>
+                                  <div class="panel col-xs-12">
+                                    {% if page.payouts != nil %}
+                                        {% for payouts in page.payouts %}
+                                           <div class="milestone panel-segment">
+                                                <span class="{{milestones.status}} ms-{{milestones.status}}"></span>
+                                                <p><span>Funds Awarded:</span> {{payouts.amount}}</p>
+                                                <p><span>Date:</span> {{payouts.date}}</p>
+                                            </div>
+                                        {%endfor%}
+                                        {%else%}
+                                            <div class="panel-segment">
+                                                <p>No payouts</p>
+                                            </div>
+                                    {%endif%}
+                                  </div>
+                             </div>
+                       </div>
+                    </div>
+                </div>
+        </section>
+    <!-- END FULL WIDTH BLOCK -->
+    
+    </div>
+    
+    
