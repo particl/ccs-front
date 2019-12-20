@@ -176,15 +176,15 @@ date: January 31, 2019
 amount: 10000
 milestones:
   - name: Milestone 1 - Purchase the parts
-    funds: 30% (3000 XMR)
+    funds: 30% (3000 XZC)
     done:
     status: unfinished
   - name: Milestone 2 - Assemble the spaceship
-    funds: 50% (5000 XMR)
+    funds: 50% (5000 XZC)
     done:
     status: unfinished
   - name: Milestone 3 - Throw a big party
-    funds: 20% (2000 XMR)
+    funds: 20% (2000 XZC)
     done:
     status: unfinished
 payouts:
