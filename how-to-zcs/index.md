@@ -55,17 +55,17 @@ payouts:
 
 First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [ZCS Proposals repo](https://github.com/zcoinofficial/ccs-proposals). Click the "Fork" button and select your name on the subsequent screen. ![Click this fork button](/img/how-to/fork.png)
 
-You should see a blue success bar, along with your new repository. ![Fork success](/img/how-to/fork-success.png)
+You should see a blue success bar, along with your new repository. ![Fork success](/img/how-to/fork-success.png) ![Fork success 2](/img/how-to/fork-success2.png)
 
 ### 2. Branches
 
 If you're not familiar with git, then this next step might not make a lot of sense to you, but it is common and recommended practice for users of git and Github. Basically, just do this, even if you don't understand it. It makes the maintainer's lives a lot simpler.
 
-Click on Branches. ![Click on Branches](/img/how-to/branches.PNG) and then click on New Branch. ![Click on NEw Branch.](/img/how-to/new-branch.PNG) Fill in the "Branch Name" on the next screen by naming it something similar to your proposal. No spaces are allowed though. Leave the other field as is (it should say "Master") and click Create Branch. You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.PNG)
+Click on Branches. ![Click on Branches](/img/how-to/branches.PNG) and then click on New Branch. ![Click on New Branch.](/img/how-to/new-branch.png) Fill in the "Branch Name" on the next screen by naming it something similar to your proposal. No spaces are allowed though. Leave the other field as is (it should say "Master") and click Create Branch. You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
 
 ### 3. Make the proposal file
 
-From here, you're going to click on the + button near the top center of your screen, and click "New File" on the subsequent dropdown. ![Plus button](/img/how-to/new-file.PNG) On this new screen, fill in the File Name field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Diego "rehrar" Salazar was to make a proposal asking for funding so I can make videos for Zcoin, I might title the file `rehrar-make-videos-for-zcoin.md`.
+From here, you're going to click on the + button near the top center of your screen, and click "New File" on the subsequent dropdown. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the File Name field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Zcoin, I might title the file `sandra-make-videos-for-zcoin.md`.
 
 
 ### 4. Front matter
@@ -157,7 +157,7 @@ After you click Commit Changes, you will be taken to your newly created file in 
 
 Click on the blue button in the upper right to start this process. ![File creation success and merge request button](/img/how-to/mr.PNG)
 
-You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the Description text box, paste in the proposal EXACTLY AS IT APPEARS IN YOUR .md file, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort. ![Fill in title and description fields](/img/how-to/submit-mr.PNG)
+You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the Description text box, paste in the proposal EXACTLY AS IT APPEARS IN YOUR .md file, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort. ![Fill in title and description fields](/img/how-to/submit-mr.png)
 
 After this is done, scroll down, and click the green Submit Merge Request button at the bottom left of the page. You should be taken to the Merge Request page for your proposal.
 
@@ -209,12 +209,12 @@ Find your copy of `CSS Proposals` in your repositories and click on it.
 
 ### Branches and files
 
-Locate the dropdown with all of your active branches, click it, and select the branch on which your proposal was made. ![Branches dropdown](/img/how-to/edit-find-branch.PNG)
+Locate the dropdown with all of your active branches, click it, and select the branch on which your proposal was made. ![Branches dropdown](/img/how-to/edit-find-branch.png)
 
 Once you are on the page with the correct branch, as evidenced by the name of the branch showing (see the last screenshot in step 2 of the step-by-step instruction to see where) find and select the file of your proposal (this is why descriptive branch and file names are important).
 
 ### Editing the file
 
-Once you are on the page of your file, on the upper right corner should be an Edit button. ![Edit button](/img/how-to/edit-edit-button.PNG) Select this and you should be taken to the editing screen. Amend the proposal as needed (remember to edit the front matter too if any of those variables are changing), and press the green Commit Changes button at the bottom.
+Once you are on the page of your file, on the upper right corner should be an Edit button. ![Edit button](/img/how-to/edit-edit-button.png) Select this and you should be taken to the editing screen. Amend the proposal as needed (remember to edit the front matter too if any of those variables are changing), and press the green Commit Changes button at the bottom.
 
-**Warning! Not only the changes but THE FACT that you made changes will be visible to EVERYONE! You CANNOT stealth edit your proposal. This is good for transparency. See the screenshot below.** ![Edits seen](/img/how-to/edit-editing-seen.PNG)
+**Warning! Not only the changes but THE FACT that you made changes will be visible to EVERYONE! You CANNOT stealth edit your proposal. This is good for transparency. See the screenshot below.** ![Edits seen](/img/how-to/edit-editing-seen.png)
