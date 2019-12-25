@@ -61,7 +61,7 @@ You should see a blue success bar, along with your new repository. ![Fork succes
 
 If you're not familiar with git, then this next step might not make a lot of sense to you, but it is common and recommended practice for users of git and Github. Basically, just do this, even if you don't understand it. It makes the maintainer's lives a lot simpler.
 
-Click on Branches. ![Click on Branches](/img/how-to/branches.PNG) and then click on New Branch. ![Click on New Branch.](/img/how-to/new-branch.png) Fill in the "Branch Name" on the next screen by naming it something similar to your proposal. No spaces are allowed though. Leave the other field as is (it should say "Master") and click Create Branch. You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
+Click on Branches. ![Click on Branches](/img/how-to/branches.png) and then click on New Branch. ![Click on New Branch.](/img/how-to/new-branch.png) Fill in the "Branch Name" on the next screen by naming it something similar to your proposal. No spaces are allowed though. Leave the other field as is (it should say "Master") and click Create Branch. You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
 
 ### 3. Make the proposal file
 
