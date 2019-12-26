@@ -69,7 +69,7 @@ When completed, you should see the repository under your username, indicating a 
 
 If you're not familiar with git, then this next step might not make a lot of sense to you, but it is common and recommended practice for users of git and Github. Basically, just do this, even if you don't understand it. It makes the maintainer's lives a lot simpler.
 
-Click on Branch: master. ![Click on Branches](/img/how-to/branches.png) Enter the name of the new branch in the dialogue box, then click on Create Branch. The new branch name should be something similar to your proposal. No spaces are allowed. ![Click on New Branch.](/img/how-to/new-branch.png) You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
+Click on Branch: master. ![Click on Branches](/img/how-to/branches.png) Enter the name of the new branch in the "Find or create a branch" field, then click on Create Branch. The new branch name should be something similar to your proposal. No spaces are allowed. ![Click on New Branch.](/img/how-to/new-branch.png) You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
 
 ### 3. Make the proposal file
 
@@ -162,7 +162,7 @@ After all of this is done, click the green "Commit new file" button at the botto
 
 After you click "Commit new file", you will be taken to your branch where you can see the newly created file. You should also see a "Compare & pull request" button or just "Pull request" button. Click on it to start the pull request.
 
-Click on the blue button in the upper right to start this process. ![File creation success and merge request button](/img/how-to/mr.ng)
+![File creation success and merge request button](/img/how-to/mr.png)
 
 You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the "Leave a comment" text box, paste in the proposal EXACTLY AS IT APPEARS IN YOUR .md file, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort. ![Fill in title and description fields](/img/how-to/submit-mr.png)
 
