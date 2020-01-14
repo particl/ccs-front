@@ -53,19 +53,27 @@ payouts:
 
 **You will only have to do this step once! If you make future proposals, you can skip to Step 2.**
 
-First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [ZCS Proposals repo](https://github.com/zcoinofficial/ccs-proposals). Click the "Fork" button and select your name on the subsequent screen. ![Click this fork button](/img/how-to/fork.png)
+First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [ZCS Proposals repo](https://github.com/zcoinofficial/ccs-proposals). Click the "Fork" button.
 
-You should see a blue success bar, along with your new repository. ![Fork success](/img/how-to/fork-success.png) ![Fork success 2](/img/how-to/fork-success2.png)
+![Click this fork button](/img/how-to/fork.png)
+
+You should see the "Forking zcoinofficial/ccs-proposals" message.
+
+![Fork success](/img/how-to/fork-success.png)
+
+When completed, you should see the repository under your username, indicating a successful fork.
+
+![Fork success 2](/img/how-to/fork-success2.png)
 
 ### 2. Branches
 
 If you're not familiar with git, then this next step might not make a lot of sense to you, but it is common and recommended practice for users of git and Github. Basically, just do this, even if you don't understand it. It makes the maintainer's lives a lot simpler.
 
-Click on Branches. ![Click on Branches](/img/how-to/branches.png) and then click on New Branch. ![Click on New Branch.](/img/how-to/new-branch.png) Fill in the "Branch Name" on the next screen by naming it something similar to your proposal. No spaces are allowed though. Leave the other field as is (it should say "Master") and click Create Branch. You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
+Click on Branch: master. ![Click on Branches](/img/how-to/branches.png) Enter the name of the new branch in the "Find or create a branch" field, then click on Create Branch. The new branch name should be something similar to your proposal. No spaces are allowed. ![Click on New Branch.](/img/how-to/new-branch.png) You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
 
 ### 3. Make the proposal file
 
-From here, you're going to click on the + button near the top center of your screen, and click "New File" on the subsequent dropdown. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the File Name field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Zcoin, I might title the file `sandra-make-videos-for-zcoin.md`.
+From here, you're going to click on the "Create new file button" in your new proposal branch. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Zcoin, I might title the file `sandra-make-videos-for-zcoin.md`.
 
 
 ### 4. Front matter
@@ -148,18 +156,17 @@ NOW you can put your proposal beneath the front matter (underneath the last thre
 
 It is recommended that after your proposal is written, you copy and paste it (minus the front matter from step 4) and paste it into a notepad. This will be used in step 6.
 
-After all of this is done, click the green Commit Changes button at the bottom.
+After all of this is done, click the green "Commit new file" button at the bottom.
 
 ### 6. Make a Merge Request
 
-After you click Commit Changes, you will be taken to your newly created file in the new branch of your repository. You will see a bar at the top that lets you know the creation of your file has been successful. You will also see a notification that your new branch can make a Merge Request.
+After you click "Commit new file", you will be taken to your branch where you can see the newly created file. You should also see a "Compare & pull request" button or just "Pull request" button. Click on it to start the pull request.
 
+![File creation success and merge request button](/img/how-to/mr.png)
 
-Click on the blue button in the upper right to start this process. ![File creation success and merge request button](/img/how-to/mr.PNG)
+You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the "Leave a comment" text box, paste in the proposal EXACTLY AS IT APPEARS IN YOUR .md file, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort. ![Fill in title and description fields](/img/how-to/submit-mr.png)
 
-You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the Description text box, paste in the proposal EXACTLY AS IT APPEARS IN YOUR .md file, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort. ![Fill in title and description fields](/img/how-to/submit-mr.png)
-
-After this is done, scroll down, and click the green Submit Merge Request button at the bottom left of the page. You should be taken to the Merge Request page for your proposal.
+After this is done, scroll down, and click the green Create pull request button at the bottom left of the page. You should be taken to the Pull Request page for your proposal.
 
 ### 7. You're done. Now go drum up some support.
 
