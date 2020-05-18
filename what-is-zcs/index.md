@@ -18,7 +18,7 @@ The ZCS is a way for the community to propose ideas and request money, while uti
 The standard ZCS workflow is as follows:
 
 1. An individual or team (henceforth 'proposer') has an idea to improve the Zcoin ecosystem that requires funds.
-2. The proposer creates a ZCS proposal, understanding the rules and expectations presented in the following section, and makes a Merge Request (MR) to the ZCS Proposals repository on Zcoin's Github instance. All steps to submit this Merge Request can be found [here](/how-to-ZCS/).
+2. The proposer creates a ZCS proposal, understanding the rules and expectations presented in the following section, and makes a Merge Request (MR) to the ZCS Proposals repository on Zcoin's Github instance. All steps to submit this Merge Request can be found [here](/how-to-zcs/).
 3. The community discusses the pros and cons of the proposal, and offers feedback and critique.
 4. The proposer changes the proposal (if necessary), utilizing the feedback and critique of the community.
 5. Repeat steps 3 and 4 as needed.
