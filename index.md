@@ -1,6 +1,6 @@
 ---
 layout: customnt
-title: Zcoin Crowdfunding System (ZCS)
+title: Particl Crowdfunding System (PCS)
 ---
 <div class="ffs-main">
         <div class="container description" >
