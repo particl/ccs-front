@@ -1,6 +1,6 @@
 ---
 layout: customnt
-title: Particl Crowdfunding System (PCS)
+title: Community Crowdfunding System (CCS)
 ---
 <div class="ffs-main">
         <div class="container description" >

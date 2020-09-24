@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is the PCS, and what are its rules and expectations?
+title: What is the CCS, and what are its rules and expectations?
 ---
 
 ## Introduction
@@ -13,16 +13,16 @@ This is why Particl has adopted the Particl Proposal System (PPS), a fork of the
 
 ## Proposals 
 
-There are many different types of proposals that can be pushed to the PCS, all with their own goals in mind. Some proposals can involve funding, such as coding new software, developing third party resources, travel reimbursement for conference presenters, or hiring skilled individuals. Other types of proposals don't necessarily involve funds, but rather votes. This can include protocol changes, Community Fund staking, inflation rate modifications, and etc. 
+There are many different types of proposals that can be pushed to the CCS, all with their own goals in mind. Some proposals can involve funding, such as coding new software, developing third party resources, travel reimbursement for conference presenters, or hiring skilled individuals. Other types of proposals don't necessarily involve funds, but rather votes. This can include protocol changes, Community Fund staking, inflation rate modifications, and etc. 
 
-The PCS is a way for the community to propose initiatives, request money, and find out consensus on various ideas while utilizing the Particl team as an escrow. The PCS is forked from Zcoin's ZCS, which is forked from Monero's CCS.
+The CCS is a way for the community to propose initiatives, request money, and find out consensus on various ideas while utilizing the Particl team as an escrow. The CCS is forked from Zcoin's ZCS, which is forked from Monero's CCS.
 
-## PCS Proposal Standard Flow
+## CCS Proposal Standard Flow
 
-The standard PCS workflow is as follows:
+The standard CCS workflow is as follows:
 
 1. An individual or team (henceforth 'proposer') has an idea to improve the Particl ecosystem that requires funds.
-2. The proposer creates a PCS proposal, understanding the rules and expectations presented in the following section, and makes a Merge Request (MR) to the PCS Proposals repository on Particl's Github instance. All steps to submit this Merge Request can be found [here](/how-to-pcs/).
+2. The proposer creates a CCS proposal, understanding the rules and expectations presented in the following section, and makes a Merge Request (MR) to the CCS Proposals repository on Particl's Github instance. All steps to submit this Merge Request can be found [here](/how-to-ccs/).
 3. The community discusses the pros and cons of the proposal, and offers feedback and critique.
 4. The proposer changes the proposal (if necessary), utilizing the feedback and critique of the community.
 5. Repeat steps 3 and 4 as needed.
@@ -31,13 +31,13 @@ The standard PCS workflow is as follows:
 8. Milestones are completed, and funds are dispersed upon their completion.
 9. After all milestones are completed, the proposal is moved into Completed Proposals, where all info is retained for posterity.
 
-## PCS Rules and Expectations
+## CCS Rules and Expectations
 
-The PCS is intentionally left as informal as possible. This allows for flexibility of the system, and keeps things from being red taped into oblivion. However, there are some things you should understand, things that will be expected of you, as either a proposer or a donor, and a recommended way of structuring a proposal for maximum likelihood that your project will be funded.
+The CCS is intentionally left as informal as possible. This allows for flexibility of the system, and keeps things from being red taped into oblivion. However, there are some things you should understand, things that will be expected of you, as either a proposer or a donor, and a recommended way of structuring a proposal for maximum likelihood that your project will be funded.
 
 ### For Donors
 
-1. The PCS is escrowed by the Particl team. When you make a donation, you are releasing funds to them to disperse when they deem the community agrees that a milestone is complete. They do not do the work to verify donors, and the final decision for all disputes falls with them, although they do their best to follow community sentiment.
+1. The CCS is escrowed by the Particl team. When you make a donation, you are releasing funds to them to disperse when they deem the community agrees that a milestone is complete. They do not do the work to verify donors, and the final decision for all disputes falls with them, although they do their best to follow community sentiment.
 2. In the event that a proposal is overfunded, unable to be completed, or otherwise put in a state where donated money will not be dispersed to the intended recipient, the default is that the remaining PART will be put in Particl's Community Fund. There are some exceptions, but they are rare, and these decisions rest with the Particl team.
 3. Refunds are extraordinarily rare. Donate accordingly.
 4. If the proposer disappears, no problem, someone else can pick up from their last milestone.
@@ -48,9 +48,9 @@ The PCS is intentionally left as informal as possible. This allows for flexibili
 1. There is no guarantee that your project will get past the Ideas stage, and if it does, there is no guarantee that it will be funded.
 2. You have to drum up support for your proposal during the first two stages. Do not expect others (especially the Particl team or other trusted members of the community) to do it for you. Others may share and support if they are excited about your project, but ultimately it is nobody's responsibility but your own.
 3. It is expected that you provide updates on the progress of your proposal to the community. For every milestone completed there should be a written report put into the Github comments of your proposal announcing its completion and the work done, but depending on the timeline of your project, it may be wise to update the community more frequently, such as at the biweekly community or dev meetings.
-4. You may NOT under any circumstances include a donation address directly in your proposal. This circumvents the PCS, and can lead to scams.
+4. You may NOT under any circumstances include a donation address directly in your proposal. This circumvents the CCS, and can lead to scams.
 5. Your work on the project can begin before the proposal is fully funded, and milestones may (at times) be paid out before the proposal is fully funded.
 
 ### How to submit a proposal
 
-[Please read this page for step-by-step instructions on how to submit a proposal.](/how-to-pcs/)
+[Please read this page for step-by-step instructions on how to submit a proposal.](/how-to-ccs/)

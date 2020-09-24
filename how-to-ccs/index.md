@@ -1,11 +1,11 @@
 ---
 layout: post
-title: How to submit a PCS proposal.
+title: How to submit a CCS proposal.
 ---
 
-#### Note: Read the [What is the PCS and What Are Its Rules and Expectations](/what-is-pcs) page before continuing!
+#### Note: Read the [What is the CCS and What Are Its Rules and Expectations](/what-is-ccs) page before continuing!
 
-The PCS utilizes git, and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
+The CCS utilizes git, and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
 
 ## Table of Contents
 - [Quickstart Guide](#quickstart-guide)
@@ -53,7 +53,7 @@ payouts:
 
 **You will only have to do this step once! If you make future proposals, you can skip to Step 2.**
 
-First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [PCS Proposals repo](https://github.com/particl/ccs-proposals). Click the "Fork" button.
+First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [CCS Proposals repo](https://github.com/particl/ccs-proposals). Click the "Fork" button.
 
 ![Click this fork button](/img/how-to/fork.png)
 
@@ -210,7 +210,7 @@ The proposal will be written here.
 
 Often times, through community critique and feedback, it is necessary to edit a proposal after the Merge Request has already been submitted. This can be done in the following way.
 
-### Navigate to your PCS Proposals repository
+### Navigate to your CCS Proposals repository
 
 Find your copy of `CSS Proposals` in your Github repositories and click on it.
 
