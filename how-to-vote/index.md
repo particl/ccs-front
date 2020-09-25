@@ -3,11 +3,11 @@ layout: post
 title: How to vote on a CCS proposal.
 ---
 
-#### Note: Read the [What is the CCS and What Are Its Rules and Expectations](/what-is-ccs) page before continuing!
-
-The CCS utilizes Github and Particl's on-chain voting system to reach consensus on proposals that require it. This quickstart guide will guide you through the process of voting for a proposal with clear step-by-step instructions.
+The CCS utilizes Github and Particl's on-chain voting system to reach consensus on proposals that require input from the community. This quickstart guide will guide you through the process of voting for a proposal with clear step-by-step instructions.
 
 ## Table of Contents
+- [Requirements](#requirements)
+- [How Particl Voting Works](#how-particl-voting-works)
 - [Step-by-step Instructions](#step-by-step-instructions)
 - [Important Notes](#important-notes-and-considerations)
 
@@ -15,6 +15,21 @@ The CCS utilizes Github and Particl's on-chain voting system to reach consensus 
 
 - Any number of PART coins
 - A staking node running Partyman
+
+## How Particl Voting Works
+
+Particl has an on-chain voting system that can determine consensus among the community. It works using a combination of the Particl blockchain, the Partyman cold staking application, the CCS framework, and Github. Voting power is determined by the number of coins a voter is staking on the Particl network.
+
+Proposals that require the community to vote are added to the X page for all to see. To be picked up by the network, they are also added to the `metadata.txt` file located in Particl's `particl-proposals` repository. This is the file that the Particl network reads to find out about any new proposal that needs to be put up for voting. In that file, each proposal has a set of attributes which are as follows.
+
+- `proposalid`: Unique ID of a proposal
+- `network`: On which network is the vote being held (typically on mainnet)
+- `blockheight_start`: At which block on the Particl blockchain does the voting period starts
+- `blockheight_end`: At which block on the Particl blockchain does the voting period ends
+- `link`: A URL that links to the CCS proposal
+- `name`: The name or title of the proposal
+
+Don't worry, you won't have to broadcast your proposal on the Particl network yourself. To submit a proposal for community voting, simply go through the normal process of submitting a proposal which can be found [here](#how-to-ccs). The CCS framework and the Particl team will take care of moving your proposal to a state where it can be voted on once a loose consensus about your proposal is reached in the community.
 
 ## Step-by-step Instructions
 
