@@ -22,6 +22,7 @@ The CCS utilizes git, and Github for proposal tracking. A quickstart guide is pr
 ```
 ---
 layout: fr
+network_vote: nvr
 title:
 author:
 date:
@@ -41,6 +42,12 @@ payouts:
   - date:
     amount:
 ---
+```
+
+
+Remove the following if the change can be made without a network vote (hardforks require this flag to be set).
+```
+network_vote: nvr
 ```
 
 5. Underneath the front matter, write the rest of your proposal. Be sure to include what the proposal is about, who will be completing it, why it is important for the community, the milestones and projected timeline, and an expiration date for your proposal.
@@ -83,6 +90,7 @@ Before you begin writing your proposal, however, you must copy the following tem
 ```
 ---
 layout: fr
+network_vote: nvr
 title:
 author:
 date:
@@ -102,6 +110,12 @@ payouts:
   - date:
     amount:
 ---
+```
+
+
+Remove the following if the change can be made without a network vote (hardforks require this flag to be set).
+```
+network_vote: nvr
 ```
 
 Fill this template out as follows:
