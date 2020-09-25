@@ -1,11 +1,11 @@
 ---
 layout: post
-title: How to submit a ZCS proposal.
+title: How to submit a PCC proposal.
 ---
 
-#### Note: Read the [What is the ZCS and What Are Its Rules and Expectations](/what-is-zcs) page before continuing!
+#### Note: Read the [What is the PCC and What Are Its Rules and Expectations](/what-is-zcs) page before continuing!
 
-The ZCS utilizes git, and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
+The PCC utilizes git, and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
 
 ## Table of Contents
 - [Quickstart Guide](#quickstart-guide)
@@ -53,7 +53,7 @@ payouts:
 
 **You will only have to do this step once! If you make future proposals, you can skip to Step 2.**
 
-First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [ZCS Proposals repo](https://github.com/zcoinofficial/ccs-proposals). Click the "Fork" button.
+First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [PCC Proposals repo](https://github.com/zcoinofficial/ccs-proposals). Click the "Fork" button.
 
 ![Click this fork button](/img/how-to/fork.png)
 
@@ -73,7 +73,7 @@ Click on Branch: master. ![Click on Branches](/img/how-to/branches.png) Enter th
 
 ### 3. Make the proposal file
 
-From here, you're going to click on the "Create new file button" in your new proposal branch. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Zcoin, I might title the file `sandra-make-videos-for-zcoin.md`.
+From here, you're going to click on the "Create new file button" in your new proposal branch. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Particl, I might title the file `sandra-make-videos-for-zcoin.md`.
 
 
 ### 4. Front matter
@@ -114,7 +114,7 @@ Fill this template out as follows:
 
 `date:` Put the date you are proposing and submitting this to the community in the following format: `January 31, 2019`.
 
-`amount:` Put the amount of Zcoin you are requesting for complete this.
+`amount:` Put the amount of Particl you are requesting for complete this.
 
 `milestones:` Do not put anything after Milestones directly, but rather the fields that follow it. Copy and paste from one dash (`-`) to the other, depending on how many milestones your proposal will take. So if you have four milestones, you should see put the following:
 
@@ -140,7 +140,7 @@ milestones:
 
 EXACT FORMATTING MUST BE PRESERVED WITH THE SPACING. Otherwise the proposal will not work. It's the way Jekyll (on which this is built) functions. The dashes must be two spaces from the left margin.
 
-Fill in the `name:` field with the name of the Milestone (for example: Complete Video 1), and the `funds:` field with the amount of Zcoin you expect to receive for completing the milestones. Do not touch the `done:` or `status:` fields. Repeat until all the `name:` and `funds:` fields are filled in. If this confuses you, please scroll to the end of the page for an example of all of this correctly filled out.
+Fill in the `name:` field with the name of the Milestone (for example: Complete Video 1), and the `funds:` field with the amount of Particl you expect to receive for completing the milestones. Do not touch the `done:` or `status:` fields. Repeat until all the `name:` and `funds:` fields are filled in. If this confuses you, please scroll to the end of the page for an example of all of this correctly filled out.
 
 `payouts:` Copy and paste the same amount of variables under payouts that you have under milestones. If you have three milestones, you should have three sets `date:` and `amount:` variables underneath `payouts:`. Do not fill in these fields.
 
@@ -150,7 +150,7 @@ NOW you can put your proposal beneath the front matter (underneath the last thre
 
 - What the proposal is about.
 - Who will complete the proposal?
-- Why it is important for Zcoin and the community.
+- Why it is important for Particl and the community.
 - Your milestones and projected timeline
 - An expiration date for the proposal. If it's not funded or finished by a certain time, the funds can be released to other proposals or the General Fund.. This keeps things moving along in a timely fashion.
 
@@ -170,14 +170,14 @@ After this is done, scroll down, and click the green Create pull request button 
 
 ### 7. You're done. Now go drum up some support.
 
-Good job on getting all the way here. When you finish, the community will be discussing your proposal on the merge request itself. If you want to weigh in on the discussion, feel free. It will be up to you to get people to support your proposal, both for it to be moved to the Funding Required stage, and also while its awaiting donations. Best of luck, and thank you so much for contributing to Zcoin. We, the community, really appreciate it.
+Good job on getting all the way here. When you finish, the community will be discussing your proposal on the merge request itself. If you want to weigh in on the discussion, feel free. It will be up to you to get people to support your proposal, both for it to be moved to the Funding Required stage, and also while its awaiting donations. Best of luck, and thank you so much for contributing to Particl. We, the community, really appreciate it.
 
 ## Example Proposal Front Matter
 
 ```
 ---
 layout: fr
-title: Make a Zcoin Spaceship
+title: Make a Particl Spaceship
 author: somekid
 date: January 31, 2019
 amount: 10000
@@ -210,7 +210,7 @@ The proposal will be written here.
 
 Often times, through community critique and feedback, it is necessary to edit a proposal after the Merge Request has already been submitted. This can be done in the following way.
 
-### Navigate to your ZCS Proposals repository
+### Navigate to your PCC Proposals repository
 
 Find your copy of `CSS Proposals` in your repositories and click on it.
 

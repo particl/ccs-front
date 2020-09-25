@@ -1,79 +1,80 @@
-{%assign counter=0%}  
+{%assign counter=0%}
+
 <div class="mob-nav">
-              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
-           
-        <div class="slide-in-nav">
-             <div class="container slide-in">
-                 <div class="row">
-                     <div class="col-xs-12"> 
-                         <div class="text-center nav-item mob">
-                            <a href="/ideas/" class="top-link">Ideas</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="/funding-required/">Funding Required</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="/work-in-progress/">Work in Progress</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="/completed-proposals/">Completed Tasks</a>
-                         </div>
-                         <!--div class="text-center nav-item mob">
-                            <a href="/donate/index.html">Donate</a>
-                         </div-->
-                         <div class="text-center nav-item mob">
-                            <a href="/what-is-zcs/">ZCS Rules</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="https://zcoin.io/" target="_blank">Zcoin.io</a>
-                         </div>
-                     </div>                     
-                 </div>          
-             </div>
-          
-        </div>
-       </div>
-       
-        <div class="desktop-nav">
-           <nav class="container">
-              <div class="row middle-xs">
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <p class="site-name"><a href="/">Zcoin Crowdfunding System</a></p>
-                  </div>
-                  <div class="col-lg-8 col-md-8 col-sm-8 items end-xs">
-                      <div class="row end-xs middle-xs">
-                         <div class="col-md-12">
-                            <div class="dropdown">
-                                <label for="desktopdrop">ZCS Stages<div class="arrow-down"></div></label>
-                                <input class="burger-checkdropdown" id="desktopdrop" type="checkbox">
-                                <div class="dropdown-content">
-                                      <a href="/ideas/">Ideas</a>
-                                      <a href="/funding-required/">Funding Required</a>
-                                      <a href="/work-in-progress/">Work in Progress</a>
-                                      <a href="/completed-proposals/">Completed Tasks</a>
-                                </div>
-                            </div> 
-                            <a href="/what-is-zcs/">ZCS Rules</a> 
-                            <a href="https://zcoin.io/" target="_blank">Zcoin.io</a> 
-                            <!--a href="/donate/" class="donate-btn">Donate</a-->
-                          </div>
-                      </div>
-                  </div>
-              </div>
-        </nav>
-        </div>
-        <div class="mob bot-nav white-nav">
-            <div class="row middle-xs">
-                <div class="col-xs-12">
-                    <p class="site-name"><a href="{% if site.lang == 'en' %}
-                    
-                    {{ site.baseurl_root }}/
-                    
-                    {% else %}
-                    
-                    {{ site.baseurl_root }}/{{site.lang}}
-                    
-                    {% endif %}">Zcoin Crowdfunding System</a></p>
+    <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+    <div class="slide-in-nav">
+        <div class="container slide-in">
+            <div class="row">
+                <div class="col-xs-12"> 
+                    <div class="text-center nav-item mob">
+                        <a href="/ideas/" class="top-link">Ideas</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/funding-required/">Funding Required</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/work-in-progress/">Work in Progress</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/completed-proposals/">Completed Tasks</a>
+                    </div>
+                    <!--div class="text-center nav-item mob">
+                        <a href="/donate/index.html">Donate</a>
+                    </div-->
+                    <div class="text-center nav-item mob">
+                        <a href="/what-is-zcs/">PCC Rules</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="https://particl.io/" target="_blank">Particl.io</a>
+                    </div>
                 </div>
-            </div>     
-        </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="desktop-nav">
+    <nav class="container">
+        <div class="row middle-xs">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <p class="site-name"><a href="/">Particl Community Crowdfunding</a></p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 items end-xs">
+                <div class="row end-xs middle-xs">
+                    <div class="col-md-12">
+                        <div class="dropdown">
+                            <label for="desktopdrop">PCC Stages<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="desktopdrop" type="checkbox">
+                            <div class="dropdown-content">
+                                <a href="/ideas/">Ideas</a>
+                                <a href="/funding-required/">Funding Required</a>
+                                <a href="/work-in-progress/">Work in Progress</a>
+                                <a href="/completed-proposals/">Completed Tasks</a>
+                            </div>
+                        </div>
+                        <a href="/what-is-zcs/">PCC Rules</a> 
+                        <a href="https://particl.io/" target="_blank">Particl.io</a> 
+                        <!--a href="/donate/" class="donate-btn">Donate</a-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="mob bot-nav white-nav">
+    <div class="row middle-xs">
+        <div class="col-xs-12">
+            <p class="site-name"><a href="{% if site.lang == 'en' %}
+
+            {{ site.baseurl_root }}/
+
+            {% else %}
+
+            {{ site.baseurl_root }}/{{site.lang}}
+
+            {% endif %}">Particl Community Crowdfunding</a></p>
+        </div>
+    </div>
+</div>

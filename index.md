@@ -1,6 +1,6 @@
 ---
 layout: customnt
-title: Zcoin Crowdfunding System (ZCS)
+title: Particl Crowdfunding System (PCC)
 ---
 <div class="ffs-main">
         <div class="container description" >
@@ -11,7 +11,7 @@ title: Zcoin Crowdfunding System (ZCS)
                <div class="half col-sm-6 col-xs-12">
                     <a href="{{site.baseurl}}/ideas/" class="ffs-cat row">
                      <div class="col-sm-4 col-xs-4">
-                         <img src="/img/ideas.png" class="icon"/>
+                         <img src="/img/step-idea.svg" class="icon"/>
                      </div>
                      <div class="col-sm-8 col-xs-8">
                          <h2>Ideas</h2>
@@ -22,7 +22,7 @@ title: Zcoin Crowdfunding System (ZCS)
                <div class="half col-sm-6 col-xs-12">
                   <a href="{{site.baseurl}}/funding-required/" class="row ffs-cat">
                      <div class="col-sm-4 col-xs-4">
-                         <img src="/img/funding-required.png" class="icon"/>
+                         <img src="/img/step-funding.svg" class="icon"/>
                      </div>
                      <div class="col-sm-8 col-xs-8">
                          <h2>Funding Required</h2>
@@ -33,7 +33,7 @@ title: Zcoin Crowdfunding System (ZCS)
                <div class="half col-sm-6 col-xs-12">
                   <a href="{{site.baseurl}}/work-in-progress/" class="row ffs-cat">
                     <div class="col-sm-4 col-xs-4">
-                         <img src="/img/work-in-progress.png" class="icon"/>
+                         <img src="/img/step-wip.svg" class="icon"/>
                      </div>
                      <div class="col-sm-8 col-xs-8">
                          <h2>Work in Progress</h2>
@@ -44,7 +44,7 @@ title: Zcoin Crowdfunding System (ZCS)
                <div class="half col-sm-6 col-xs-12">
                     <a href="{{site.baseurl}}/completed-proposals/" class="ffs-cat row">
                         <div class="col-sm-4 col-xs-4">
-                             <img src="/img/completed-tasks.png" class="icon"/>
+                             <img src="/img/step-completed.svg" class="icon"/>
                          </div>
                          <div class="col-sm-8 col-xs-8">
                              <h2>Completed Tasks</h2>

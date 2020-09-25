@@ -1,3 +1,58 @@
+/* ---------------- PARTICL CONFIG ---------------- */
+
+:root {
+    /* --- Main colors --- */
+
+    --color-primary: hsl(152, 62%, 55%);
+    --color-primary-hsl: 152, 62%, 55%;
+
+    --color-secondary: hsl(201, 83%, 47%);
+    --color-secondary-hsl: 201, 83%, 47%;
+
+    --color-tertiary: hsl(250, 39%, 47%);
+    --color-tertiary-hsl: 250, 39%, 47%;
+
+    /* --- Status colors --- */
+
+    --color-success: var(--color-primary);
+    --color-success-hsl: var(--color-primary-hsl);
+
+    --color-alert: hsl(358, 68%, 50%);
+    --color-alert-hsl: 358, 68%, 50%;
+
+    --color-warning: hsl(41, 100%, 47%);
+    --color-warning-hsl: 41, 100%, 47%;
+
+    --color-info: var(--color-secondary);
+    --color-info-hsl: var(--color-secondary-hsl);
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-white-hsl: 0, 0%, 100%;
+
+    /* --- Text colors --- */
+
+    --text: hsl(192, 7%, 15%);
+    --text-hsl: 192, 7%, 15%;
+
+    --text-muted: hsl(206, 6%, 46%);
+    --text-muted-hsl: 206, 6%, 46%;
+
+    /* --- Background colors --- */
+
+    --bg: hsl(0, 0%, 98%);
+    --bg-hsl: 0, 0%, 98%;
+
+    --bg-hover: hsl(0, 0%, 96%);
+    --bg-hover-hsl: 0, 0%, 96%;
+
+    --bg-muted: hsl(0, 0%, 86%);
+    --bg-muted-hsl: 0, 0%, 86%;
+
+    --bg-black: var(--text);
+    --bg-black-hsl: var(--text-hsl);
+}
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -2532,7 +2587,7 @@ footer a.white {
 }
 
 .ffs-main .icon {
-    width: 6.5rem;
+    width: 4.7rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -2761,20 +2816,25 @@ h1 {
     background-size: cover;
 }
 
-.ffs p.author-list:before, .ffs-proposal p.author-list:before {
-    background-image: url(/img/author-filled.png);
+.ffs p.author-list:before,
+.ffs-proposal p.author-list:before {
+    background-image: url(/img/circle-user.svg);
 }
 
-.ffs p.date-list:before, .ffs-proposal p.date-list:before {
-    background-image: url(/img/calendar.png);
+.ffs p.date-list:before,
+.ffs-proposal p.date-list:before {
+    background-image: url(/img/date.svg);
 }
 
-.in-progress p.progress-number-goal:before, .ffs-proposal p.progress-number-goal:before, .complete-proposal p.progress-number-goal:before {
-    background-image: url(/img/zcoin-amount.png);
+.in-progress p.progress-number-goal:before,
+.ffs-proposal p.progress-number-goal:before,
+.complete-proposal p.progress-number-goal:before {
+    background-image: url(/img/particl-amount.svg);
 }
 
-.ffs p.date-list.contributor:before, .ffs-proposal p.date-list.contributor:before {
-    background-image: url(/img/contributors.png);
+.ffs p.date-list.contributor:before,
+.ffs-proposal p.date-list.contributor:before {
+    background-image: url(/img/rocket.svg);
 }
 
 .ffs p.author-list, .ffs p.date-list, .ffs-proposal p.author-list, .ffs-proposal p.date-list, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
@@ -3817,7 +3877,7 @@ input.accordion {
     -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
     -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
-    background-color: #b74848;
+    background-color: #63a43f;
     color: #ffffff;
 }
 
