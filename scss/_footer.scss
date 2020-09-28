@@ -1,0 +1,162 @@
+body {
+    height: 100%;
+}
+
+.page-wrapper {
+    position: relative;
+    /*min-height: 100vh;*/
+    background-color: #edeef0;
+}
+
+footer {
+    width: 100%;
+    background-color: #474c56;
+    color: #efefef;
+    z-index: 1;
+}
+
+footer a.white {
+    color: #efefef;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    border-bottom: none;
+}
+
+footer a.white.gf {
+    border-bottom: 2px dotted #efefef;
+}
+
+footer a.white:hover, a.white:focus {
+    border-bottom: 2px dotted #efefef;
+}
+
+.footer-wrapper {
+    padding: 4rem 1rem;
+}
+
+.footer-wrapper ul {
+    line-height: 1.7;
+}
+
+.footer-links {
+    width: 100%;
+}
+
+.footer-links ul {
+    margin: 2rem;
+}
+
+.footer-link {
+    margin: 0 1rem;
+}
+
+.footer-wrapper .gf-address {
+    background-color: #dadbdd;
+    color: #4c4c4c;
+    font-weight: bold;
+    word-wrap: break-word;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    -moz-box-shadow: 0 0 10px rgba(28,30,34,.6);
+    -webkit-box-shadow: 0 0 10px rgba(28,30,34,.6);
+    box-shadow: 0 0 10px rgba(28,30,34,.6);
+    border-radius: 2px;
+    -webkit-touch-callout: all; /* iOS Safari */
+    -webkit-user-select: all; /* Safari */
+    -khtml-user-select: all; /* Konqueror HTML */
+    -moz-user-select: all; /* Firefox */
+    -ms-user-select: all; /* Internet Explorer/Edge */
+    user-select: all; /* Chrome and Opera */
+}
+
+.footer-wrapper .qr {
+    display: none;
+    border: none;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 30px rgba(28,30,34,.6);
+    -webkit-box-shadow: 0 0 30px rgba(28,30,34,.6);
+    box-shadow: 0 0 30px rgba(28,30,34,.6);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: #ffffff;
+}
+
+.footer-wrapper .qr img {
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 75rem) {
+
+}
+
+@media only screen and (max-width: 62rem) {
+
+.page-wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    width: 100%;
+    color: #efefef;
+    z-index: 1;
+}
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+.page-wrapper {
+    position: initial;
+    min-height: 100vh;
+}
+
+footer {
+    position: initial;
+    width: 100%;
+    height: auto;
+    color: #efefef;
+    z-index: 1;
+}
+
+.footer-wrapper {
+    padding: 2.5rem 1rem;
+}
+
+.footer-wrapper div.col-xs-6 {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+}
+    
+footer a.white {
+    font-size: 0.8rem;
+}
+
+}
+
+@media only screen and (max-width: 37rem) {
+    
+.footer-wrapper .qr {
+    display: inline-block;
+}    
+    
+}
+
+@media only screen and (max-width: 30rem) {
+
+.footer-wrapper {
+    padding: 2rem;
+}
+
+.footer-wrapper div.col-xs-6 {
+    -ms-flex-preferred-size: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+    padding-right: 0;
+}
+    
+.list-inline>li {
+    display: inline-block;
+}
+
+}

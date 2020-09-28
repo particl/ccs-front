@@ -1,0 +1,110 @@
+.btn-fixed, .btn-auto {
+    background: none;
+    border: 1px solid #ff7519;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 700;
+    color: #ff7519;
+    text-transform: uppercase;
+    /*padding: 0.5rem 1rem 0.3rem 1rem;*/
+    padding: 0 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    -moz-transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    -o-transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    display: inline-block;
+    height: 2.6rem;
+    line-height: 2.7rem;
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+}
+
+a.btn-link:hover, a.btn-link.active, a.btn-link:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+.btn-link span.icon-windows, .btn-link span.icon-linux, .btn-link span.icon-apple, .btn-link span.icon-blockchain {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.btn-link span.icon-windows {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: 0 0;
+}
+
+a.btn-link:hover span.icon-windows, a.btn-link:focus span.icon-windows, a.btn-link.active span.icon-windows {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: -48px 0;
+}
+
+.btn-link span.icon-linux, span.icon-linux {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: 0 -48px;
+}
+
+a.btn-link:hover span.icon-linux, a.btn-link:focus span.icon-linux, a.btn-link.active span.icon-linux {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: -48px -48px;
+}
+
+.btn-link span.icon-apple {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: 0 -96px;
+}
+
+a.btn-link:hover span.icon-apple, a.btn-link:focus span.icon-apple, a.btn-link.active span.icon-apple {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: -48px -96px;
+}
+
+.btn-link span.icon-blockchain {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: 0 -144px;
+}
+
+a.btn-link:hover span.icon-blockchain, a.btn-link:focus span.icon-blockchain, a.btn-link.active span.icon-blockchain {
+    background-image: url(../img/monero-spritesheet.png);
+    background-position: -48px -144px;
+}
+
+.btn-fixed {
+    width: 15rem;
+    display: block;
+}
+
+.btn-fixed:hover, .btn-fixed:active, .btn-fixed:focus, .btn-auto:hover, .btn-auto:active, .btn-auto:focus {
+    background-color: #ff7519;
+    color: #fff!important;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 62rem) {
+
+    .btn-fixed, .btn-auto {
+        font-size: 0.875rem;
+    }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+    .btn-fixed, .btn-auto {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 30rem) {
+    .btn-link span#icon-windows, .btn-link span#icon-linux, .btn-link span#icon-apple, .btn-link span#icon-blockchain {
+        display: none;
+    }
+}
