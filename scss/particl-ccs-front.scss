@@ -1,3 +1,4 @@
+@import "config";
 @import "css-base";
 @import "flexbox";
 @import "grid";
@@ -7,66 +8,10 @@
 @import "navigation";
 @import "footer";
 
+@import "contribute-dropdown";
 
 
-/* ---------------- PARTICL CONFIG ---------------- */
 
-:root {
-  /* --- Main colors --- */
-
-  --color-primary: hsl(152, 62%, 55%);
-  --color-primary-hsl: 152, 62%, 55%;
-
-  --color-secondary: hsl(201, 83%, 47%);
-  --color-secondary-hsl: 201, 83%, 47%;
-
-  --color-tertiary: hsl(250, 39%, 47%);
-  --color-tertiary-hsl: 250, 39%, 47%;
-
-  /* --- Status colors --- */
-
-  --color-success: var(--color-primary);
-  --color-success-hsl: var(--color-primary-hsl);
-
-  --color-alert: hsl(358, 68%, 50%);
-  --color-alert-hsl: 358, 68%, 50%;
-
-  --color-warning: hsl(41, 100%, 47%);
-  --color-warning-hsl: 41, 100%, 47%;
-
-  --color-info: var(--color-secondary);
-  --color-info-hsl: var(--color-secondary-hsl);
-
-  --color-white: hsl(0, 0%, 100%);
-  --color-white-hsl: 0, 0%, 100%;
-
-  /* --- Text colors --- */
-
-  --text: hsl(192, 7%, 15%);
-  --text-hsl: 192, 7%, 15%;
-
-  --text-muted: hsl(206, 6%, 46%);
-  --text-muted-hsl: 206, 6%, 46%;
-
-  /* --- Background colors --- */
-
-  --bg: hsl(0, 0%, 98%);
-  --bg-hsl: 0, 0%, 98%;
-
-  --bg-hover: hsl(0, 0%, 96%);
-  --bg-hover-hsl: 0, 0%, 96%;
-
-  --bg-muted: hsl(0, 0%, 86%);
-  --bg-muted-hsl: 0, 0%, 86%;
-
-  --bg-black: var(--text);
-  --bg-black-hsl: var(--text-hsl);
-
-
-  /* --- Typography --- */
-
-  --font: "Inter_UI", sans-serif;
-}
 
 body {
   font-family: var(--font);

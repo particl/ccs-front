@@ -11,15 +11,10 @@
     padding: 0 1rem;
     white-space: nowrap;
     cursor: pointer;
-    -webkit-transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
-    -moz-transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
-    -o-transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
     transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
     display: inline-block;
     height: 2.6rem;
     line-height: 2.7rem;
-    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
 }
 

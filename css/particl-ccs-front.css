@@ -1,15 +1,48 @@
+:root {
+  --color-primary: hsl(152, 62%, 55%);
+  --color-primary-hsl: 152,62%,55%;
+  --color-secondary: hsl(201, 83%, 47%);
+  --color-secondary-hsl: 201,83%,47%;
+  --color-tertiary: hsl(250, 39%, 47%);
+  --color-tertiary-hsl: 250,39%,47%;
+  --color-success: var(--color-primary);
+  --color-success-hsl: var(--color-primary-hsl);
+  --color-alert: hsl(358, 68%, 50%);
+  --color-alert-hsl: 358,68%,50%;
+  --color-warning: hsl(41, 100%, 47%);
+  --color-warning-hsl: 41,100%,47%;
+  --color-info: var(--color-secondary);
+  --color-info-hsl: var(--color-secondary-hsl);
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-hsl: 0,0%,100%;
+  --text: hsl(192, 7%, 15%);
+  --text-hsl: 192,7%,15%;
+  --text-muted: hsl(206, 6%, 46%);
+  --text-muted-hsl: 206,6%,46%;
+  --bg: hsl(0, 0%, 98%);
+  --bg-hsl: 0,0%,98%;
+  --bg-hover: hsl(0, 0%, 96%);
+  --bg-hover-hsl: 0,0%,96%;
+  --bg-muted: hsl(0, 0%, 86%);
+  --bg-muted-hsl: 0,0%,86%;
+  --bg-black: var(--text);
+  --bg-black-hsl: var(--text-hsl);
+  --font: "Inter_UI",sans-serif;
+  --font-mono: "OfficeCodePro",monospace;
+  --radius: 4px
+}
 body,
 html {
   margin: 0;
   padding: 0;
-  min-height: 100vh
+  min-height: 100vh;
+  background: var(--bg-black)
 }
 body {
   margin: 0;
   padding: 0;
   font-weight: 400;
-  color: #4c4c4c;
-  background-color: #474c56
+  color: var(--text-muted)
 }
 body blockquote,
 body p,
@@ -40,16 +73,6 @@ select,
 textarea {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0
 }
 img,
 video {
@@ -338,7 +361,8 @@ label.upgrade-x:after {
   width: 4.7rem;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  padding-left: 2rem
 }
 .ffs-main a.ffs-cat {
   background-color: #fff;
@@ -762,16 +786,7 @@ p.progress-number-goal {
   display: inline;
   vertical-align: middle
 }
-.complete-proposal p.progress-number-goal,
-.in-progress p.progress-number-goal {
-  font-size: 1.1rem;
-  color: #a1aabb;
-  line-height: 0;
-  display: inline;
-  vertical-align: middle
-}
 .ffs-proposal .btn {
-  width: 8rem;
   height: 3rem;
   text-align: center;
   line-height: 3rem;
@@ -780,26 +795,33 @@ p.progress-number-goal {
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
-  padding: 0 1rem;
+  padding: 0 2rem;
   cursor: pointer;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,.07),0 7px 17px 0 rgba(0,0,0,.1);
-  border: none;
-  display: block;
+  display: inline-block;
   transition: background .15s ease,box-shadow .15s ease;
   margin: 0 auto;
-  border-radius: 2px
+  border-radius: var(--radius)
 }
 .ffs-proposal .btn-primary {
-  background-color: #4e9965;
+  background-color: var(--color-secondary);
   color: #fff
 }
 .ffs-proposal .btn-primary:active,
 .ffs-proposal .btn-primary:focus,
 .ffs-proposal .btn-primary:hover {
-  background-color: #188039;
+  background-color: var(--color-tertiary);
   color: #fff;
   border: none!important;
   box-shadow: 0 0 30px rgba(50,50,93,.2),0 3px 22px rgba(0,0,0,.2)
+}
+.complete-proposal p.progress-number-goal,
+.in-progress p.progress-number-goal {
+  font-size: 1.1rem;
+  color: #a1aabb;
+  line-height: 0;
+  display: inline;
+  vertical-align: middle
 }
 .tabs {
   display: flex;
@@ -822,15 +844,15 @@ p.progress-number-goal {
   font-family: var(--font);
   box-shadow: 0 0 4px rgba(50,50,93,.1)
 }
-.ffs-con .label,
-.ffs-fr .label {
-  width: 50%
-}
 .label:hover {
   background: #a1aabb
 }
 .label:active {
   background: #a1aabb
+}
+.ffs-con .label,
+.ffs-fr .label {
+  width: 50%
 }
 .input:focus + .label {
   z-index: 1
@@ -1383,80 +1405,6 @@ p.progress-number-goal {
 p.if-issues {
   font-size: .8rem;
   padding-top: 2rem
-}
-.tab {
-  position: relative;
-  width: 100%;
-  color: #4c4c4c;
-  overflow: hidden
-}
-label.accordion {
-  position: relative;
-  display: block;
-  padding: 1.3rem 2rem 1.3rem 0;
-  font-weight: 700;
-  line-height: 1.7;
-  cursor: pointer;
-  margin-right: .5rem
-}
-.tab-content {
-  overflow: hidden;
-  height: 0;
-  padding: 0;
-  transition: all .5s ease;
-  padding: 0 1rem
-}
-input.accordion:checked ~ .tab-content {
-  height: auto;
-  padding: 1rem
-}
-input.accordion {
-  position: absolute;
-  display: none;
-  z-index: -1
-}
-.contribute-dropdown {
-  text-align: center
-}
-.contribute-dropdown .btn {
-  margin: 1rem auto;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
-  background-color: #63a43f;
-  color: #fff
-}
-input.accordion:checked ~ .btn {
-  background-color: #c56c6c
-}
-.instructions a.qr {
-  border: none;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 0 5px rgba(50,50,93,.4);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  text-decoration: none
-}
-.instructions .qr img {
-  border-radius: 10px;
-  vertical-align: middle;
-  max-width: 15rem
-}
-.instructions p.string {
-  background-color: #edeff2;
-  padding: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  -webkit-touch-callout: all;
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
-  border-radius: 2px;
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 5px rgba(50,50,93,.4)
 }
 .container,
 .container-fluid {
@@ -2178,11 +2126,35 @@ input.accordion:checked ~ .btn {
   src: url(../fonts/Inter-UI-Black.woff2) format("woff2"),url(../fonts/Inter-UI-Black.woff) format("woff")
 }
 @font-face {
+  font-family: OfficeCodePro;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/OfficeCodePro-Regular.woff2) format("woff2"),url(../fonts/OfficeCodePro-Regular.woff) format("woff")
+}
+@font-face {
   font-family: icons;
   src: url(../fonts/icons.eot?58817762);
   src: url(../fonts/icons.eot?58817762#iefix) format("embedded-opentype"),url(../fonts/icons.woff2?58817762) format("woff2"),url(../fonts/icons.woff?58817762) format("woff"),url(../fonts/icons.ttf?58817762) format("truetype"),url(../fonts/icons.svg?58817762#icons) format("svg");
   font-weight: 400;
   font-style: normal
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text)
 }
 h1 {
   font-weight: 600;
@@ -2205,9 +2177,16 @@ h3 {
   margin-top: 1rem;
   margin-bottom: 0
 }
-h4,
-p {
+h4 {
   padding-top: 1rem
+}
+p {
+  color: var(--text-muted);
+  padding-top: 1rem
+}
+p strong {
+  color: var(--text);
+  font-weight: 500
 }
 h1#main-h1 {
   font-weight: 700;
@@ -2226,8 +2205,7 @@ h2#main-h2 {
   line-height: 1;
   text-align: left
 }
-.about-main h3,
-.about-monero h3 {
+.about-main h3 {
   padding-top: 0;
   font-weight: 600;
   line-height: 1.7;
@@ -2330,8 +2308,7 @@ h3:first-of-type {
     padding: .3rem;
     margin: .5rem 0
   }
-  .about-main h3,
-  .about-monero h3 {
+  .about-main h3 {
     padding-top: 1rem
   }
   .container.description p {
@@ -2935,7 +2912,7 @@ body {
 }
 footer {
   width: 100%;
-  background-color: #474c56;
+  background-color: var(--bg-black);
   color: #efefef;
   z-index: 1
 }
@@ -2976,7 +2953,6 @@ footer a.white:hover {
   margin-top: 1.5rem;
   box-shadow: 0 0 10px rgba(28,30,34,.6);
   border-radius: 2px;
-  -webkit-touch-callout: all;
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
@@ -3047,36 +3023,75 @@ footer a.white:hover {
     display: inline-block
   }
 }
-:root {
-  --color-primary: hsl(152, 62%, 55%);
-  --color-primary-hsl: 152,62%,55%;
-  --color-secondary: hsl(201, 83%, 47%);
-  --color-secondary-hsl: 201,83%,47%;
-  --color-tertiary: hsl(250, 39%, 47%);
-  --color-tertiary-hsl: 250,39%,47%;
-  --color-success: var(--color-primary);
-  --color-success-hsl: var(--color-primary-hsl);
-  --color-alert: hsl(358, 68%, 50%);
-  --color-alert-hsl: 358,68%,50%;
-  --color-warning: hsl(41, 100%, 47%);
-  --color-warning-hsl: 41,100%,47%;
-  --color-info: var(--color-secondary);
-  --color-info-hsl: var(--color-secondary-hsl);
-  --color-white: hsl(0, 0%, 100%);
-  --color-white-hsl: 0,0%,100%;
-  --text: hsl(192, 7%, 15%);
-  --text-hsl: 192,7%,15%;
-  --text-muted: hsl(206, 6%, 46%);
-  --text-muted-hsl: 206,6%,46%;
-  --bg: hsl(0, 0%, 98%);
-  --bg-hsl: 0,0%,98%;
-  --bg-hover: hsl(0, 0%, 96%);
-  --bg-hover-hsl: 0,0%,96%;
-  --bg-muted: hsl(0, 0%, 86%);
-  --bg-muted-hsl: 0,0%,86%;
-  --bg-black: var(--text);
-  --bg-black-hsl: var(--text-hsl);
-  --font: "Inter_UI",sans-serif
+.tab {
+  position: relative;
+  width: 100%;
+  overflow: hidden
+}
+label.accordion {
+  position: relative;
+  display: block;
+  padding: 1.3rem 2rem 1.3rem 0;
+  font-weight: 700;
+  line-height: 1.7;
+  cursor: pointer;
+  margin-right: .5rem
+}
+.tab-content {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  transition: all .5s ease;
+  padding: 0 1rem
+}
+input.accordion:checked ~ .tab-content {
+  height: auto;
+  padding: 1rem
+}
+input.accordion {
+  position: absolute;
+  display: none;
+  z-index: -1
+}
+input.accordion:checked ~ .btn {
+  background-color: var(--color-tertiary)
+}
+.contribute-dropdown {
+  text-align: center
+}
+.contribute-dropdown .btn {
+  margin: 1rem auto;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
+  background-color: var(--color-secondary);
+  color: #fff
+}
+.instructions a.qr {
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(50,50,93,.4);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-decoration: none
+}
+.instructions a.qr img {
+  border-radius: 10px;
+  vertical-align: middle;
+  max-width: 15rem
+}
+.instructions p.string {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  background-color: #edeff2;
+  padding: 1.5rem;
+  margin: 1.5rem auto .5rem;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  border-radius: var(--radius);
+  max-width: 40rem
 }
 body {
   font-family: var(--font)

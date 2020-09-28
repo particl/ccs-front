@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    background: var(--bg-black);
 }
 
 /******************GENERAL**********************/
@@ -10,14 +11,15 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    color: #4c4c4c;
-    background-color: #474c56;
+    color: var(--text-muted);
+    p,
+    blockquote,
+    ul {
+        line-height: 1.7;
+        font-size: 1rem;
+    }
 }
 
-body p, body blockquote, body ul {
-    line-height: 1.7;
-    font-size: 1rem;
-}
 
 a {
     color: #000;
@@ -36,8 +38,6 @@ a, button, input, select, textarea, label, label:checked, label:focus {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
 }
-
-h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0;}
 
 img, video {max-width: 100%;}
 
@@ -382,6 +382,7 @@ label.upgrade-x:after {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 2rem;
 }
 
 .ffs-main a.ffs-cat {
@@ -828,22 +829,52 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 /* FFS FUNDING REQUIRED SINGLE */
 
-.ffs-proposal .info-block {
-    padding: 4rem;
+.ffs-proposal {
+    .info-block {
+        padding: 4rem;
+    }
+    h2 {
+        text-align: left;
+    }
+    p.progress-number-goal {
+        padding-top: 0;
+        font-size: 1.1rem;
+        color: #a1aabb;
+        line-height: 0;
+        display: inline;
+        vertical-align: middle;
+    }
+    .btn {
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        text-decoration: none;
+        font-family: var(--font);
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding: 0 2rem;
+        cursor: pointer;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+        display: inline-block;
+        transition: background .15s ease, box-shadow .15s ease;
+        margin: 0 auto;
+        border-radius: var(--radius);
+    }
+    .btn-primary {
+        background-color: var(--color-secondary);
+        color: #ffffff;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: var(--color-tertiary);
+            color: #ffffff;
+            border: none !important;
+            box-shadow: 0 0 30px rgba(50, 50, 93, .2), 0 3px 22px rgba(0, 0, 0, .2);
+        }
+    }
 }
 
-.ffs-proposal h2 {
-    text-align: left;
-}
-
-.ffs-proposal p.progress-number-goal {
-    padding-top: 0;
-    font-size: 1.1rem;
-    color: #a1aabb;
-    line-height: 0;
-    display: inline;
-    vertical-align: middle;
-}
 
 .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
     font-size: 1.1rem;
@@ -851,45 +882,6 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
     line-height: 0;
     display: inline;
     vertical-align: middle;
-}
-
-.ffs-proposal .btn {
-    width: 8rem;
-    height: 3rem;
-    text-align: center;
-    line-height: 3rem;
-    text-decoration: none;
-    font-family: var(--font);
-    font-weight: 700;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding: 0 1rem;
-    cursor: pointer;
-    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
-    border: none;
-    display: block;
-    -webkit-transition: background .15s ease, box-shadow .15s ease;
-    -moz-transition: background .15s ease, box-shadow .15s ease;
-    -o-transition: background .15s ease, box-shadow .15s ease;
-    transition: background .15s ease, box-shadow .15s ease;
-    margin: 0 auto;
-    border-radius: 2px;
-}
-
-.ffs-proposal .btn-primary {
-    background-color: #4e9965;
-    color: #ffffff;
-}
-
-.ffs-proposal .btn-primary:hover, .ffs-proposal .btn-primary:active, .ffs-proposal .btn-primary:focus {
-    background-color: #188039;
-    color: #ffffff;
-    border: none !important;
-    -moz-box-shadow: 0 0 30px rgba(50, 50, 93, .2), 0 3px 22px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: 0 0 30px rgba(50, 50, 93, .2), 0 3px 22px rgba(0, 0, 0, .2);
-    box-shadow: 0 0 30px rgba(50, 50, 93, .2), 0 3px 22px rgba(0, 0, 0, .2);
 }
 
 .tabs {
@@ -916,19 +908,18 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
   -moz-box-shadow: 0 0 4px rgba(50,50,93,.1);
   -webkit-box-shadow: 0 0 4px rgba(50,50,93,.1);
   box-shadow: 0 0 4px rgba(50,50,93,.1);
+  &:hover {
+    background: #a1aabb;
+  }
+  &:active {
+    background: #a1aabb;
+  }
 }
 
 .ffs-fr .label, .ffs-con .label {
     width: 50%;
 }
 
-.label:hover {
-  background: #a1aabb;
-}
-
-.label:active {
-  background: #a1aabb;
-}
 
 .input:focus + .label {
   z-index: 1;
@@ -940,18 +931,18 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 }
 
 @media (max-width: 600px) {
-  .label {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+    .label {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
   
-  .input:checked + .label {
-      margin-bottom: 0;
-}
+    .input:checked + .label {
+        margin-bottom: 0;
+    }
 
-.ffs-fr .label, .ffs-con .label {
-    width: 100%;
-}
+    .ffs-fr .label, .ffs-con .label {
+        width: 100%;
+    }
 }
 
 .panel {
@@ -963,8 +954,6 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 .panel-segment {
   padding: 4rem 4rem;
   background-color: #ffffff;
-  -moz-box-shadow: 0 2px 4px rgba(50,50,93,.1);
-  -webkit-box-shadow: 0 2px 4px rgba(50,50,93,.1);
   box-shadow: 0 2px 4px rgba(50,50,93,.1);
   margin-top: 0;
   word-wrap: break-word;
@@ -1064,43 +1053,43 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 75rem) {
     
-.ffs-proposal .info-block {
-    padding: 3rem;
-}    
+    .ffs-proposal .info-block {
+        padding: 3rem;
+    }    
 
-.panel-segment {
-    padding: 3rem;
-}
+    .panel-segment {
+        padding: 3rem;
+    }
 
-.milestone.panel-segment {
-    padding: 0 3rem 3rem 3rem;
-}
+    .milestone.panel-segment {
+        padding: 0 3rem 3rem 3rem;
+    }
 
-.milestone.panel-segment:first-of-type, .milestone.panel-segment:after {
-    padding-top: 3rem;
-}
-    
-.panel-segment h2 {
-    margin-top: 2.3rem;
-}
+    .milestone.panel-segment:first-of-type, .milestone.panel-segment:after {
+        padding-top: 3rem;
+    }
+        
+    .panel-segment h2 {
+        margin-top: 2.3rem;
+    }
 
-.panel-segment h3 {
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-}
-    
-.panel-segment h1 {
-    margin-bottom: 2rem;
-}
+    .panel-segment h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+        
+    .panel-segment h1 {
+        margin-bottom: 2rem;
+    }
 
-.panel-segment .gldiscuss {
-    padding-top: 2rem;
-    margin-top: 2.5rem;
-}
+    .panel-segment .gldiscuss {
+        padding-top: 2rem;
+        margin-top: 2.5rem;
+    }
 
-.panel-segment p, .panel-segment ul li, .panel-segment ol li {
-    padding-top: 0.5rem;
-}
+    .panel-segment p, .panel-segment ul li, .panel-segment ol li {
+        padding-top: 0.5rem;
+    }
     
 }
 
@@ -1112,86 +1101,84 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 48rem) {
     
-.ffs-proposal .info-block, .panel-segment {
-    padding: 2rem;
-}    
+    .ffs-proposal .info-block, .panel-segment {
+        padding: 2rem;
+    }    
 
-.milestone.panel-segment {
-    padding: 0 2rem 2rem 2rem;
-}
+    .milestone.panel-segment {
+        padding: 0 2rem 2rem 2rem;
+    }
 
-.milestone.panel-segment:first-of-type, .milestone.panel-segment:after {
-    padding-top: 2rem;
-}
+    .milestone.panel-segment:first-of-type, .milestone.panel-segment:after {
+        padding-top: 2rem;
+    }
 
-.panel-segment p, .panel-segment ul li, .panel-segment ol li, .dongf p {
-    font-size: 1rem;
-}
-    
-.panel-segment h2 {
-    margin-top: 2rem;
-}
+    .panel-segment p, .panel-segment ul li, .panel-segment ol li, .dongf p {
+        font-size: 1rem;
+    }
+        
+    .panel-segment h2 {
+        margin-top: 2rem;
+    }
 
-.panel-segment h3 {
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-} 
-    
-.panel-segment h1 {
-    margin-bottom: 1.5rem;
-    font-size: 1.7rem;
-}
+    .panel-segment h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    } 
+        
+    .panel-segment h1 {
+        margin-bottom: 1.5rem;
+        font-size: 1.7rem;
+    }
 
-.panel-segment .gldiscuss {
-    padding-top: 1.5rem;
-    margin-top: 2rem;
-}
-    
-.fund-required p.author-list, .fund-required p.date-list {
-    font-size: 1rem;
-}
-    
-.complete-proposal p.author-list, .complete-proposal p.date-list, .complete-proposal p.progress-number-goal, .complete-proposal p.date-list, .in-progress p.autor-list, .in-progress p.date-list, .in-progress p.progress-number-goal {
-    display: block;
-    margin-left: 0;
-    padding-top: 0.9rem;
-    font-size: 1rem;
-}
+    .panel-segment .gldiscuss {
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+        
+    .fund-required p.author-list, .fund-required p.date-list {
+        font-size: 1rem;
+    }
+        
+    .complete-proposal p.author-list, .complete-proposal p.date-list, .complete-proposal p.progress-number-goal, .complete-proposal p.date-list, .in-progress p.autor-list, .in-progress p.date-list, .in-progress p.progress-number-goal {
+        display: block;
+        margin-left: 0;
+        padding-top: 0.9rem;
+        font-size: 1rem;
+    }
     
 }
 
 @media (max-width: 600px) {
-  .panel {
-    order: 0;
-  }
+
+    .panel {
+        order: 0;
+    }
+        
+    .panel-segment h1 {
+        font-size: 1.5rem;
+    }
   
-  .panel-segment:first-of-type, .milestone.panel-segment:first-of-type {
-      
-  }
+    .input:checked + .label {
+        padding-bottom: 0;
+    }
     
-.panel-segment h1 {
-    font-size: 1.5rem;
-}
-  
-  .input:checked + .label {
-      padding-bottom: 0;
-  }
-  
-  .input:checked + .label:after {
-      content: '';
-      width: 100%;
-      display: block;
-      border-bottom: 1.5px solid #edeef0;
-      padding-bottom: 1rem;
-  }
-  
-  .panel-segment ol {
-      padding-left: 1rem;
-  }
-  
-  .panel-segment ul {
-      padding-left: 0;
-  }
+    .input:checked + .label:after {
+        content: '';
+        width: 100%;
+        display: block;
+        border-bottom: 1.5px solid #edeef0;
+        padding-bottom: 1rem;
+    }
+    
+    .panel-segment ol {
+        padding-left: 1rem;
+    }
+    
+    .panel-segment ul {
+        padding-left: 0;
+    }
+
 }
 
 /* FFS CONTRIBUTE PAGE */
@@ -1233,17 +1220,17 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media (max-width: 600px) {
 
-.ffs-con .panel {
-    display: initial;
-}
+    .ffs-con .panel {
+        display: initial;
+    }
 
-.ffs-con .input:checked + .label, .ffs-con .input + .label {
-    display: none;
-}
+    .ffs-con .input:checked + .label, .ffs-con .input + .label {
+        display: none;
+    }
 
-.ffs-con .qr img {
-    max-width: 100%;
-}
+    .ffs-con .qr img {
+        max-width: 100%;
+    }
 
 }
 
@@ -1262,49 +1249,50 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 62rem) {
 
-.in-progress p.author-list, .in-progress p.date-list {
-    font-size: 1rem;
-}
+    .in-progress p.author-list, .in-progress p.date-list {
+        font-size: 1rem;
+    }
 
-.in-progress p.bar-work-status {
-    font-size: 1rem;
-}
+    .in-progress p.bar-work-status {
+        font-size: 1rem;
+    }
 
 }
 
 @media only screen and (max-width: 48rem) {
 
-.in-progress p.author-list {
-    font-size: 0.9rem;
-    padding-top: 0;
-}
+    .in-progress p.author-list {
+        font-size: 0.9rem;
+        padding-top: 0;
+    }
 
 }
 
 @media only screen and (max-width: 41rem) {
 
-.in-progress .between-xs {
-    -ms-flex-pack: start;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    text-align: start;
-}
+    .in-progress .between-xs {
+        -ms-flex-pack: start;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        text-align: start;
+    }
 
-.in-progress p.bar-work-status, .ffs-cp p.bar-work-status {
-    text-align: left;
-    float: none;
-    font-size: 0.9rem;
-    padding-top: 0;
-    margin-top: 1rem;
-}
+    .in-progress p.bar-work-status, .ffs-cp p.bar-work-status {
+        text-align: left;
+        float: none;
+        font-size: 0.9rem;
+        padding-top: 0;
+        margin-top: 1rem;
+    }
 
 }
 
 @media only screen and (max-width: 30rem) {
 
-.in-progress p.author-list, .in-progress p.date-list, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
-    padding-top: 0.7rem;
-}
+    .in-progress p.author-list, .in-progress p.date-list, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
+        padding-top: 0.7rem;
+    }
+
 }
 
 /* FFS WORK IN PROGRESS SINGLE */
@@ -1324,61 +1312,61 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 75rem) {
     
-.in-progress p.bar-work-status {
-    text-align: left;
-    float: none;
-    display: block;
-    margin-top: 1rem;
-}    
+    .in-progress p.bar-work-status {
+        text-align: left;
+        float: none;
+        display: block;
+        margin-top: 1rem;
+    }    
     
 }
 
 
 @media only screen and (max-width: 62rem) {
 
-.ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs-proposal p.bar-work-status {
-    font-size: 1rem;
-}
+    .ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs-proposal p.bar-work-status {
+        font-size: 1rem;
+    }
 
-.ffs-proposal p.bar-work-status, .ffs-proposal p.bar-work-status, .ffs-proposal p.bar-fund-status, .fund-required p.bar-fund-status {
-    text-align: left;
-    float: none;
-    display: block;
-    margin-top: 1rem;
-}
-   
+    .ffs-proposal p.bar-work-status, .ffs-proposal p.bar-work-status, .ffs-proposal p.bar-fund-status, .fund-required p.bar-fund-status {
+        text-align: left;
+        float: none;
+        display: block;
+        margin-top: 1rem;
+    }
+
 }
 
 @media only screen and (max-width: 48rem) {
 
-.ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs-proposal p.bar-work-status {
-    font-size: 1rem;
-}
+    .ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs-proposal p.bar-work-status {
+        font-size: 1rem;
+    }
 
-.ffs-wip p.date-list, .ffs-wip p.progress-number-goal, .ffs-cp p.date-list, .ffs-cp p.progress-number-goal {
-    margin-left: 1rem;
-}
+    .ffs-wip p.date-list, .ffs-wip p.progress-number-goal, .ffs-cp p.date-list, .ffs-cp p.progress-number-goal {
+        margin-left: 1rem;
+    }
 
 }
 
 @media only screen and (max-width: 37rem) {
 
-.ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .fund-required p.author-list, .fund-required p.date-list {
-    padding-top: 0.9rem;
-}
-    
-.ffs-proposal p.bar-fund-status, .ffs-proposal p.bar-work-status {
-    padding-top: 0;
-}
+    .ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .fund-required p.author-list, .fund-required p.date-list {
+        padding-top: 0.9rem;
+    }
+        
+    .ffs-proposal p.bar-fund-status, .ffs-proposal p.bar-work-status {
+        padding-top: 0;
+    }
 
-.ffs-wip .progress-bar, .ffs-cp .progress-bar {
-    margin-top: 0.5rem;
-}
+    .ffs-wip .progress-bar, .ffs-cp .progress-bar {
+        margin-top: 0.5rem;
+    }
 
-.ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs-proposal p.bar-work-status, .fund-required p.author-list, .fund-required p.date-list, .ffs-proposal p.bar-fund-status, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
-    display: block;
-    margin-left: 0;
-}
+    .ffs-proposal p.author-list, .ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs-proposal p.bar-work-status, .fund-required p.author-list, .fund-required p.date-list, .ffs-proposal p.bar-fund-status, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
+        display: block;
+        margin-left: 0;
+    }
     
 }
 
@@ -1476,9 +1464,9 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 62rem) {
 
-.ffs-breadcrumbs {
-    display: none;
-}
+    .ffs-breadcrumbs {
+        display: none;
+    }
 
 }
 
@@ -1551,9 +1539,9 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 62rem) {
 
-.progress-bar {
-    margin-top: 0.2rem;
-}
+    .progress-bar {
+        margin-top: 0.2rem;
+    }
 
 }
 
@@ -1563,22 +1551,22 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 41rem) {
 
-.ffs a.ffs-idea {
-    padding: 1.5rem;
-}
+    .ffs a.ffs-idea {
+        padding: 1.5rem;
+    }
 
-.ffs-idea h3 {
-    margin-bottom: 0.1rem;
-    font-size: 1.2rem;
-}
+    .ffs-idea h3 {
+        margin-bottom: 0.1rem;
+        font-size: 1.2rem;
+    }
 
-.in-progress .progress-bar, .fund-required .progress-bar {
-    margin-top: 0.3rem;
-}
+    .in-progress .progress-bar, .fund-required .progress-bar {
+        margin-top: 0.3rem;
+    }
 
-.progress-bar {
-    padding: 0.2rem;
-}
+    .progress-bar {
+        padding: 0.2rem;
+    }
 
 }
 
@@ -1590,126 +1578,17 @@ p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
 
 @media only screen and (max-width: 23rem) {
 
-.ffs p.author-list, .ffs p.date-list, .ffs-proposal p.author-list, .ffs-proposal p.date-list {
-    display: block;
-}
+    .ffs p.author-list, .ffs p.date-list, .ffs-proposal p.author-list, .ffs-proposal p.date-list {
+        display: block;
+    }
 
-.ffs p.date-list, .ffs-proposal p.date-list {
-    margin-left: 0;
-}
+    .ffs p.date-list, .ffs-proposal p.date-list {
+        margin-left: 0;
+    }
 
 }
 
 p.if-issues {
     font-size: 0.8rem;
     padding-top: 2rem;
-}
-
-/*Contribute Dropdown*/
-
-.tab {
-    position: relative;
-    width: 100%;
-    color: #4c4c4c;
-    overflow: hidden;
-}
-
-label.accordion {
-    position: relative;
-    display: block;
-    padding: 1.3rem 2rem 1.3rem 0;
-    font-weight: bold;
-    line-height: 1.7;
-    cursor: pointer;
-    margin-right: 0.5rem;
-}
-
-/*input.accordion:checked ~ .tab-content {
-    max-height: 100rem;
-    overflow: visible;
-}
-
-.tab-content {
-    max-height: 0;
-    overflow: hidden;
-    border-radius: 3px;
-    -webkit-transition: max-height 2s ease-out;
-    -o-transition: max-height 2s ease-out;
-    transition: max-height 2s ease-out;
-}*/
-
-.tab-content {
-    overflow:hidden;
-    height:0;
-    padding: 0;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
-    padding: 0 1rem;
-}
-input.accordion:checked ~ .tab-content {
-    height:auto;
-    padding: 1rem;
-}
-
-input.accordion {
-    position: absolute;
-    display: none;
-    z-index: -1;
-}
-
-.contribute-dropdown {
-    text-align: center;
-}
-
-.contribute-dropdown .btn {
-    margin: 1rem auto;
-    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
-    background-color: #63a43f;
-    color: #ffffff;
-}
-
-input.accordion:checked ~ .btn {
-    background-color: #C56C6C;
-}
-
-.instructions a.qr {
-    border: none;
-    border-radius: 10px;
-    display: inline-block;
-    -moz-box-shadow: 0 0 5px rgba(50,50,93,.4);
-    -webkit-box-shadow: 0 0 5px rgba(50,50,93,.4);
-    box-shadow: 0 0 5px rgba(50,50,93,.4);
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    text-decoration: none;
-}
-
-.instructions .qr img {
-    border-radius: 10px;
-    vertical-align: middle;
-    max-width: 15rem;
-}
-
-.instructions p.string {
-    background-color: #edeff2;
-    padding: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    -webkit-touch-callout: all;
-    -webkit-user-select: all;
-    -khtml-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-    user-select: all;
-    border-radius: 2px;
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    -moz-box-shadow: 0 0 5px rgba(50,50,93,.4);
-    -webkit-box-shadow: 0 0 5px rgba(50,50,93,.4);
-    box-shadow: 0 0 5px rgba(50,50,93,.4);
 }
