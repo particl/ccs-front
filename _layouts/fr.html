@@ -4,93 +4,96 @@ layout: base
 
 <div class="site-wrap ffs-proposal ffs-fr">
 
-<div class="container ffs-breadcrumbs">
-   <div class="row">
-      <div class="col-xs-12">
-          <p><a href="/">Zcoin Crowdfunding System</a></p>
-          <p><a href="/funding-required/">Funding Required</a></p>
-        <p class="bread-active">{{page.title}}</p>
+   <div class="container ffs-breadcrumbs">
+      <div class="row">
+         <div class="col-xs-12">
+            <p><a href="/">Particl Crowdfunding System</a></p>
+            <p><a href="/funding-required/">Funding Required</a></p>
+            <p class="bread-active">{{page.title}}</p>
+         </div>
       </div>
    </div>
-</div>
-                <section class="container full">
-                <div class="info-block">
-                   <div class="row">
-                        <div class="col-xs-12"> 
-                           {% for toplevel in site.data.proposals %}
-                             {% if toplevel.stage == "Funding Required" %}
-                                {% for proposal in toplevel.proposals%}
-                                  {% if proposal.name == {{page.title}} %}
-                            <h2>{{page.title}}</h2>
-                                <p class="author-list">{{proposal.author}}</p>
-                                <p class="date-list">{{proposal.date}}</p>
-                                <p class="date-list contributor">{{proposal.contributions}} contributors</p>
-                                <p class="bar-fund-status">Raised <span class="progress-number-funded">{{proposal.amount-funded}}</span> of <span class="progress-number-goal">{{proposal.amount}}</span> XZC</p>
-                            <div class="progress-bar">
-                                <span class="fund-progress" style="width: {{proposal.percentage}}%"></span>
-                            </div>
-                                                        <div class="contribute-dropdown">
-                                <div class="tab">
-                                    <input id="tab-con" type="checkbox" name="tabs" class="accordion">
-                                    <label for="tab-con" class="accordion btn">Contribute</label>
-                                    <div class="tab-content">
-                                        <div class="instructions">
-                                            <p>1. Choose the amount of XZC you wish to contribute to this proposal.</p>
-                                            <p>2. Scan the QR code or tap to open in your Zcoin wallet app</p>
-                                            <p><a href="zcoin:{{ proposal.donate-address }}" class="qr"><img src="{{ proposal.donate-qr-code }}"></a></p>
-                                            <p>or copy the following XZC address:</p>
-                                            <p class="string">{{ proposal.donate-address }}</p>
-                                            <p>3. Send! Thank you! You are amazing!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+   <section class="container full">
+      <div class="info-block">
+         <div class="row">
+            <div class="col-xs-12"> 
+               {% for toplevel in site.data.proposals %}
+               {% if toplevel.stage == "Funding Required" %}
+               {% for proposal in toplevel.proposals%}
+               {% if proposal.name == {{page.title}} %}
+               <h2>{{page.title}}</h2>
+               <p class="author-list">{{proposal.author}}</p>
+               <p class="date-list">{{proposal.date}}</p>
+               <p class="date-list contributor">{{proposal.contributions}} contributors</p>
+               <p class="bar-fund-status">Raised <span class="progress-number-funded">{{proposal.amount-funded}}</span> of <span class="progress-number-goal">{{proposal.amount}}</span> PART</p>
+               <div class="progress-bar">
+                  <span class="fund-progress" style="width: {{proposal.percentage}}%"></span>
+               </div>
+               <div class="contribute-dropdown">
+                  <div class="tab">
+                     <input id="tab-con" type="checkbox" name="tabs" class="accordion">
+                     <label for="tab-con" class="accordion btn">Contribute</label>
+                     <div class="tab-content">
+                        <div class="instructions">
+                           <p><strong>1.</strong> Choose the amount of PART you wish to contribute to this proposal.</p>
+                           <p><strong>2.</strong> Scan the QR code or tap to open in your Particl wallet app:</p>
+                           <p><a href="particl:{{ proposal.donate-address }}" class="qr"><img src="{{ proposal.donate-qr-code }}"></a></p>
+                           <p>or copy the following PART address:</p>
+                           <p class="string">{{ proposal.donate-address }}</p>
+                           <p><strong>3.</strong> Send!</p>
+                           <p>Thank you! You are amazing!</p>
                         </div>
-                    </div>
-                </div>
-        </section>
-                   
-        <section class="container full">
-                <div class="">
-                    <div class="row between-xs">
-                       <div class="col-xs-12">
-                            <div class="tabs">
-                                  <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
-                                  <label class="label" for="tab-1">Proposal</label>
-                                  <div class="panel col-xs-12">
-                                       <div class="panel-segment">
-                                           {{content}}
-                                           <div class="gldiscuss">
-                                               <h3>Community Discussion and Updates</h3>
-                                               <p><a href="{{proposal.gitlab-url}}">View community discussion, comments, and proposal updates on GitHub</a></p>
-                                           </div>
-                                           {%endif%}
-                            {%endfor%}
-                            {%endif%}
-                            {%endfor%}
-                                       </div>
-                                  </div>
-                                  <input class="input" name="tabs" type="radio" id="tab-2"/>
-                                  <label class="label" for="tab-2">Milestones</label>
-                                  <div class="panel col-xs-12">
-                                    {% if page.milestones != nil %}
-                                        {% for milestones in page.milestones %}
-                                           <div class="milestone panel-segment">
-                                                <span class="{{milestones.status}} ms-{{milestones.status}}"></span>
-                                                <h3>{{milestones.name}}</h3>
-                                                <p><span class="bold">To be paid:</span> {{milestones.funds}}</p>
-                                                <p><span class="bold">Completion date:</span> {{milestones.done}}</p>
-                                           </div>
-                                        {%endfor%}
-                                        {%else%}
-                                            <div class="panel-segment">
-                                                <p>No milestones</p>
-                                            </div>
-                                    {%endif%}
-                                  </div>
-                                </div>
-                       </div>
-                    </div>
-                </div>
-        </section>
-    </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="container full">
+      <div class="">
+         <div class="row between-xs">
+            <div class="col-xs-12">
+               <div class="tabs">
+                  <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+                  <label class="label" for="tab-1">Proposal</label>
+                  <div class="panel col-xs-12">
+                     <div class="panel-segment">
+                        {{content}}
+                        <div class="gldiscuss">
+                           <h3>Community Discussion and Updates</h3>
+                           <p><a href="{{proposal.gitlab-url}}">View community discussion, comments, and proposal updates on GitHub</a></p>
+                        </div>
+                        {%endif%}
+                        {%endfor%}
+                        {%endif%}
+                        {%endfor%}
+                     </div>
+                  </div>
+                  <input class="input" name="tabs" type="radio" id="tab-2"/>
+                  <label class="label" for="tab-2">Milestones</label>
+                  <div class="panel col-xs-12">
+                  {% if page.milestones != nil %}
+                  {% for milestones in page.milestones %}
+                     <div class="milestone panel-segment">
+                        <span class="{{milestones.status}} ms-{{milestones.status}}"></span>
+                        <h3>{{milestones.name}}</h3>
+                        <p><span class="bold">To be paid:</span> {{milestones.funds}}</p>
+                        <p><span class="bold">Completion date:</span> {{milestones.done}}</p>
+                     </div>
+                     {%endfor%}
+                     {%else%}
+                     <div class="panel-segment">
+                        <p>No milestones</p>
+                     </div>
+                     {%endif%}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+</div><!-- .site-wrap -->
