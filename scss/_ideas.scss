@@ -1,0 +1,200 @@
+.ideas h1 {
+   display: none;
+}
+
+.ffs-breadcrumbs p.submit-idea {
+   float: right;
+}
+
+.ffs-breadcrumbs p.submit-idea a {
+   background-color: #4e9965;
+   color: #fff;
+   padding: 0.5rem 0.5rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 0.8rem;
+   border-radius: 2px;
+   box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+   transition: background .15s ease, box-shadow .15s ease;
+}
+
+.ffs-breadcrumbs p.submit-idea a:hover, .ffs-breadcrumbs p.submit-idea a:focus, .ffs-breadcrumbs p.submit-idea a:active {
+   background-color: #188039;
+}
+
+.ffs-breadcrumbs p.submit-idea a:after, .ffs-breadcrumbs p.submit-idea a:before {
+   display: none;
+}
+
+.ffs a.ffs-idea {
+   background-color: #ffffff;
+   padding: 2.5rem;
+   border-radius: 6px;
+   box-shadow: 0 0 5px rgba(50,50,93,.4);
+   margin-bottom: 1rem;
+   flex: 1;
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   word-wrap: break-word;
+   text-decoration: none;
+   color: #4c4c4c;
+   transition: background .15s ease, box-shadow .15s ease;
+   border-bottom: none;
+}
+
+.ffs a.ffs-idea:hover, .ffs a.ffs-idea:focus, .ffs a.ffs-idea:active {
+   box-shadow: 0 0 10px rgba(50,50,93,.4);
+   border-bottom: none;
+}
+
+.ffs p.author-list span img, .ffs p.date-list span img, .ffs-proposal p.author-list span img, .ffs-proposal p.date-list span img, .ffs-proposal p.progress-number-goal span img {
+   height: 0.8rem;
+   width: 0.8rem;
+   margin-right: 0.3rem;
+   vertical-align: baseline;
+}
+
+.ffs p.author-list:before, .ffs p.date-list:before, .ffs-proposal p.author-list:before, .ffs-proposal p.date-list:before, .ffs-proposal p.progress-number-goal:before, .ffs-proposal p.date-list.contributor:before, .in-progress p.progress-number-goal:before, .complete-proposal p.progress-number-goal:before {
+   content: '';
+   display: inline-block;
+   height: 0.8rem;
+   width: 0.8rem;
+   margin-right: 0.3rem;
+   vertical-align: baseline;
+   background-size: cover;
+}
+
+.ffs p.author-list:before,
+.ffs-proposal p.author-list:before {
+   background-image: url(/img/circle-user.svg);
+}
+
+.ffs p.date-list:before,
+.ffs-proposal p.date-list:before {
+   background-image: url(/img/date.svg);
+}
+
+.in-progress p.progress-number-goal:before,
+.ffs-proposal p.progress-number-goal:before,
+.complete-proposal p.progress-number-goal:before {
+   background-image: url(/img/particl-amount.svg);
+}
+
+.ffs p.date-list.contributor:before,
+.ffs-proposal p.date-list.contributor:before {
+   background-image: url(/img/rocket.svg);
+}
+
+.ffs p.author-list, .ffs p.date-list, .ffs-proposal p.author-list, .ffs-proposal p.date-list, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
+   padding-top: 0;
+   font-size: 1.1rem;
+   color: #9ca1ac;
+   line-height: 0;
+   display: inline;
+   vertical-align: middle;
+}
+
+.ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs p.date-list, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
+   margin-left: 2rem;
+}
+
+p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
+   box-sizing: border-box;
+   flex: 0 0 auto;
+}
+
+.ideas p.author-list, .ideas p.date-list, .complete-proposal p.author-list, .complete-proposal p.date-list {
+   display: inline;
+}
+
+.ideas p.date-list, .complete-proposal p.date-list {
+   margin-left: 2rem;
+}
+
+.ffs p.list-button {
+   padding-top: 1.5rem;
+}
+
+.ffs .ideas p.list-button, .ffs .fund-required p.list-button, .ffs .in-progress p.list-button, .ffs .complete-proposal p.list-button {
+   padding-top: 0;
+   text-align: right;
+}
+
+.ideas h1, .fund-required h1, .in-progress h1, .complete-proposal h1 {
+   display: none;
+}
+
+@media only screen and (max-width: 75rem) {
+
+}
+
+@media only screen and (max-width: 62rem) {
+
+   .ideas h1, .fund-required h1, .in-progress h1, .complete-proposal h1 {
+      display: initial;
+      display: block;
+      text-align: left;
+      margin: 1.5rem 1rem 1.3rem 3.5rem;
+      font-size: 2rem;
+      padding: 0;
+   }
+
+   .ffs a.ffs-idea {
+      margin-left: 1rem;
+      margin-right: 1rem;
+   }
+
+   .ideas p.author-list, .ideas p.date-list, .complete-proposal p.author-list, .complete-proposal p.date-list {
+      font-size: 1rem;
+   }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+   .ideas h1, .fund-required h1, .in-progress h1, .complete-proposal h1 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+   }
+
+   .ffs .ffs-idea {
+      margin-left: 1rem;
+      margin-right: 1rem;
+   }
+
+   .ideas p.author-list, .ideas p.date-list, .complete-proposal p.author-list, .complete-proposal p.date-list {
+      padding-top: 0.7rem;
+   }
+
+}
+
+@media only screen and (max-width: 41rem) {
+
+   .ideas h1, .fund-required h1, .in-progress h1, .complete-proposal h1 {
+      margin-left: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+   }
+
+}
+
+@media only screen and (max-width: 30rem) {
+
+   .ideas h1, .fund-required h1, .in-progress h1, .complete-proposal h1 {
+      margin-top: 0.5rem;
+   }
+
+   .ideas p.author-list, .ideas p.date-list, .complete-proposal p.author-list, .complete-proposal p.date-list, .ffs p.author-list, .ffs p.date-list {
+      display: block;
+      margin-left: 0;
+   }
+
+}
+
+@media only screen and (max-width: 28rem) {
+
+   .ideas p.author-list, .ideas p.date-list, .complete-proposal p.author-list, .complete-proposal p.date-list {
+      padding-top: 0.7rem;
+   }
+
+}
