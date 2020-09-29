@@ -1362,12 +1362,12 @@ a.btn-link:hover span.icon-blockchain {
   z-index: 5;
   transition: all .3s ease
 }
+.desktop-nav .dropdown-content a {
+  display: block
+}
 .desktop-nav .dropdown:hover > .dropdown-content {
   opacity: 1;
   visibility: visible
-}
-.dropdown-content a {
-  display: block
 }
 .arrow-down {
   width: 0;
@@ -1379,27 +1379,28 @@ a.btn-link:hover span.icon-blockchain {
   margin-bottom: .25rem;
   margin-left: .5rem
 }
-img.monero-logo {
-  max-width: 100%;
-  height: auto;
-  width: 12rem;
-  padding: .5rem 0;
-  vertical-align: middle
-}
 p.site-name {
   padding: 0
 }
 p.site-name a {
   font-family: var(--font);
-  color: #000;
+  color: var(--text);
   display: inline-block;
   text-decoration: none;
-  padding: 1.4rem 0 1.1rem 0;
-  font-size: 1.2rem
+  line-height: 4.2rem;
+  font-size: 1.2rem;
+  font-weight: 500
+}
+p.site-name img.logo {
+  width: 1.5rem;
+  height: auto;
+  margin-right: .4rem;
+  position: relative;
+  top: .3rem
 }
 .desktop-nav .dropdown,
 .desktop-nav .items a {
-  color: #4c4c4c;
+  color: var(--text-muted);
   text-decoration: none;
   transition: all ease-out .1s;
   font-size: 1rem;
@@ -1469,11 +1470,6 @@ p.site-name a {
   display: none
 }
 @media only screen and (max-width:62rem) {
-  img.monero-logo {
-    position: inherit;
-    width: 10rem;
-    padding: .39rem 0 .39rem 1rem
-  }
   p.site-name {
     padding-left: 1rem
   }
@@ -1484,9 +1480,7 @@ p.site-name a {
     line-height: .5;
     display: flex;
     flex-direction: column;
-    border-top: none;
-    border-right: none;
-    border-left: none
+    border: none
   }
   .white-nav .nav-items {
     line-height: 1
@@ -1521,8 +1515,7 @@ p.site-name a {
     border-bottom: 2px solid #4c4c4c;
     width: 100%;
     margin-bottom: 5px;
-    transition: transform .5s ease-in-out;
-    -webkit-transition: -webkit-transform .5s ease-in-out
+    transition: transform .5s ease-in-out
   }
   .burger:after {
     content: "";
@@ -1530,25 +1523,19 @@ p.site-name a {
     border-bottom: 2px solid #4c4c4c;
     width: 100%;
     margin-bottom: 5px;
-    transition: transform .5s ease-in-out;
-    -webkit-transition: -webkit-transform .5s ease-in-out
+    transition: transform .5s ease-in-out
   }
   .burger-check:checked ~ .burger {
     border-bottom: 4px solid transparent;
-    transition: border-bottom .5s ease-in-out;
-    -webkit-transition: border-bottom .5s ease-in-out
+    transition: border-bottom .5s ease-in-out
   }
   .burger-check:checked ~ .burger:before {
     transform: rotate(-405deg) translateY(6px) translateX(-5px);
-    -webkit-transform: rotate(-405deg) translateY(6px) translateX(-5px);
-    transition: transform .5s ease-in-out;
-    -webkit-transition: -webkit-transform .5s ease-in-out
+    transition: transform .5s ease-in-out
   }
   .burger-check:checked ~ .burger:after {
     transform: rotate(405deg) translateY(0) translateX(1.3px);
-    -webkit-transform: rotate(405deg) translateY(0) translateX(1.3px);
-    transition: transform .5s ease-in-out;
-    -webkit-transition: -webkit-transform .5s ease-in-out
+    transition: transform .5s ease-in-out
   }
   .burger-check:checked ~ .nav-items {
     display: block
@@ -1776,10 +1763,6 @@ p.site-name a {
   }
 }
 @media only screen and (max-width:30rem) {
-  img.monero-logo {
-    width: 9rem;
-    padding-top: .527rem
-  }
   #mobile-burger:checked ~ .slide-in-nav {
     width: 100vw;
     left: 0
@@ -3059,8 +3042,6 @@ body {
   font-weight: 600;
   font-size: 1.4rem;
   text-decoration: underline;
-  -webkit-text-decoration-color: #9099a8;
-  text-decoration-color: #9099a8;
   -webkit-text-decoration-color: #a1aabb;
   text-decoration-color: #a1aabb;
   -webkit-text-decoration-style: dotted;

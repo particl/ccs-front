@@ -1,6 +1,6 @@
 ---
 layout: customnt
-title: Particl Crowdfunding System (PCC)
+title: Particl Community Crowdfunding
 ---
 <div class="ffs-main">
   <div class="container description">
