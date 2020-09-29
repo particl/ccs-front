@@ -1,7 +1,41 @@
-// ---------------- PARTICL CONFIG ---------------- //
+/*
+
+    ____ ____ _  _ ____ _ ____
+    |    |  | |\ | |___ | | __
+___ |___ |__| | \| |    | |__]
+
+Global SCSS config file defining site-wide settings (included in every page)
+
+   TOC:
+      1. Variables
+      2. Templates
+      3. Mixins
+
+*/
+
+
+/* ------------------------------- *\
+    1. Variables
+\* ------------------------------- */
+
+// --------- BREAKPOINTS --------- //
+
+$break-l: 1500px;
+$break-xl: 1700px;
+$break-hd: 1920px;
+$break-xhd: 2200px;
+
 
 :root {
-   // --- Main colors --- //
+   
+   /* ---------- COLORS ----------
+      
+      Each color is defined by 2 variables - 1st is "proper" color definition (HSL),
+      the 2nd one containes only the HSL values for usage with variable alpha channel, e.g.:
+      
+      .white-transparent { color: hsla(var(--color-primary-hsl), 0.6); }
+      
+   */
 
    --color-primary: hsl(152, 62%, 55%);
    --color-primary-hsl: 152, 62%, 55%;
@@ -48,8 +82,10 @@
    --bg-muted: hsl(0, 0%, 86%);
    --bg-muted-hsl: 0, 0%, 86%;
 
-   --bg-black: var(--text);
-   --bg-black-hsl: var(--text-hsl);
+   --bg-black: hsl(192, 7%, 15%);
+   --bg-black-hsl: 192, 7%, 15%;
+   --bg-black-lighter: hsl(192, 7%, 20%);
+   --bg-black-lighter-hsl: 192, 7%, 20%;
 
 
    // --- Typography --- //
@@ -62,3 +98,75 @@
 
    --radius: 4px;
 }
+
+
+/*
+  Override SASS' handling of HSL(a) color functions, don't touch it and let CSS handle it itself.
+  This will enable the trick with variable alpha channels for CSS color variables (see below).
+*/
+@function hsla($args...) { @return #{'hsla(#{$args})'}; }
+
+
+
+/* ------------------------------- *\
+    2. Templates
+\* ------------------------------- */
+
+%card {
+   box-shadow: 0 1px 0 var(--bg-muted), 0 1px 10px -4px hsla(var(--text-hsl), 0.3);
+   background: var(--color-white);
+}
+
+%card-hover {
+   box-shadow: 0 1px 0 var(--bg-muted), 0 1px 10px -4px hsla(var(--text-hsl), 0.7);
+}
+
+// Transition effects
+%tfx {
+   transition: all 0.17s;
+}
+ 
+%hide {
+   display: none;
+}
+
+
+
+/* ------------------------------- *\
+    3. Mixins
+\* ------------------------------- */
+
+// Default breakpoints with widths defined in _config.scss
+// Usage: @include break(l|xl|xxl|hd) { .. }
+
+@mixin break($media) {
+   @if $media == l { 
+      @media only screen and (min-width: $break-l) { @content; }
+   } @else if $media == xl {
+      @media only screen and (min-width: $break-xl) { @content; }
+   } @else if $media == hd {
+      @media only screen and (min-width: $break-hd) { @content; }
+   } @else if $media == xhd {
+      @media only screen and (min-width: $break-xhd) { @content; }
+   }
+}
+
+// Custom responsivity (px-based, for when default breakpoints aren't enough)
+// Usage: @include break-from(741px) { .. }
+
+@mixin break-from($size) {
+   @media only screen and (min-width: $size) { @content; }
+}
+
+
+// ------ GRADIENTS ------ //
+
+// @include gradient (<top-color>, <bottom-color>);
+
+@mixin gradient($top, $bottom) {
+   background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+}
+@mixin gradientH($left, $right) {
+   background: linear-gradient(to right, $left 0%, $right 100%);
+}
+

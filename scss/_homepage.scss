@@ -1,11 +1,18 @@
 // ----- HOMEPAGE ----- //
 
 .ffs-main {
-   h1 {
-      font-size: 2rem;
-      text-align: center;
-      padding: 0;
-      padding-bottom: 1rem;
+   .description {
+      padding: 3rem 0;
+      h1 {
+         font-size: 2.3rem;
+         text-align: center;
+         padding: 0 0 1.5rem;
+      }
+      p {
+         padding: 0 5rem;
+         text-align: center;
+         margin-bottom: 3.5rem;
+      }
    }
    .half {
       &:nth-child(even) {
@@ -17,54 +24,48 @@
          padding-left: 0;
       }
    }
-   // icons in steps
-   .icon {
+}
+
+
+// step "cards"
+a.ffs-cat {
+   @extend %card;
+   padding: 2.5rem;
+   border: none !important;
+   border-radius: var(--radius);
+   margin-bottom: 1rem;
+   flex: 1;
+   word-wrap: break-word;
+   text-decoration: none;
+   color: #4c4c4c;
+   transition: background .15s ease, box-shadow .15s ease;
+   align-items: center;
+   &:hover,
+   &:focus,
+   &:active {
+      @extend %card-hover;
+      border: none !important;
+   }
+   .icon { // illustrations in steps
       width: 8rem;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 2rem;
+      margin: 0 auto;
    }
-   // step "cards"
-   a.ffs-cat {
-      background-color: #ffffff;
-      padding: 2.5rem;
-      border: 1px dotted #dbdfe1;
-      border: none;
-      border-radius: var(--radius);
-      box-shadow: 0 0 5px rgba(50,50,93,.4);
-      margin-bottom: 1rem;
-      flex: 1;
-      word-wrap: break-word;
-      text-decoration: none;
-      color: #4c4c4c;
-      transition: background .15s ease, box-shadow .15s ease;
-      align-items: center;
-      &:hover,
-      &:focus,
-      &:active {
-         box-shadow: 0 0 10px rgba(50,50,93,.4);
-         border: none;
-      }
+   .col-sm-8 { // text part in step card
+      padding-right: 1rem;
+   }
+   h2 {
+      text-align: left;
+      font-size: 1.5rem;
+   }
+   p {
+      padding-top: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
    }
 }
 
 
-.ffs-main .col-sm-8 {
-   padding-left: 1rem;
-}
-
-.ffs-main h2 {
-   text-align: left;
-}
-
-.ffs-main h2 a {
-   color: #4c4c4c;
-}
-
-.ffs-main a.ffs-cat p {
-   padding-top: 0;
-}
 
 @media only screen and (max-width: 62rem) {
 

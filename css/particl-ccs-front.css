@@ -25,11 +25,22 @@
   --bg-hover-hsl: 0,0%,96%;
   --bg-muted: hsl(0, 0%, 86%);
   --bg-muted-hsl: 0,0%,86%;
-  --bg-black: var(--text);
-  --bg-black-hsl: var(--text-hsl);
+  --bg-black: hsl(192, 7%, 15%);
+  --bg-black-hsl: 192,7%,15%;
+  --bg-black-lighter: hsl(192, 7%, 20%);
+  --bg-black-lighter-hsl: 192,7%,20%;
   --font: "Inter_UI",sans-serif;
   --font-mono: "OfficeCodePro",monospace;
   --radius: 4px
+}
+a.ffs-cat {
+  box-shadow: 0 1px 0 var(--bg-muted),0 1px 10px -4px hsla(var(--text-hsl),.3);
+  background: var(--color-white)
+}
+a.ffs-cat:active,
+a.ffs-cat:focus,
+a.ffs-cat:hover {
+  box-shadow: 0 1px 0 var(--bg-muted),0 1px 10px -4px hsla(var(--text-hsl),.7)
 }
 body,
 html {
@@ -1053,7 +1064,7 @@ h1 {
   font-weight: 600;
   font-size: 2.3rem;
   line-height: 1;
-  margin: 2.5rem 0 .7rem 0
+  margin: 0
 }
 h2 {
   font-weight: 600;
@@ -1063,12 +1074,10 @@ h2 {
 }
 h3 {
   font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: .05rem;
+  font-weight: 500;
   line-height: 1.3;
   padding-top: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0
+  margin: 1rem 0 0
 }
 h4 {
   padding-top: 1rem
@@ -1117,12 +1126,6 @@ h3:first-of-type {
 }
 .events h3 {
   margin-top: 1rem
-}
-.container.description h3,
-.container.description p {
-  padding: 0 5rem;
-  text-align: center;
-  margin-bottom: 2.5rem
 }
 .pre-roadmap p {
   margin-bottom: 2.5rem
@@ -1801,13 +1804,19 @@ body {
 }
 .page-wrapper {
   position: relative;
-  background-color: #edeef0
+  background-color: var(--bg)
 }
 footer {
   width: 100%;
-  background-color: var(--bg-black);
+  background-color: var(--bg-black-lighter);
   color: #efefef;
   z-index: 1
+}
+footer .donate h3 {
+  color: var(--color-white)
+}
+footer .donate p {
+  color: hsla(var(--color-white-hsl),.6)
 }
 footer a.white {
   color: #efefef;
@@ -1815,27 +1824,18 @@ footer a.white {
   font-size: .9375rem;
   border-bottom: none
 }
-footer a.white.gf {
-  border-bottom: 2px dotted #efefef
-}
-a.white:focus,
+footer a.white:focus,
 footer a.white:hover {
-  border-bottom: 2px dotted #efefef
+  border-bottom: 1px dotted #efefef
+}
+footer a.white.gf {
+  border-bottom: 1px dotted #efefef
 }
 .footer-wrapper {
   padding: 4rem 1rem
 }
 .footer-wrapper ul {
   line-height: 1.7
-}
-.footer-links {
-  width: 100%
-}
-.footer-links ul {
-  margin: 2rem
-}
-.footer-link {
-  margin: 0 1rem
 }
 .footer-wrapper .gf-address {
   background-color: #dadbdd;
@@ -1851,17 +1851,15 @@ footer a.white:hover {
   -ms-user-select: all;
   user-select: all
 }
-.footer-wrapper .qr {
-  display: none;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(28,30,34,.6);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  background-color: #fff
+.footer-links {
+  background: var(--bg-black);
+  width: 100%
 }
-.footer-wrapper .qr img {
-  vertical-align: middle
+.footer-links ul {
+  margin: 2rem
+}
+.footer-link {
+  margin: 0 1rem
 }
 @media only screen and (max-width:62rem) {
   .page-wrapper {
@@ -1897,11 +1895,6 @@ footer a.white:hover {
     font-size: .8rem
   }
 }
-@media only screen and (max-width:37rem) {
-  .footer-wrapper .qr {
-    display: inline-block
-  }
-}
 @media only screen and (max-width:30rem) {
   .footer-wrapper {
     padding: 2rem
@@ -1916,11 +1909,18 @@ footer a.white:hover {
     display: inline-block
   }
 }
-.ffs-main h1 {
-  font-size: 2rem;
+.ffs-main .description {
+  padding: 3rem 0
+}
+.ffs-main .description h1 {
+  font-size: 2.3rem;
   text-align: center;
-  padding: 0;
-  padding-bottom: 1rem
+  padding: 0 0 1.5rem
+}
+.ffs-main .description p {
+  padding: 0 5rem;
+  text-align: center;
+  margin-bottom: 3.5rem
 }
 .ffs-main .half:nth-child(even) {
   padding-left: .5rem;
@@ -1930,20 +1930,10 @@ footer a.white:hover {
   padding-right: .5rem;
   padding-left: 0
 }
-.ffs-main .icon {
-  width: 8rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem
-}
-.ffs-main a.ffs-cat {
-  background-color: #fff;
+a.ffs-cat {
   padding: 2.5rem;
-  border: 1px dotted #dbdfe1;
-  border: none;
+  border: none!important;
   border-radius: var(--radius);
-  box-shadow: 0 0 5px rgba(50,50,93,.4);
   margin-bottom: 1rem;
   flex: 1;
   word-wrap: break-word;
@@ -1952,23 +1942,27 @@ footer a.white:hover {
   transition: background .15s ease,box-shadow .15s ease;
   align-items: center
 }
-.ffs-main a.ffs-cat:active,
-.ffs-main a.ffs-cat:focus,
-.ffs-main a.ffs-cat:hover {
-  box-shadow: 0 0 10px rgba(50,50,93,.4);
-  border: none
+a.ffs-cat:active,
+a.ffs-cat:focus,
+a.ffs-cat:hover {
+  border: none!important
 }
-.ffs-main .col-sm-8 {
-  padding-left: 1rem
+a.ffs-cat .icon {
+  width: 8rem;
+  display: block;
+  margin: 0 auto
 }
-.ffs-main h2 {
-  text-align: left
+a.ffs-cat .col-sm-8 {
+  padding-right: 1rem
 }
-.ffs-main h2 a {
-  color: #4c4c4c
+a.ffs-cat h2 {
+  text-align: left;
+  font-size: 1.5rem
 }
-.ffs-main a.ffs-cat p {
-  padding-top: 0
+a.ffs-cat p {
+  padding-top: .5rem;
+  font-size: .9rem;
+  line-height: 1.6
 }
 @media only screen and (max-width:62rem) {
   .ffs-main h1 {

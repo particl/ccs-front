@@ -10,3 +10,7 @@ Development workflow (live compiling of SCSS etc.):
 
     $ gulp devel
 
+
+## TODO
+
+- [ ] update with proper donation address (search for `$$$$$$$$$$$$$$$$$$$$`)
