@@ -58,7 +58,3 @@ The CCS is intentionally left as informal as possible. This allows for flexibili
 ### How to submit a proposal
 
 [Please read this page for step-by-step instructions on how to submit a proposal.](/how-to-ccs/)
-
-### How to vote on a proposal
-
-[Please read this page for step-by-step instructions on how to vote on a proposal.](/how-to-vote/)
