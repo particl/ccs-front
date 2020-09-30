@@ -6,7 +6,7 @@
     <div class="slide-in-nav">
         <div class="container slide-in">
             <div class="row">
-                <div class="col-xs-12"> 
+                <nav class="col-xs-12"> 
                     <div class="text-center nav-item mob">
                         <a href="/ideas/" class="top-link">Ideas</a>
                     </div>
@@ -19,16 +19,34 @@
                     <div class="text-center nav-item mob">
                         <a href="/completed-proposals/">Completed Tasks</a>
                     </div>
+
+                    <hr>
+
+                    <div class="text-center nav-item mob">
+                        <a href="/what-is-ccs/">CCS Intro &amp; Rules</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/how-to-ccs/">How to CCS</a>
+                    </div>
                     <!--div class="text-center nav-item mob">
-                        <a href="/donate/index.html">Donate</a>
+                        <a href="/how-to-vote/">How to vote</a>
                     </div-->
                     <div class="text-center nav-item mob">
-                        <a href="/what-is-zcs/">CCS Rules</a>
+                        <a href="/donate/">Donate</a>
                     </div>
+
+                    <hr>
+
                     <div class="text-center nav-item mob">
                         <a href="https://particl.io/" target="_blank">Particl.io</a>
                     </div>
-                </div>
+                    <div class="text-center nav-item mob">
+                        <a href="https://particl.news/" target="_blank">Latest News</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="https://particl.wiki/" target="_blank">Wiki</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
@@ -47,10 +65,10 @@
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 items end-xs">
                 <div class="row end-xs middle-xs">
-                    <div class="col-md-12">
+                    <nav class="col-md-12">
                         <div class="dropdown">
-                            <label for="desktopdrop">CCS Stages<div class="arrow-down"></div></label>
-                            <input class="burger-checkdropdown" id="desktopdrop" type="checkbox">
+                            <label for="stages">CCS Stages<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="stages" type="checkbox">
                             <div class="dropdown-content">
                                 <a href="/ideas/">Ideas</a>
                                 <a href="/funding-required/">Funding Required</a>
@@ -58,10 +76,26 @@
                                 <a href="/completed-proposals/">Completed Tasks</a>
                             </div>
                         </div>
-                        <a href="/what-is-zcs/">CCS Rules</a> 
-                        <a href="https://particl.io/" target="_blank">Particl.io</a> 
-                        <!--a href="/donate/" class="donate-btn">Donate</a-->
-                    </div>
+                        <div class="dropdown">
+                            <label for="about">About CCS<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="about" type="checkbox">
+                            <div class="dropdown-content">
+                                <a href="/what-is-ccs/">Intro &amp; Rules</a>
+                                <a href="/how-to-ccs/">How to CCS</a>
+                                <!--a href="/how-to-vote/">How to vote</a-->
+                                <a href="/donate/">Donate</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <label for="particl">Particl<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="particl" type="checkbox">
+                            <div class="dropdown-content">
+                                <a href="https://particl.io" target="_blank">Particl.io</a>
+                                <a href="https://particl.news" target="_blank">Latest News</a>
+                                <a href="https://particl.wiki" target="_blank">Wiki</a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -79,7 +113,7 @@
 
             {{ site.baseurl_root }}/{{site.lang}}
 
-            {% endif %}">Particl Community Crowdfunding</a></p>
+            {% endif %}">Particl Crowdfunding</a></p>
         </div>
     </div>
 </div>
