@@ -42,7 +42,6 @@ The CCS is intentionally left as informal as possible. This allows for flexibili
 3. Refunds are extraordinarily rare. Donate accordingly.
 4. If the proposer disappears, no problem, someone else can pick up from their last milestone.
 5. Milestone and payout structures vary per proposal based on the proposers wishes (meaning some will require more trust of the proposer if the fund release schedule is immediate or accelerated), it is up to the donor to do their due diligience in whether or not they support the proposal in its entirety.
-6. Only send funds from public addresses that you own (not from exchanges). Knowledge of your public address may be required by the Particl team if they have to issue refunds (very rare). If a refund needs to be executed, all funds sent from stealth addresses will instead be sent to the Community Fund. 
 
 ### For Proposers
 
