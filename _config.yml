@@ -5,6 +5,8 @@ keywords: "particl, part, blockchain, cryptocurrency"
 baseurl: ""
 url: "https://particl.io/"
 
+donation-address: "$$$-donation-$$$-addy-$$$-here-$$$"
+
 markdown: kramdown
 
 # Kramdown was using smart quotes, which messes up CLI examples

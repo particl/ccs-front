@@ -1539,12 +1539,61 @@ p.site-name img.logo {
   .mob-nav {
     display: flex
   }
+  .mob-nav .nav-item {
+    position: relative;
+    text-align: left;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.125rem;
+    cursor: pointer
+  }
+  .mob-nav .nav-item:active,
+  .mob-nav .nav-item:checked,
+  .mob-nav .nav-item:focus {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent
+  }
+  .mob-nav .nav-item .arrow-down {
+    margin-top: .8rem;
+    margin-left: .2rem
+  }
+  .mob-nav .nav-item a {
+    padding: 1rem 0 1rem 2rem;
+    transition: all ease-out .2s;
+    display: block
+  }
+  .mob-nav .nav-item > a:active,
+  .mob-nav .nav-item > a:focus,
+  .mob-nav .nav-item > a:hover {
+    color: #a1aabb
+  }
+  .mob-nav .nav-item .dropdown-content > a {
+    text-align: left;
+    padding: .8rem 0 .8rem 3rem;
+    text-transform: none;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    text-decoration: none;
+    color: #393939;
+    cursor: pointer
+  }
+  .mob-nav .nav-item .dropdown-content > a.active,
+  .mob-nav .nav-item .dropdown-content > a:focus,
+  .mob-nav .nav-item .dropdown-content > a:hover {
+    color: #ff7519;
+    background-color: #f5f5f5
+  }
+  .mob-nav hr {
+    margin: .2rem 0;
+    border: none;
+    border-top: 2px solid var(--bg-muted)
+  }
   .white-nav {
     box-shadow: 0 2px 2px rgba(0,0,0,.1)
   }
   .slide-in-nav {
     position: absolute;
-    top: -100%;
+    top: -120%;
     left: 0;
     display: flex;
     width: 100%;
@@ -1584,35 +1633,6 @@ p.site-name img.logo {
     padding-top: var(--navbar-height);
     width: 100%
   }
-  .mob-nav .nav-item {
-    position: relative;
-    text-align: left;
-    font-family: var(--font);
-    font-weight: 500;
-    font-size: 1.125rem;
-    cursor: pointer
-  }
-  .mob-nav .nav-item:active,
-  .mob-nav .nav-item:checked,
-  .mob-nav .nav-item:focus {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: transparent
-  }
-  .mob-nav .nav-item .arrow-down {
-    margin-top: .8rem;
-    margin-left: .2rem
-  }
-  .mob-nav .nav-item a {
-    padding: 1rem 0 1rem 2rem
-  }
-  .mob-nav .nav-item a {
-    transition: all ease-out .2s;
-    display: block
-  }
-  .mob-nav .nav-item:last-of-type a {
-    border-top: 3px solid #edeef0;
-    color: #a1aabb
-  }
   .mob-nav .nav-item a.active .arrow-down,
   .mob-nav .nav-item a:focus .arrow-down,
   .mob-nav .nav-item a:hover .arrow-down,
@@ -1628,27 +1648,6 @@ p.site-name img.logo {
     cursor: pointer;
     height: 1.9rem;
     line-height: 2.1rem
-  }
-  .mob-nav .nav-item > a:active,
-  .mob-nav .nav-item > a:focus,
-  .mob-nav .nav-item > a:hover {
-    color: #a1aabb
-  }
-  .mob-nav .nav-item .dropdown-content > a {
-    text-align: left;
-    padding: .8rem 0 .8rem 3rem;
-    text-transform: none;
-    line-height: 1.5rem;
-    height: 1.5rem;
-    text-decoration: none;
-    color: #393939;
-    cursor: pointer
-  }
-  .mob-nav .nav-item .dropdown-content > a.active,
-  .mob-nav .nav-item .dropdown-content > a:focus,
-  .mob-nav .nav-item > .dropdown-content > a:hover {
-    color: #ff7519;
-    background-color: #f5f5f5
   }
   #drop1:checked ~ .dropdown-content,
   #drop2:checked ~ .dropdown-content,

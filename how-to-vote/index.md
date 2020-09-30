@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to vote on a CCS proposal.
+title: How to vote on a CCS proposal
 ---
 
 The CCS utilizes Github and Particl's on-chain voting system to reach consensus on proposals that require input from the community. This quickstart guide will guide you through the process of voting for a proposal with clear step-by-step instructions.
