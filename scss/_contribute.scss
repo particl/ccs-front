@@ -1,0 +1,56 @@
+/* Contribute (Donate) page - currently disabled */
+
+.ffs-con .con-how p {
+   word-wrap: break-word;
+}
+
+.ffs-con p.string {
+   background-color: #edeff2;
+   padding: 1.5rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   font-weight: 700;
+   -webkit-touch-callout: all; /* iOS Safari */
+   -webkit-user-select: all; /* Safari */
+   -khtml-user-select: all; /* Konqueror HTML */
+   -moz-user-select: all; /* Firefox */
+   -ms-user-select: all; /* Internet Explorer/Edge */
+   user-select: all; /* Chrome and Opera */
+}
+
+.ffs-con .qr,
+.ffs-con .qr:hover,
+.ffs-con .qr:focus,
+.ffs-con .qr:active {
+   border: none;
+   border-radius: 10px;
+   display: inline-block;
+   -moz-box-shadow: 0 0 20px rgba(50,50,93,.4);
+   -webkit-box-shadow: 0 0 20px rgba(50,50,93,.4);
+   box-shadow: 0 0 20px rgba(50,50,93,.4);
+   margin-bottom: 1rem;
+   margin-top: 1rem;
+}
+
+.ffs-con .qr img {
+   border-radius: 10px;
+   vertical-align: middle;
+   max-width: 15rem;
+}
+
+@media (max-width: 600px) {
+
+   .ffs-con .panel {
+      display: initial;
+   }
+
+   .ffs-con .input:checked + .label,
+   .ffs-con .input + .label {
+      display: none;
+   }
+
+   .ffs-con .qr img {
+      max-width: 100%;
+   }
+
+}

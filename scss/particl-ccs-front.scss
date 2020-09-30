@@ -1,5 +1,5 @@
 @import "config";
-@import "css-base";
+@import "general";
 @import "flexbox";
 @import "grid";
 @import "fonts";
@@ -8,11 +8,56 @@
 @import "navigation";
 @import "footer";
 
+// Pages
+@import "homepage";
+@import "ideas";
+@import "funding-required";
+@import "contribute";
 @import "contribute-dropdown";
-
+@import "work-in-progress";
+@import "completed";
 
 
 
 body {
   font-family: var(--font);
 }
+
+
+.ffs {
+  padding-bottom: 3rem;
+  .info-block {
+    padding: 2.5rem;
+    border-radius: 2px;
+  }
+  h3 {
+    padding-top: 0;
+    letter-spacing: 0;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-decoration-color: #a1aabb;
+    text-decoration-style: dotted;
+    margin-bottom: 0.5rem;
+    a {
+      color: #4c4c4c;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.ffs a,
+.ffs-proposal a,
+.ffs-main a {
+  color: #000;
+  border-bottom: 1px dotted #a1aabb;
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid #a1aabb;
+    text-decoration: none;
+  }
+}
+
