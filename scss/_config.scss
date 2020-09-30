@@ -152,10 +152,14 @@ $break-xhd: 2200px;
 }
 
 // Custom responsivity (px-based, for when default breakpoints aren't enough)
-// Usage: @include break-from(741px) { .. }
+// Usage: @include break-min(741px) { .. }
 
-@mixin break-from($size) {
+@mixin break-min($size) {
    @media only screen and (min-width: $size) { @content; }
+}
+
+@mixin break-max($size) {
+   @media only screen and (max-width: $size) { @content; }
 }
 
 
