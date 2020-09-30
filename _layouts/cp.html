@@ -6,7 +6,7 @@ layout: base
 <div class="container ffs-breadcrumbs">
    <div class="row">
       <div class="col-xs-12">
-          <p><a href="/">Particl Crowdfunding System</a></p>
+          <p><a href="/">Community Crowdfunding System</a></p>
           <p><a href="/completed-proposals/">Completed Tasks</a></p>
         <p class="bread-active">{{page.title}}</p>
       </div>
@@ -19,7 +19,7 @@ layout: base
                            {% for toplevel in site.data.completed-proposals %}
                              {% if toplevel.stage == "Completed Proposals" %}
                                 {% for proposal in toplevel.proposals%}
-                                  {% if proposal.name == {{page.title}} %}
+                                  {% if proposal.name == page.title %}
                             <h2>{{page.title}}</h2>
                                 <p class="author-list">by {{proposal.author}}</p>
                                 <p class="date-list">{{proposal.date}}</p>
@@ -44,15 +44,15 @@ layout: base
                                   <label class="label" for="tab-1">Proposal</label>
                                   <div class="panel col-xs-12">
                                        <div class="panel-segment">
-                                           {{content}}
-                                           <div class="gldiscuss">
-                                               <h3>Community Discussion and Updates</h3>
-                                               <p><a href="{{proposal.gitlab-url}}">View community discussion, comments, and proposal updates on GitHub</a></p>
-                                           </div>
+                                            {{content}}
+                                            <div class="gldiscuss">
+                                                <h3>Community Discussion and Updates</h3>
+                                                <p><a href="{{proposal.gitlab-url}}">View community discussion, comments, and proposal updates on GitHub</a></p>
+                                            </div>
                                            {%endif%}
-                            {%endfor%}
-                            {%endif%}
-                            {%endfor%}
+                                            {%endfor%}
+                                            {%endif%}
+                                            {%endfor%}
                                        </div>
                                   </div>
                                   <input class="input" name="tabs" type="radio" id="tab-2"/>

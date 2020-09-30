@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to submit a CCS proposal.
+title: How to submit a CCS proposal
 ---
 
-#### Note: Read the [What is the CCS and What Are Its Rules and Expectations](/what-is-zcs) page before continuing!
+#### Note: Read the [What is the CCS and What Are Its Rules and Expectations](/what-is-ccs/) page before continuing!
 
 The CCS utilizes git, and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
 
@@ -14,7 +14,7 @@ The CCS utilizes git, and Github for proposal tracking. A quickstart guide is pr
 - [Editing or Amending a Proposal](#editing-or-amending-a-proposal)
 
 ## Quickstart Guide
-1. Register for an account on [Github](https://github.com) and fork the [CCS Proposals repository](https://github.com/zcoinofficial/ccs-proposals)
+1. Register for an account on [Github](https://github.com) and fork the [CCS Proposals repository](https://github.com/particl/ccs-proposals)
 2. Make a new branch, named similarly to your proposal
 3. Add a new `.md` document, and title it similarly to the title of your proposal with your name or handle in the file name.
 4. Use the template provided below for the front matter, and place it at the top of your proposal. You are responsible for adding the appropriate amount of milestones, with an equal number of payouts below the milestones. FORMATTING MUST BE PRESERVED, OR THE PROPOSAL WILL NOT WORK! Do NOT fill in the `done:` variable under `milestones:`, and do NOT fill in anything under `payouts:` besides making sure the number matches the number of milestones.
@@ -59,11 +59,11 @@ network_vote: nvr
 
 **You will only have to do this step once! If you make future proposals, you can skip to Step 2.**
 
-First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [CCS Proposals repo](https://github.com/zcoinofficial/ccs-proposals). Click the "Fork" button.
+First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [CCS Proposals repo](https://github.com/particl/ccs-proposals). Click the "Fork" button.
 
 ![Click this fork button](/img/how-to/fork.png)
 
-You should see the "Forking zcoinofficial/ccs-proposals" message.
+You should see the "Forking particl/ccs-proposals" message.
 
 ![Fork success](/img/how-to/fork-success.png)
 
@@ -79,7 +79,7 @@ Click on Branch: master. ![Click on Branches](/img/how-to/branches.png) Enter th
 
 ### 3. Make the proposal file
 
-From here, you're going to click on the "Create new file button" in your new proposal branch. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Particl, I might title the file `sandra-make-videos-for-zcoin.md`.
+From here, you're going to click on the "Create new file button" in your new proposal branch. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Particl, I might title the file `sandra-make-videos-for-particl.md`.
 
 
 ### 4. Front matter
@@ -111,6 +111,12 @@ payouts:
 ---
 ```
 
+
+Remove the following if the change can be made without a network vote (hardforks require this flag to be set).
+```
+network_vote: nvr
+```
+
 Fill this template out as follows:
 
 `layout:` Do NOT touch this field.
@@ -123,7 +129,7 @@ Fill this template out as follows:
 
 `date:` Put the date you are proposing and submitting this to the community in the following format: `January 31, 2019`.
 
-`amount:` Put the amount of Particl you are requesting for complete this.
+`amount:` Put the amount of PART you are requesting to complete the initiative.
 
 `milestones:` Do not put anything after Milestones directly, but rather the fields that follow it. Copy and paste from one dash (`-`) to the other, depending on how many milestones your proposal will take. So if you have four milestones, you should see put the following:
 
@@ -149,7 +155,7 @@ milestones:
 
 EXACT FORMATTING MUST BE PRESERVED WITH THE SPACING. Otherwise the proposal will not work. It's the way Jekyll (on which this is built) functions. The dashes must be two spaces from the left margin.
 
-Fill in the `name:` field with the name of the Milestone (for example: Complete Video 1), and the `funds:` field with the amount of Particl you expect to receive for completing the milestones. Do not touch the `done:` or `status:` fields. Repeat until all the `name:` and `funds:` fields are filled in. If this confuses you, please scroll to the end of the page for an example of all of this correctly filled out.
+Fill in the `name:` field with the name of the Milestone (for example: Complete Video 1), and the `funds:` field with the amount of PART you expect to receive for completing the milestones. Do not touch the `done:` or `status:` fields. Repeat until all the `name:` and `funds:` fields are filled in. If this confuses you, please scroll to the end of the page for an example of all of this correctly filled out.
 
 `payouts:` Copy and paste the same amount of variables under payouts that you have under milestones. If you have three milestones, you should have three sets `date:` and `amount:` variables underneath `payouts:`. Do not fill in these fields.
 
@@ -192,15 +198,15 @@ date: January 31, 2019
 amount: 10000
 milestones:
   - name: Milestone 1 - Purchase the parts
-    funds: 30% (3000 XZC)
+    funds: 30% (3000 PART)
     done:
     status: unfinished
   - name: Milestone 2 - Assemble the spaceship
-    funds: 50% (5000 XZC)
+    funds: 50% (5000 PART)
     done:
     status: unfinished
   - name: Milestone 3 - Throw a big party
-    funds: 20% (2000 XZC)
+    funds: 20% (2000 PART)
     done:
     status: unfinished
 payouts:
@@ -221,7 +227,7 @@ Often times, through community critique and feedback, it is necessary to edit a 
 
 ### Navigate to your CCS Proposals repository
 
-Find your copy of `CSS Proposals` in your repositories and click on it.
+Find your copy of `CSS Proposals` in your Github repositories and click on it.
 
 ### Branches and files
 

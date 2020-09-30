@@ -33,6 +33,7 @@
   --font-mono: "OfficeCodePro",monospace;
   --radius: 4px
 }
+.desktop-nav .dropdown-content,
 a.ffs-cat {
   box-shadow: 0 1px 0 var(--bg-muted),0 1px 10px -4px hsla(var(--text-hsl),.3);
   background: var(--color-white)
@@ -1339,24 +1340,45 @@ a.btn-link:hover span.icon-blockchain {
     display: none
   }
 }
+:root {
+  --navbar-height: 4.2rem
+}
+@media only screen and (max-width:27rem) {
+  :root {
+    --navbar-height: 3.6rem
+  }
+}
 .desktop-nav {
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: 0 2px 2px rgba(0,0,0,.1);
   margin-bottom: 4rem
+}
+@media only screen and (max-width:62rem) {
+  .desktop-nav {
+    display: none
+  }
+}
+.desktop-nav nav > a {
+  display: inline-block
 }
 .desktop-nav .dropdown {
   position: relative;
   display: inline-block
 }
+.desktop-nav .dropdown label {
+  cursor: pointer
+}
+.desktop-nav .dropdown:hover > .dropdown-content {
+  opacity: 1;
+  visibility: visible
+}
 .desktop-nav .dropdown-content {
   position: absolute;
   left: 0;
-  top: 4.3rem;
+  top: calc(var(--navbar-height) + 3px);
   text-align: left;
-  background: #fff;
   width: 150%;
   box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(50,50,93,.1);
   opacity: 0;
   visibility: hidden;
   z-index: 5;
@@ -1365,9 +1387,22 @@ a.btn-link:hover span.icon-blockchain {
 .desktop-nav .dropdown-content a {
   display: block
 }
-.desktop-nav .dropdown:hover > .dropdown-content {
-  opacity: 1;
-  visibility: visible
+.desktop-nav .dropdown,
+.desktop-nav .items a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all ease-out .1s;
+  font-size: 1rem;
+  line-height: var(--navbar-height);
+  padding: 0 1.5rem;
+  cursor: pointer
+}
+@media only screen and (max-width:75rem) {
+  .desktop-nav .dropdown,
+  .desktop-nav .items a {
+    font-size: 1rem;
+    padding: 0 1.3rem
+  }
 }
 .arrow-down {
   width: 0;
@@ -1382,14 +1417,24 @@ a.btn-link:hover span.icon-blockchain {
 p.site-name {
   padding: 0
 }
+@media only screen and (max-width:62rem) {
+  p.site-name {
+    padding-left: 1rem
+  }
+}
 p.site-name a {
   font-family: var(--font);
   color: var(--text);
   display: inline-block;
   text-decoration: none;
-  line-height: 4.2rem;
+  line-height: var(--navbar-height);
   font-size: 1.2rem;
   font-weight: 500
+}
+@media only screen and (max-width:27rem) {
+  p.site-name a {
+    font-size: 1rem
+  }
 }
 p.site-name img.logo {
   width: 1.5rem;
@@ -1398,69 +1443,31 @@ p.site-name img.logo {
   position: relative;
   top: .3rem
 }
-.desktop-nav .dropdown,
-.desktop-nav .items a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: all ease-out .1s;
-  font-size: 1rem;
-  padding: 1.5rem;
-  cursor: pointer
-}
-.desktop-nav .dropdown label {
-  cursor: pointer
-}
 .desktop-nav .items a:hover,
 .topnav .topnav-list a:active,
 .topnav .topnav-list a:focus {
-  color: #a1aabb;
+  color: var(--text);
   text-decoration: none
-}
-.desktop-nav a.donate-btn {
-  background-color: #4e9965;
-  color: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 2px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-left: 1.5rem
-}
-.desktop-nav a.donate-btn:active,
-.desktop-nav a.donate-btn:focus,
-.desktop-nav a.donate-btn:hover {
-  background-color: #188039;
-  color: #fff
-}
-.white-nav {
-  margin-bottom: 1rem;
-  line-height: 1
 }
 .burger-check,
 .burger-checkdropdown {
   display: none
 }
-.white-nav > .nav-items > .nav-item.mob {
-  display: none
-}
-@media only screen and (max-width:75rem) {
-  .desktop-nav .dropdown,
-  .desktop-nav .items a {
-    font-size: 1rem;
-    padding: 1rem 1.3rem
-  }
-  .desktop-nav a.donate-btn {
-    margin-left: 1.3rem
-  }
-  .desktop-nav .dropdown-content {
-    top: 3.9rem
-  }
-  img.monero-logo {
-    width: 10rem
-  }
+.white-nav {
+  margin-bottom: 1rem;
+  line-height: 1
 }
 @media only screen and (max-width:62rem) {
-  .desktop-nav {
-    display: none
+  .white-nav {
+    line-height: .5;
+    display: flex;
+    flex-direction: column;
+    border: none
+  }
+}
+@media only screen and (max-width:48rem) {
+  .white-nav {
+    margin-bottom: 0
   }
 }
 .mob-nav {
@@ -1470,27 +1477,6 @@ p.site-name img.logo {
   display: none
 }
 @media only screen and (max-width:62rem) {
-  p.site-name {
-    padding-left: 1rem
-  }
-  p.site-name a {
-    padding: .8rem 0 .6rem 0
-  }
-  .white-nav {
-    line-height: .5;
-    display: flex;
-    flex-direction: column;
-    border: none
-  }
-  .white-nav .nav-items {
-    line-height: 1
-  }
-  .white-nav > .nav-items > .nav-item.mob {
-    display: initial
-  }
-  .nav-items {
-    display: none
-  }
   .dropdown-content {
     display: none
   }
@@ -1537,9 +1523,6 @@ p.site-name img.logo {
     transform: rotate(405deg) translateY(0) translateX(1.3px);
     transition: transform .5s ease-in-out
   }
-  .burger-check:checked ~ .nav-items {
-    display: block
-  }
   #drop1:checked ~ .dropdown-content,
   #drop2:checked ~ .dropdown-content,
   #drop3:checked ~ .dropdown-content,
@@ -1555,51 +1538,6 @@ p.site-name img.logo {
   }
   .mob-nav {
     display: flex
-  }
-  .white-nav {
-    box-shadow: 0 2px 2px rgba(0,0,0,.1)
-  }
-  .slide-in-nav {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    display: flex;
-    width: 100%;
-    background-color: #fff;
-    transition: top .5s,right .5s;
-    overflow: scroll;
-    z-index: 90
-  }
-  .slide-in-nav::-webkit-scrollbar {
-    display: none
-  }
-  .mob.bot-nav {
-    display: block;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    min-height: 3.5rem;
-    z-index: 100
-  }
-  label[for=mobile-burger] {
-    position: fixed;
-    top: 1.3rem;
-    right: 1rem;
-    z-index: 110
-  }
-  #mobile-burger:checked ~ .slide-in-nav {
-    position: fixed;
-    box-shadow: 0 0 900px 900px rgba(0,0,0,.5);
-    top: 0;
-    height: 100%
-  }
-  #mobile-burger:checked ~ body {
-    overflow: none
-  }
-  .slide-in {
-    padding-top: 3.5rem;
-    width: 100%
   }
   .mob-nav .nav-item {
     position: relative;
@@ -1620,31 +1558,9 @@ p.site-name img.logo {
     margin-left: .2rem
   }
   .mob-nav .nav-item a {
-    padding: 1rem 0 1rem 2rem
-  }
-  .mob-nav .nav-item a {
+    padding: 1rem 0 1rem 2rem;
     transition: all ease-out .2s;
     display: block
-  }
-  .mob-nav .nav-item:last-of-type a {
-    border-top: 3px solid #edeef0;
-    color: #a1aabb
-  }
-  .mob-nav .nav-item a.active .arrow-down,
-  .mob-nav .nav-item a:focus .arrow-down,
-  .mob-nav .nav-item a:hover .arrow-down,
-  .mob-nav .nav-item label.active .arrow-down,
-  .mob-nav .nav-item label:focus .arrow-down,
-  .mob-nav .nav-item label:hover .arrow-down {
-    border-top: 3px solid #ff7519
-  }
-  .mob-nav .nav-item > a,
-  .mob-nav .nav-item label {
-    text-decoration: none;
-    color: #393939;
-    cursor: pointer;
-    height: 1.9rem;
-    line-height: 2.1rem
   }
   .mob-nav .nav-item > a:active,
   .mob-nav .nav-item > a:focus,
@@ -1663,9 +1579,75 @@ p.site-name img.logo {
   }
   .mob-nav .nav-item .dropdown-content > a.active,
   .mob-nav .nav-item .dropdown-content > a:focus,
-  .mob-nav .nav-item > .dropdown-content > a:hover {
+  .mob-nav .nav-item .dropdown-content > a:hover {
     color: #ff7519;
     background-color: #f5f5f5
+  }
+  .mob-nav hr {
+    margin: .2rem 0;
+    border: none;
+    border-top: 2px solid var(--bg-muted)
+  }
+  .white-nav {
+    box-shadow: 0 2px 2px rgba(0,0,0,.1)
+  }
+  .slide-in-nav {
+    position: absolute;
+    top: -120%;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background-color: var(--color-white);
+    transition: top .5s,right .5s;
+    overflow: scroll;
+    z-index: 90
+  }
+  .slide-in-nav::-webkit-scrollbar {
+    display: none
+  }
+  .mob.bot-nav {
+    display: block;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    min-height: 3.5rem;
+    z-index: 100
+  }
+  label[for=mobile-burger] {
+    position: fixed;
+    top: 1.6rem;
+    right: 1rem;
+    z-index: 110
+  }
+  #mobile-burger:checked ~ .slide-in-nav {
+    position: fixed;
+    box-shadow: 0 0 900px 900px rgba(0,0,0,.5);
+    top: 0;
+    height: 100%
+  }
+  #mobile-burger:checked ~ body {
+    overflow: none
+  }
+  .slide-in {
+    padding-top: var(--navbar-height);
+    width: 100%
+  }
+  .mob-nav .nav-item a.active .arrow-down,
+  .mob-nav .nav-item a:focus .arrow-down,
+  .mob-nav .nav-item a:hover .arrow-down,
+  .mob-nav .nav-item label.active .arrow-down,
+  .mob-nav .nav-item label:focus .arrow-down,
+  .mob-nav .nav-item label:hover .arrow-down {
+    border-top: 3px solid #ff7519
+  }
+  .mob-nav .nav-item > a,
+  .mob-nav .nav-item label {
+    text-decoration: none;
+    color: #393939;
+    cursor: pointer;
+    height: 1.9rem;
+    line-height: 2.1rem
   }
   #drop1:checked ~ .dropdown-content,
   #drop2:checked ~ .dropdown-content,
@@ -1692,7 +1674,7 @@ p.site-name img.logo {
     text-align: center;
     width: inherit;
     margin-top: .6rem;
-    background-color: #fff
+    background-color: var(--color-white)
   }
   label[for=moblangdrop] {
     display: block;
@@ -1753,15 +1735,6 @@ p.site-name img.logo {
     text-decoration: none
   }
 }
-@media only screen and (max-width:48rem) {
-  .white-nav {
-    margin-bottom: 0
-  }
-  .burger-check:checked ~ .nav-items {
-    display: block;
-    height: 100vh
-  }
-}
 @media only screen and (max-width:30rem) {
   #mobile-burger:checked ~ .slide-in-nav {
     width: 100vw;
@@ -1769,17 +1742,8 @@ p.site-name img.logo {
   }
 }
 @media only screen and (max-width:27rem) {
-  p.site-name a {
-    font-size: 1rem;
-    padding-top: 1rem;
-    padding-bottom: .7rem
-  }
-}
-@media only screen and (max-width:21.25rem) {
-  p.site-name a {
-    font-size: .9rem;
-    padding-top: 1.1rem;
-    padding-bottom: .8rem
+  label[for=mobile-burger] {
+    top: 1.3rem
   }
 }
 body {
