@@ -21,7 +21,7 @@ layout: base
                            {% for toplevel in site.data.proposals %}
                              {% if toplevel.stage == "Work in Progress" %}
                                 {% for proposal in toplevel.proposals%}
-                                  {% if proposal.name == {{page.title}} %}
+                                  {% if proposal.name == page.title %}
                             <h2>{{page.title}}</h2>
                             <p class="author-list">{{page.author}}</p>
                             <p class="date-list">{{page.date}}</p>
