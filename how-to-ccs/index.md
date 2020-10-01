@@ -44,7 +44,6 @@ payouts:
 ---
 ```
 
-
 Remove the following if the change can be made without a network vote (hardforks require this flag to be set).
 ```
 network_vote: nvr
@@ -121,6 +120,8 @@ network_vote: nvr
 Fill this template out as follows:
 
 `layout:` Do NOT touch this field.
+
+`network_vote:` Remove this field if your proposal does not require a network vote (Only set when doing hardforks)
 
 `title:` Fill this in with a descriptive title of what your proposal wants to accomplish. Copy this field into a notepad program, as the EXACT title will be used in Step 6.
 
