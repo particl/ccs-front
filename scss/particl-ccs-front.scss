@@ -24,22 +24,23 @@ body {
 }
 
 
-.ffs {
-  padding-bottom: 3rem;
+.site-wrap { // site content wrapper
+  padding: 3rem 0;
   .info-block {
     padding: 2.5rem;
     border-radius: 2px;
   }
-  h3 {
+  h3 { // task title in card lists
     padding-top: 0;
     letter-spacing: 0;
     font-family: var(--font);
-    font-weight: 600;
-    font-size: 1.4rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5;
     text-decoration: underline;
     text-decoration-color: #a1aabb;
     text-decoration-style: dotted;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     a {
       color: #4c4c4c;
       text-decoration: underline;
