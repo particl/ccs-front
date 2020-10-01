@@ -5,7 +5,7 @@ title: How to submit a CCS proposal
 
 #### Note: Read the [What is the CCS and What Are Its Rules and Expectations](/what-is-ccs/) page before continuing!
 
-The CCS utilizes git, and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
+The CCS utilizes git and Github for proposal tracking. A quickstart guide is provided at the top for those already well-versed in git, and step-by-step instructions (with pictures) are provided afterward for those who need help getting through the process. An example proposal is provided at the bottom of this document for referential purposes.
 
 ## Table of Contents
 - [Quickstart Guide](#quickstart-guide)
