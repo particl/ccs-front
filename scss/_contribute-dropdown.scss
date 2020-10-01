@@ -66,16 +66,14 @@ input.accordion {
 
 .instructions {
    a.qr {
-      border: none;
-      border-radius: 10px;
+      border: none !important;
       display: inline-block;
       box-shadow: 0 0 5px rgba(50,50,93,.4);
-      margin-bottom: 1rem;
-      margin-top: 1rem;
+      margin: 1rem auto;
       text-decoration: none;
       img {
-         border-radius: 10px;
          vertical-align: middle;
+         width: 100%;
          max-width: 15rem;
       }
    }

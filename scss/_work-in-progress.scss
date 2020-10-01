@@ -2,7 +2,6 @@
 
 .in-progress .progress-bar {
    margin-top: 1rem;
-   margin-bottom: 0.5rem;
 }
 
 .in-progress p.bar-work-status {
@@ -136,14 +135,15 @@
 
 @media only screen and (max-width: 37rem) {
 
-   .ffs-proposal p.author-list,
-   .ffs-proposal p.date-list,
-   .ffs-proposal p.progress-number-goal,
-   .fund-required p.author-list,
-   .fund-required p.date-list {
-      padding-top: 0.9rem;
+   .ffs-proposal,
+   .fund-required {
+      p.author-list,
+      p.date-list,
+      p.progress-number-goal {
+         padding-top: 0.5rem;
+      }
    }
-      
+
    .ffs-proposal p.bar-fund-status,
    .ffs-proposal p.bar-work-status {
       padding-top: 0;
@@ -167,10 +167,4 @@
       margin-left: 0;
    }
    
-}
-
-@media only screen and (max-width: 30rem) {
-
-
-
 }

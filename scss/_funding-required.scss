@@ -13,18 +13,22 @@
    padding-top: 0.5rem;
 }
 
-.fund-required p.bar-fund-status, .ffs-proposal p.bar-fund-status, .in-progress p.bar-work-status, .ffs-proposal p.bar-work-status, .ffs-con p.bar-fund-status {
+.fund-required p.bar-fund-status,
+.ffs-proposal p.bar-fund-status,
+.in-progress p.bar-work-status,
+.ffs-proposal p.bar-work-status,
+.ffs-con p.bar-fund-status {
    padding-top: 0;
-   font-weight: bold;
+   font-weight: 500;
    font-family: var(--font);
    text-align: right;
    float: right;
    font-size: 1.2rem;
+   line-height: 1.3;
 }
 
 .fund-required .progress-bar {
    margin-top: 1rem;
-   margin-bottom: 0.5rem;
 }
 
 .fund-required a.btn-link:nth-of-type(2) {
@@ -33,11 +37,18 @@
 
 @media only screen and (max-width: 62rem) {
 
-   .fund-required p.author-list, .fund-required p.date-list, .ffs-fr p.author-list, .ffs-fr p.date-list, .ffs-con p.author-list, .ffs-con p.date-list {
+   .fund-required p.author-list,
+   .fund-required p.date-list,
+   .ffs-fr p.author-list,
+   .ffs-fr p.date-list,
+   .ffs-con p.author-list,
+   .ffs-con p.date-list {
       font-size: 1rem;
    }
 
-   .fund-required p.bar-fund-status, .ffs-fr p.bar-fund-status, .ffs-con p.bar-fund-status {
+   .fund-required p.bar-fund-status,
+   .ffs-fr p.bar-fund-status,
+   .ffs-con p.bar-fund-status {
       font-size: 1rem;
    }
 
@@ -45,7 +56,8 @@
 
 @media only screen and (max-width: 48rem) {
 
-   .fund-required p.date-list, .ffs-fr p.date-list {
+   .fund-required p.date-list,
+   .ffs-fr p.date-list {
       padding-top: 0;
    }
 
@@ -64,7 +76,9 @@
       padding-top: 0.3rem;
    }
 
-   .fund-required p.bar-fund-status, .ffs-fr p.bar-fund-status, .ffs-con p.bar-fund-status {
+   .fund-required p.bar-fund-status,
+   .ffs-fr p.bar-fund-status,
+   .ffs-con p.bar-fund-status {
       text-align: left;
       float: none;
       font-size: 1rem;
@@ -390,12 +404,17 @@
    .fund-required p.author-list, .fund-required p.date-list {
       font-size: 1rem;
    }
-      
-   .complete-proposal p.author-list, .complete-proposal p.date-list, .complete-proposal p.progress-number-goal, .complete-proposal p.date-list, .in-progress p.autor-list, .in-progress p.date-list, .in-progress p.progress-number-goal {
-      display: block;
-      margin-left: 0;
-      padding-top: 0.9rem;
-      font-size: 1rem;
+
+   .complete-proposal,
+   .in-progress {
+      p.author-list,
+      p.date-list,
+      p.progress-number-goal {
+         display: block;
+         margin-left: 0;
+         padding-top: 0.5rem;
+         font-size: 1rem;
+      }
    }
    
 }

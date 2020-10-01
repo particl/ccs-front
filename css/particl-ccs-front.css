@@ -34,14 +34,21 @@
   --radius: 4px
 }
 .desktop-nav .dropdown-content,
+.ffs a.ffs-idea,
 a.ffs-cat {
   box-shadow: 0 1px 0 var(--bg-muted),0 1px 10px -4px hsla(var(--text-hsl),.3);
   background: var(--color-white)
 }
+.ffs a.ffs-idea:active,
+.ffs a.ffs-idea:focus,
+.ffs a.ffs-idea:hover,
 a.ffs-cat:active,
 a.ffs-cat:focus,
 a.ffs-cat:hover {
-  box-shadow: 0 1px 0 var(--bg-muted),0 1px 10px -4px hsla(var(--text-hsl),.7)
+  box-shadow: 0 1px 0 var(--bg-muted),0 1px 10px -4px hsla(var(--text-hsl),.8)
+}
+a.ffs-cat .icon {
+  transition: all .17s
 }
 body,
 html {
@@ -1059,24 +1066,22 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--text)
+  color: var(--text);
+  line-height: 1.3
 }
 h1 {
   font-weight: 600;
   font-size: 2.3rem;
-  line-height: 1;
   margin: 0
 }
 h2 {
   font-weight: 600;
   font-size: 1.75rem;
-  line-height: 1.3;
   text-align: center
 }
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.3;
   padding-top: 1rem;
   margin: 1rem 0 0
 }
@@ -1090,23 +1095,6 @@ p {
 p strong {
   color: var(--text);
   font-weight: 500
-}
-h1#main-h1 {
-  font-weight: 700;
-  font-size: 3.4375rem;
-  text-transform: uppercase;
-  margin: 0;
-  line-height: 1;
-  padding: 0
-}
-h2#main-h2 {
-  font-size: 1.5625rem;
-  font-size: 1.75rem;
-  font-weight: 400;
-  margin: 1rem 0 0 0;
-  letter-spacing: .05rem;
-  line-height: 1;
-  text-align: left
 }
 .about-main h3 {
   padding-top: 0;
@@ -1350,8 +1338,7 @@ a.btn-link:hover span.icon-blockchain {
 }
 .desktop-nav {
   background-color: var(--color-white);
-  box-shadow: 0 2px 2px rgba(0,0,0,.1);
-  margin-bottom: 4rem
+  box-shadow: 0 2px 2px rgba(0,0,0,.1)
 }
 @media only screen and (max-width:62rem) {
   .desktop-nav {
@@ -1768,7 +1755,6 @@ footer .donate p {
 footer a.white {
   color: #efefef;
   text-decoration: none;
-  font-size: .9375rem;
   border-bottom: none
 }
 footer a.white:focus,
@@ -1838,9 +1824,6 @@ footer a.white.gf {
     margin-bottom: 1.5rem;
     padding-right: 1rem
   }
-  footer a.white {
-    font-size: .8rem
-  }
 }
 @media only screen and (max-width:30rem) {
   .footer-wrapper {
@@ -1857,17 +1840,48 @@ footer a.white.gf {
   }
 }
 .ffs-main .description {
-  padding: 3rem 0
+  padding: 5rem 0 8rem
+}
+@media only screen and (max-width:45rem) {
+  .ffs-main .description {
+    padding: 2rem 0 5rem
+  }
+}
+@media only screen and (max-width:30rem) {
+  .ffs-main .description {
+    padding: 0 0 3rem
+  }
 }
 .ffs-main .description h1 {
   font-size: 2.3rem;
   text-align: center;
   padding: 0 0 1.5rem
 }
+@media only screen and (max-width:48rem) {
+  .ffs-main .description h1 {
+    font-size: 2rem
+  }
+}
+@media only screen and (max-width:41rem) {
+  .ffs-main .description h1 {
+    font-size: 1.7rem
+  }
+}
+@media only screen and (max-width:30rem) {
+  .ffs-main .description h1 {
+    font-size: 1.5rem
+  }
+}
 .ffs-main .description p {
-  padding: 0 5rem;
+  padding: 0;
   text-align: center;
-  margin-bottom: 3.5rem
+  margin: 0 auto;
+  max-width: 48rem
+}
+@media only screen and (max-width:30rem) {
+  .ffs-main .description p {
+    font-size: .9rem
+  }
 }
 .ffs-main .half:nth-child(even) {
   padding-left: .5rem;
@@ -1894,6 +1908,11 @@ a.ffs-cat:focus,
 a.ffs-cat:hover {
   border: none!important
 }
+a.ffs-cat:active .icon,
+a.ffs-cat:focus .icon,
+a.ffs-cat:hover .icon {
+  transform: scale(1.05)
+}
 a.ffs-cat .icon {
   width: 8rem;
   display: block;
@@ -1912,9 +1931,6 @@ a.ffs-cat p {
   line-height: 1.6
 }
 @media only screen and (max-width:62rem) {
-  .ffs-main h1 {
-    margin: 1.5rem 0 1.3rem 0
-  }
   .ffs-main .container {
     margin-left: 1rem;
     margin-right: 1rem
@@ -1928,15 +1944,8 @@ a.ffs-cat p {
   .ffs-main a.ffs-cat p {
     font-size: .9rem
   }
-  .container.description p {
-    margin-bottom: 2rem
-  }
 }
 @media only screen and (max-width:48rem) {
-  .ffs-main h1 {
-    margin-top: 1rem;
-    font-size: 1.8rem
-  }
   .ffs-main .half:nth-child(even) {
     padding-left: 0
   }
@@ -1944,30 +1953,7 @@ a.ffs-cat p {
     padding-right: 0
   }
 }
-@media only screen and (max-width:41rem) {
-  .ffs-main h1 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem
-  }
-  .container.description p {
-    padding: 0 1.5rem;
-    font-size: .9rem;
-    margin-bottom: 2rem;
-    text-align: left
-  }
-}
 @media only screen and (max-width:30rem) {
-  h1 {
-    padding: 0 2.5rem;
-    font-size: 1.5rem;
-    line-height: 1.3
-  }
-  .container.description p {
-    padding: 0;
-    text-align: left;
-    font-size: .9rem;
-    margin-bottom: 2rem
-  }
   .ffs-main .ffs-cat .col-xs-4 {
     display: none
   }
@@ -1981,8 +1967,31 @@ a.ffs-cat p {
     border-radius: 6px
   }
 }
-.ideas h1 {
+.complete-proposal h1,
+.fund-required h1,
+.ideas h1,
+.in-progress h1 {
   display: none
+}
+@media only screen and (max-width:62rem) {
+  .complete-proposal h1,
+  .fund-required h1,
+  .ideas h1,
+  .in-progress h1 {
+    display: block;
+    text-align: center;
+    margin: -.4rem 1rem 3rem;
+    font-size: 1.7rem
+  }
+}
+@media only screen and (max-width:30rem) {
+  .complete-proposal h1,
+  .fund-required h1,
+  .ideas h1,
+  .in-progress h1 {
+    margin: -1rem 1rem 2.5rem;
+    font-size: 1.5rem
+  }
 }
 .ffs-breadcrumbs p.submit-idea {
   float: right
@@ -2008,25 +2017,24 @@ a.ffs-cat p {
   display: none
 }
 .ffs a.ffs-idea {
-  background-color: #fff;
   padding: 2.5rem;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(50,50,93,.4);
+  border-radius: var(--radius);
   margin-bottom: 1rem;
   flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   word-wrap: break-word;
   text-decoration: none;
-  color: #4c4c4c;
   transition: background .15s ease,box-shadow .15s ease;
   border-bottom: none
 }
 .ffs a.ffs-idea:active,
 .ffs a.ffs-idea:focus,
 .ffs a.ffs-idea:hover {
-  box-shadow: 0 0 10px rgba(50,50,93,.4);
   border-bottom: none
+}
+@media only screen and (max-width:62rem) {
+  .ffs a.ffs-idea {
+    margin: 0 1rem 1rem
+  }
 }
 .ffs p.author-list span img,
 .ffs p.date-list span img,
@@ -2038,20 +2046,27 @@ a.ffs-cat p {
   margin-right: .3rem;
   vertical-align: baseline
 }
+.complete-proposal p.author-list:before,
+.complete-proposal p.date-list.contributor:before,
+.complete-proposal p.date-list:before,
 .complete-proposal p.progress-number-goal:before,
 .ffs p.author-list:before,
+.ffs p.date-list.contributor:before,
 .ffs p.date-list:before,
+.ffs p.progress-number-goal:before,
 .ffs-proposal p.author-list:before,
 .ffs-proposal p.date-list.contributor:before,
 .ffs-proposal p.date-list:before,
 .ffs-proposal p.progress-number-goal:before,
+.in-progress p.author-list:before,
+.in-progress p.date-list.contributor:before,
+.in-progress p.date-list:before,
 .in-progress p.progress-number-goal:before {
   content: '';
   display: inline-block;
   height: .8rem;
   width: .8rem;
-  margin-right: .3rem;
-  vertical-align: baseline;
+  margin-right: .5rem;
   background-size: cover
 }
 .ffs p.author-list:before,
@@ -2080,7 +2095,7 @@ a.ffs-cat p {
   padding-top: 0;
   font-size: 1.1rem;
   color: #9ca1ac;
-  line-height: 0;
+  line-height: 1.3;
   display: inline;
   vertical-align: middle
 }
@@ -2104,6 +2119,22 @@ p.progress-number-goal {
 .ideas p.date-list {
   display: inline
 }
+@media only screen and (max-width:62rem) {
+  .complete-proposal p.author-list,
+  .complete-proposal p.date-list,
+  .ideas p.author-list,
+  .ideas p.date-list {
+    font-size: 1rem
+  }
+}
+@media only screen and (max-width:28rem) {
+  .complete-proposal p.author-list,
+  .complete-proposal p.date-list,
+  .ideas p.author-list,
+  .ideas p.date-list {
+    padding-top: .7rem
+  }
+}
 .complete-proposal p.date-list,
 .ideas p.date-list {
   margin-left: 2rem
@@ -2118,47 +2149,7 @@ p.progress-number-goal {
   padding-top: 0;
   text-align: right
 }
-.complete-proposal h1,
-.fund-required h1,
-.ideas h1,
-.in-progress h1 {
-  display: none
-}
-@media only screen and (max-width:62rem) {
-  .complete-proposal h1,
-  .fund-required h1,
-  .ideas h1,
-  .in-progress h1 {
-    display: initial;
-    display: block;
-    text-align: left;
-    margin: 1.5rem 1rem 1.3rem 3.5rem;
-    font-size: 2rem;
-    padding: 0
-  }
-  .ffs a.ffs-idea {
-    margin-left: 1rem;
-    margin-right: 1rem
-  }
-  .complete-proposal p.author-list,
-  .complete-proposal p.date-list,
-  .ideas p.author-list,
-  .ideas p.date-list {
-    font-size: 1rem
-  }
-}
 @media only screen and (max-width:48rem) {
-  .complete-proposal h1,
-  .fund-required h1,
-  .ideas h1,
-  .in-progress h1 {
-    font-size: 1.8rem;
-    margin-top: 1rem
-  }
-  .ffs .ffs-idea {
-    margin-left: 1rem;
-    margin-right: 1rem
-  }
   .complete-proposal p.author-list,
   .complete-proposal p.date-list,
   .ideas p.author-list,
@@ -2166,23 +2157,7 @@ p.progress-number-goal {
     padding-top: .7rem
   }
 }
-@media only screen and (max-width:41rem) {
-  .complete-proposal h1,
-  .fund-required h1,
-  .ideas h1,
-  .in-progress h1 {
-    margin-left: 2.5rem;
-    margin-bottom: .5rem;
-    font-size: 1.6rem
-  }
-}
 @media only screen and (max-width:30rem) {
-  .complete-proposal h1,
-  .fund-required h1,
-  .ideas h1,
-  .in-progress h1 {
-    margin-top: .5rem
-  }
   .complete-proposal p.author-list,
   .complete-proposal p.date-list,
   .ffs p.author-list,
@@ -2191,14 +2166,6 @@ p.progress-number-goal {
   .ideas p.date-list {
     display: block;
     margin-left: 0
-  }
-}
-@media only screen and (max-width:28rem) {
-  .complete-proposal p.author-list,
-  .complete-proposal p.date-list,
-  .ideas p.author-list,
-  .ideas p.date-list {
-    padding-top: .7rem
   }
 }
 .ffs .fund-required p.list-button a {
@@ -2217,15 +2184,15 @@ p.progress-number-goal {
 .fund-required p.bar-fund-status,
 .in-progress p.bar-work-status {
   padding-top: 0;
-  font-weight: 700;
+  font-weight: 500;
   font-family: var(--font);
   text-align: right;
   float: right;
-  font-size: 1.2rem
+  font-size: 1.2rem;
+  line-height: 1.3
 }
 .fund-required .progress-bar {
-  margin-top: 1rem;
-  margin-bottom: .5rem
+  margin-top: 1rem
 }
 .fund-required a.btn-link:nth-of-type(2) {
   margin-left: 2rem
@@ -2553,12 +2520,12 @@ p.progress-number-goal {
   .complete-proposal p.author-list,
   .complete-proposal p.date-list,
   .complete-proposal p.progress-number-goal,
-  .in-progress p.autor-list,
+  .in-progress p.author-list,
   .in-progress p.date-list,
   .in-progress p.progress-number-goal {
     display: block;
     margin-left: 0;
-    padding-top: .9rem;
+    padding-top: .5rem;
     font-size: 1rem
   }
 }
@@ -2672,17 +2639,15 @@ input.accordion:checked ~ .btn {
   color: #fff
 }
 .instructions a.qr {
-  border: none;
-  border-radius: 10px;
+  border: none!important;
   display: inline-block;
   box-shadow: 0 0 5px rgba(50,50,93,.4);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 1rem auto;
   text-decoration: none
 }
 .instructions a.qr img {
-  border-radius: 10px;
   vertical-align: middle;
+  width: 100%;
   max-width: 15rem
 }
 .instructions p.string {
@@ -2700,8 +2665,7 @@ input.accordion:checked ~ .btn {
   max-width: 40rem
 }
 .in-progress .progress-bar {
-  margin-top: 1rem;
-  margin-bottom: .5rem
+  margin-top: 1rem
 }
 .in-progress p.bar-work-status {
   padding-top: 0;
@@ -2802,8 +2766,9 @@ input.accordion:checked ~ .btn {
   .ffs-proposal p.date-list,
   .ffs-proposal p.progress-number-goal,
   .fund-required p.author-list,
-  .fund-required p.date-list {
-    padding-top: .9rem
+  .fund-required p.date-list,
+  .fund-required p.progress-number-goal {
+    padding-top: .5rem
   }
   .ffs-proposal p.bar-fund-status,
   .ffs-proposal p.bar-work-status {
@@ -2931,31 +2896,32 @@ input.accordion:checked ~ .btn {
   padding-top: 1.2rem
 }
 .progress-bar {
-  padding: .4rem;
+  padding: 3px;
+  background: var(--bg);
   position: relative;
-  margin: 1rem 0 .5rem 0;
+  margin: 1rem 0 0 0;
   border-radius: 20px;
   border: 1.5px solid #d0d4dd
+}
+@media only screen and (max-width:62rem) {
+  .progress-bar {
+    margin-top: .2rem
+  }
 }
 .progress-bar span.fund-progress,
 .progress-bar span.work-progress {
   display: block;
-  height: .8rem;
+  height: 10px;
   border-radius: 20px;
   box-shadow: inset 0 2px 9px rgba(255,255,255,.3),inset 0 -2px 6px rgba(0,0,0,.07);
   position: relative;
   overflow: hidden
 }
 .progress-bar span.fund-progress {
-  background-color: #4e9965
+  background-color: var(--color-primary)
 }
 .progress-bar span.work-progress {
-  background-color: #4e9965
-}
-@media only screen and (max-width:62rem) {
-  .progress-bar {
-    margin-top: .2rem
-  }
+  background-color: var(--color-secondary)
 }
 @media only screen and (max-width:41rem) {
   .ffs a.ffs-idea {
@@ -2967,10 +2933,7 @@ input.accordion:checked ~ .btn {
   }
   .fund-required .progress-bar,
   .in-progress .progress-bar {
-    margin-top: .3rem
-  }
-  .progress-bar {
-    padding: .2rem
+    margin-top: .5rem
   }
 }
 @media only screen and (max-width:23rem) {
@@ -2992,27 +2955,28 @@ p.if-issues {
 body {
   font-family: var(--font)
 }
-.ffs {
-  padding-bottom: 3rem
+.site-wrap {
+  padding: 3rem 0
 }
-.ffs .info-block {
+.site-wrap .info-block {
   padding: 2.5rem;
   border-radius: 2px
 }
-.ffs h3 {
+.site-wrap h3 {
   padding-top: 0;
   letter-spacing: 0;
   font-family: var(--font);
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
   text-decoration: underline;
   -webkit-text-decoration-color: #a1aabb;
   text-decoration-color: #a1aabb;
   -webkit-text-decoration-style: dotted;
   text-decoration-style: dotted;
-  margin-bottom: .5rem
+  margin-bottom: .8rem
 }
-.ffs h3 a {
+.site-wrap h3 a {
   color: #4c4c4c;
   text-decoration: underline
 }
