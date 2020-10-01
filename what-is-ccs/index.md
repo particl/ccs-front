@@ -5,9 +5,7 @@ title: What is the CCS, and what are its rules and expectations?
 
 ## Introduction
 
-The Particl project is currently funded by donations from the Particl Foundation. This has been sufficient to fund the development and management expenses of the project thus far, but there is a need for alternative sources of funding both for the long term sustainability of the project and also for further decentralization. 
-
-Additionally, the Particl community owns a Community Fund which can be used to fund initiatives once they get approved by a community vote. 
+The Particl project is currently funded by donations from the Particl Foundation. This has been sufficient to fund the development and management expenses of the project thus far, but there is a need for alternative sources of funding both for the long term sustainability of the project and also for further decentralization.  
 
 This is why Particl has adopted the Community Crowdfunding System (CCS), a fork of the Monero/Zcoin Crowdfunding System (CCS framework) to which on-chain voting capabilities have been added. This system can be used to both crowdfund initiatives and push proposals to the Particl community.
 
