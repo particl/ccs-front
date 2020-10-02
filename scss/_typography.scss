@@ -1,0 +1,228 @@
+
+h1, h2, h3, h4, h5, h6, p {
+   margin: 0; padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   color: var(--text);
+   line-height: 1.3;
+}
+
+h1 {
+   font-weight: 600;
+   font-size: 2.3rem;
+   margin: 0;
+}
+
+h2 {
+   font-weight: 600;
+   font-size: 1.75rem;
+   text-align: center;
+}
+
+h3 {
+   font-size: 1.5rem;
+   font-weight: 500;
+   padding-top: 1rem;
+   margin: 1rem 0 0;
+}
+
+h4 {
+   padding-top: 1rem;
+}
+
+p {
+   color: var(--text-muted);
+   padding-top: 1rem;
+   strong {
+      color: var(--text);
+      font-weight: 500;
+   }
+}
+/*
+h1#main-h1 {
+   font-weight: 700;
+   font-size: 3.4375rem;
+   text-transform: uppercase;
+   margin: 0;
+   line-height: 1;
+   padding: 0;
+}
+
+
+h2#main-h2 {
+   font-size: 1.5625rem;
+   font-size: 1.75rem;
+   font-weight: 400;
+   margin: 1rem 0 0 0;
+   letter-spacing: 0.05rem;
+   line-height: 1;
+   text-align: left;
+}
+*/
+
+.about-main h3 {
+   padding-top: 0;
+   font-weight: 600;
+   line-height: 1.7;
+   font-size: 1.15rem;
+   letter-spacing: normal;
+}
+
+.info-block h2 {
+   margin-top: 4rem;
+   margin-bottom: 1rem;
+   margin-bottom: 0;
+}
+
+.info-block h2:first-child,
+h3:first-child,
+h3:first-of-type {
+   margin-top: 0;
+}
+
+.events h3 {
+   margin-top: 1rem;
+}
+
+
+
+.pre-roadmap p {
+   margin-bottom: 2.5rem;
+}
+
+.hangouts ul {
+   margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 75rem) {
+
+   h1#main-h1 {
+      font-size: 2.4rem;
+      margin: 0;
+      line-height: 1;
+   }
+
+   h2#main-h2 {
+      font-size: 1.25rem;
+      margin: 0.5rem 0 0 0;
+   }
+
+   h2,
+   .info-block h2 {
+      font-size: 23px;
+      font-size: 	1.5625rem;
+      margin-bottom: 0;
+   }
+
+   h3 {
+      font-size: 19px;
+      font-size: 1.25rem;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+   }
+
+}
+
+@media only screen and (max-width: 62rem) {
+
+   h1 {
+      margin: 0.5rem 0 1rem 0;
+   }
+
+   .pre-roadmap p,
+   .container.description p {
+      margin-bottom: 1.5rem;
+      margin-top: -1rem;
+   }
+
+   h1#main-h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin: 0;
+   }
+
+   h2#main-h2 {
+      font-size: 1.25rem;
+      margin: 1rem 0 0 0;
+   }
+
+   h2,
+   .info-block h2 {
+      font-size: 23px;
+      font-size: 	1.5625rem;
+      margin-bottom: 0;
+   }
+
+   h3 {
+      font-size: 20px;
+      font-size: 1.25rem;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+   }
+
+   p {
+      padding-top: 1rem;
+   }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+   h1#main-h1 {
+      font-size: 3rem;
+   }
+      
+   h2 {
+      font-size: 1.4rem; 
+   }
+
+   h1 {
+      font-size: 1.8rem;
+      padding: 0.3rem;
+      margin: 0.5rem 0;
+   }
+
+   .about-main h3 {
+      padding-top: 1rem;
+   }
+
+   .container.description p {
+      padding: 0 2rem;
+   }
+
+   .pre-roadmap p,
+   .container.description p {
+      margin-bottom: 1rem;
+      margin-top: -0.5rem;
+   }
+
+}
+
+@media only screen and (max-width: 47.9rem) {
+
+
+
+}
+
+
+
+@media only screen and (max-width: 30rem) {
+
+   h1#main-h1 {
+      font-size: 2.5rem;
+   }
+
+   h2#main-h2 {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+   }
+
+   h2,
+   .info-block h2 {
+      font-size: 1.4rem;
+   }
+
+}

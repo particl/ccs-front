@@ -1,0 +1,104 @@
+@import "config";
+@import "general";
+@import "flexbox";
+@import "grid";
+@import "fonts";
+@import "typography";
+@import "buttons";
+@import "navigation";
+@import "footer";
+
+// Pages
+@import "homepage";
+@import "ideas";
+@import "funding-required";
+@import "contribute-dropdown";
+@import "work-in-progress";
+@import "completed";
+
+
+
+body {
+  font-family: var(--font);
+}
+
+
+.site-wrap { // site content wrapper
+  padding: 3rem 0;
+  .info-block {
+    padding: 2.5rem;
+    border-radius: 2px;
+  }
+  h3 { // task title in card lists
+    padding-top: 0;
+    letter-spacing: 0;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-color: #a1aabb;
+    text-decoration-style: dotted;
+    margin-bottom: 0.8rem;
+    a {
+      color: #4c4c4c;
+      text-decoration: underline;
+    }
+  }
+  h2 {
+    &.proposal-detail-title { // task title in task detail page
+      font-size: 1.55rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      @include break-max(42rem) { font-size: 1.35rem; }
+    }
+  }
+}
+
+
+.ffs a,
+.ffs-proposal a,
+.ffs-main a {
+  color: #000;
+  border-bottom: 1px dotted #a1aabb;
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid #a1aabb;
+    text-decoration: none;
+  }
+}
+
+// --------- DONATION SECTIONS --------- //
+
+// Donate page + Contribute "form" for Proposals
+.donate-contribute {
+  text-align: center;
+  .qr-code {
+    border: none !important;
+    display: inline-block;
+    box-shadow: 0 0 5px rgba(50,50,93,.4);
+    margin: 1rem auto;
+    text-decoration: none;
+    img {
+       vertical-align: middle;
+       width: 100%;
+       max-width: 15rem;
+    }
+  }
+  .address-string {
+    background-color: #edeff2;
+    padding: 1.5rem 2.4rem;
+    margin: 2rem 0 1rem;
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--text);
+    display: inline-block;
+    user-select: all;
+  }
+  small {
+    display: inline-block;
+    max-width: 34rem;
+    margin: 2rem auto 0;
+  }
+}

@@ -1,0 +1,129 @@
+// ----- HOMEPAGE ----- //
+
+.ffs-main {
+   .description {
+      padding: 5rem 0 8rem;
+      @include break-max(45rem) { padding: 2rem 0 5rem; }
+      @include break-max(30rem) { padding: 0 0 3rem; }
+      h1 { // homepage title
+         font-size: 2.3rem;
+         text-align: center;
+         padding: 0 0 1.5rem;
+         @include break-max(48rem) { font-size: 2rem; }
+         @include break-max(41rem) { font-size: 1.7rem; }
+         @include break-max(30rem) { font-size: 1.5rem; }
+      }
+      p {
+         padding: 0;
+         text-align: center;
+         margin: 0 auto;
+         max-width: 48rem;
+         @include break-max(30rem) { font-size: 0.9rem; }
+      }
+   }
+   .half {
+      &:nth-child(even) {
+         padding-left: 0.5rem;
+         padding-right: 0;
+      }
+      &:nth-child(odd) {
+         padding-right: 0.5rem;
+         padding-left: 0;
+      }
+   }
+}
+
+
+// step "cards"
+a.ffs-cat {
+   @extend %card;
+   padding: 2.5rem;
+   border: none !important;
+   border-radius: var(--radius);
+   margin-bottom: 1rem;
+   flex: 1;
+   word-wrap: break-word;
+   text-decoration: none;
+   color: #4c4c4c;
+   transition: background .15s ease, box-shadow .15s ease;
+   align-items: center;
+   &:hover,
+   &:focus,
+   &:active {
+      @extend %card-hover;
+      border: none !important;
+      .icon {
+         transform: scale(1.05);
+      }
+   }
+   .icon { // illustrations in steps
+      @extend %tfx;
+      width: 8rem;
+      display: block;
+      margin: 0 auto;
+   }
+   .col-sm-8 { // text part in step card
+      padding-right: 1rem;
+   }
+   h2 {
+      text-align: left;
+      font-size: 1.5rem;
+   }
+   p {
+      padding-top: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+   }
+}
+
+
+
+@media only screen and (max-width: 62rem) {
+   .ffs-main .container {
+      margin-left: 1rem;
+      margin-right: 1rem;
+   }
+
+   .ffs-main a.ffs-cat {
+      padding: 1.5rem;
+   }
+
+   .ffs-main a.ffs-cat h2 {
+      font-size: 1.3rem;
+   }
+
+   .ffs-main a.ffs-cat p {
+      font-size: 0.9rem;
+   }
+}
+
+
+@media only screen and (max-width: 48rem) {
+   .ffs-main .half:nth-child(even) {
+      padding-left: 0;
+   }
+
+   .ffs-main .half:nth-child(odd) {
+      padding-right: 0;
+   }
+}
+
+@media only screen and (max-width: 30rem) {
+
+   .ffs-main .ffs-cat .col-xs-4 {
+      display: none;
+   }
+
+   .ffs-main .ffs-cat .col-xs-8 {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-left: 0;
+   }
+
+   .ffs-main a.ffs-cat {
+      border: none;
+      border-radius: 6px;
+   }
+
+}

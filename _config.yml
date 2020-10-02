@@ -1,9 +1,11 @@
-email: dev@getmonero.org
-name: Monero
-description: Monero is a digital currency that is secure, private, and untraceable.
-keywords: "monero, xmr, bitmonero, cryptocurrency"
+email: hello@particl.io
+name: Particl
+description: Particl is a private and censorship-resistant eCommerce platform built on blockchain and peer-to-peer technology.
+keywords: "particl, part, blockchain, cryptocurrency"
 baseurl: ""
-url: "https://getmonero.org"
+url: "https://particl.io/"
+
+donation-address: "$$$-donation-$$$-addy-$$$-here-$$$"
 
 markdown: kramdown
 

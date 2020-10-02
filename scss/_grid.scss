@@ -1,0 +1,104 @@
+.info-block {
+    margin-bottom: 1rem;
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    padding: 4rem 2.5rem;
+    word-wrap: break-word;
+}
+
+.full>.info-block.text-adapt {
+    padding: 4rem 15rem;
+}
+
+.guides .info-block {
+    word-break:keep-all;
+}
+
+.left.two-thirds, .left.one-third, .left.half, .left.one-fourth, .left.three-fourths {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    padding-right: 0.5rem;
+}
+
+.right.two-thirds, .right.one-third, .right.half, .right.one-fourth, .right.three-fourths {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    padding-left: 0.5rem;
+}
+
+.half {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+.center.one-third, .center-1.one-fourth, .center-2.one-fourth {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 75rem) {
+
+    .info-block {
+        padding: 3rem 2rem;
+    }
+
+    .full>.info-block.text-adapt {
+        padding: 4rem 10rem;
+    }
+
+}
+
+@media only screen and (max-width: 62rem) {
+
+    .container.full {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .info-block {
+        padding: 2.5rem 1.8rem;
+    }
+
+    .full>.info-block.text-adapt {
+        padding: 4rem;
+    }
+
+    .center.one-fourth, .right.three-fourths, .left.three-fourths, .left.one-fourth.no-pad-sm, .right.one-fourth.no-pad-sm, .right.half, .left.half, .right.one-third, .left.two-thirds, .left.one-third, .right.two-thirds, .center.one-third {
+        padding-left: 0; padding-right: 0;
+    }
+
+    .center-1.one-fourth {padding-left: 0.5rem; padding-right: 0;}
+
+    .center-2.one-fourth {
+        padding-right: 0.5rem; padding-left: 0;
+    }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+    .left.two-thirds, .left.one-third, .left.half, .left.one-fourth, .left.three-fourths, .right.two-thirds, .right.one-third, .center.one-third, .center-1.one-fourth, .center-2.one-fourth, .right.half, .right.one-fourth, .right.three-fourths {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .info-block {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 30rem) {
+
+    .info-block{
+        padding: 2rem 1rem;
+    }
+
+}
