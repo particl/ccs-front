@@ -44,13 +44,13 @@ footer {
       line-height: 1.7;
    }
    .gf-address {
-      background-color: #dadbdd;
-      color: #4c4c4c;
-      font-weight: bold;
+      background-color: var(--bg-black);
+      color: var(--color-primary);
+      font-family: var(--font-mono);
       word-wrap: break-word;
       padding: 1.5rem;
       margin-top: 1.5rem;
-      box-shadow: 0 0 10px rgba(28,30,34,.6);
+      box-shadow: 0 0 24px hsla(var(--bg-hsl),0.05);
       border-radius: 2px;
       user-select: all;
    }
