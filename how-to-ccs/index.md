@@ -22,7 +22,7 @@ The CCS utilizes git and Github for proposal tracking. A quickstart guide is pro
 ```
 ---
 layout: fr
-network_vote: nvr
+network_vote: no
 title:
 author:
 date:
@@ -44,10 +44,6 @@ payouts:
 ---
 ```
 
-Remove the following if the change can be made without a network vote (hardforks require this flag to be set).
-```
-network_vote: nvr
-```
 
 5. Underneath the front matter, write the rest of your proposal. Be sure to include what the proposal is about, who will be completing it, why it is important for the community, the milestones and projected timeline, and an expiration date for your proposal.
 6. Save, commit, and make a Merge Request to the repo. Your MR title must be descriptive and relevant to your proposal. The MR description should be copy/pasted from the proposal contents for easy viewing (front matter excluded).
