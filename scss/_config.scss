@@ -39,12 +39,18 @@ $break-xhd: 2200px;
 
    --color-primary: hsl(152, 62%, 55%);
    --color-primary-hsl: 152, 62%, 55%;
+   --color-primary-darker:hsl(152, 82%, 40%);
+   --color-primary-darker-hsl: 152, 82%, 40%;
 
    --color-secondary: hsl(201, 83%, 47%);
    --color-secondary-hsl: 201, 83%, 47%;
+   --color-secondary-darker: hsl(201, 100%, 38%);
+   --color-secondary-darker-hsl: 201, 100%, 38%;
 
-   --color-tertiary: hsl(250, 39%, 47%);
-   --color-tertiary-hsl: 250, 39%, 47%;
+   --color-tertiary: hsl(250, 46%, 54%);
+   --color-tertiary-hsl: 250, 46%, 54%;
+   --color-tertiary-darker: hsl(250, 39%, 47%);
+   --color-tertiary-darker-hsl: 250, 39%, 47%;
 
    // --- Status colors --- //
 

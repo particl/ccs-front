@@ -264,13 +264,16 @@
    margin-top: 0;
 }
 
-.panel-segment p, .panel-segment ul li, .panel-segment ol li, .dongf p {
+.panel-segment p,
+.panel-segment ul li,
+.panel-segment ol li,
+.dongf p {
    padding-top: 1rem;
-   font-size: 1.1rem;
    line-height: 1.7;
 }
 
-.panel-segment ul, .panel-segment ol {
+.panel-segment ul,
+.panel-segment ol {
    padding-top: 0;
    padding-bottom: 0;
    margin-top: 0;
@@ -352,7 +355,9 @@
       margin-top: 2.5rem;
    }
 
-   .panel-segment p, .panel-segment ul li, .panel-segment ol li {
+   .panel-segment p,
+   .panel-segment ul li,
+   .panel-segment ol li {
       padding-top: 0.5rem;
    }
    
@@ -378,7 +383,10 @@
       padding-top: 2rem;
    }
 
-   .panel-segment p, .panel-segment ul li, .panel-segment ol li, .dongf p {
+   .panel-segment p,
+   .panel-segment ul li,
+   .panel-segment ol li,
+   .dongf p {
       font-size: 1rem;
    }
       
@@ -446,7 +454,7 @@
    }
    
    .panel-segment ul {
-      padding-left: 0;
+      padding-left: 1.5rem;
    }
 
 }

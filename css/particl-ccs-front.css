@@ -1,10 +1,16 @@
 :root {
   --color-primary: hsl(152, 62%, 55%);
   --color-primary-hsl: 152,62%,55%;
+  --color-primary-darker: hsl(152, 82%, 40%);
+  --color-primary-darker-hsl: 152,82%,40%;
   --color-secondary: hsl(201, 83%, 47%);
   --color-secondary-hsl: 201,83%,47%;
-  --color-tertiary: hsl(250, 39%, 47%);
-  --color-tertiary-hsl: 250,39%,47%;
+  --color-secondary-darker: hsl(201, 100%, 38%);
+  --color-secondary-darker-hsl: 201,100%,38%;
+  --color-tertiary: hsl(250, 46%, 54%);
+  --color-tertiary-hsl: 250,46%,54%;
+  --color-tertiary-darker: hsl(250, 39%, 47%);
+  --color-tertiary-darker-hsl: 250,39%,47%;
   --color-success: var(--color-primary);
   --color-success-hsl: var(--color-primary-hsl);
   --color-alert: hsl(358, 68%, 50%);
@@ -1041,7 +1047,7 @@ label.upgrade-x:after {
   font-family: OfficeCodePro;
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/OfficeCodePro-Regular.woff2) format("woff2"),url(../fonts/OfficeCodePro-Regular.woff) format("woff")
+  src: url(../fonts/OfficeCodePro-Medium.woff2) format("woff2"),url(../fonts/OfficeCodePro-Medium.woff) format("woff")
 }
 @font-face {
   font-family: icons;
@@ -1771,13 +1777,13 @@ footer a.white.gf {
   line-height: 1.7
 }
 .footer-wrapper .gf-address {
-  background-color: #dadbdd;
-  color: #4c4c4c;
-  font-weight: 700;
+  background-color: var(--bg-black);
+  color: var(--color-primary);
+  font-family: var(--font-mono);
   word-wrap: break-word;
   padding: 1.5rem;
   margin-top: 1.5rem;
-  box-shadow: 0 0 10px rgba(28,30,34,.6);
+  box-shadow: 0 0 24px hsla(var(--bg-hsl),.05);
   border-radius: 2px;
   -webkit-user-select: all;
   -moz-user-select: all;
@@ -2405,7 +2411,6 @@ p.progress-number-goal {
 .panel-segment p,
 .panel-segment ul li {
   padding-top: 1rem;
-  font-size: 1.1rem;
   line-height: 1.7
 }
 .panel-segment ol,
@@ -2550,50 +2555,7 @@ p.progress-number-goal {
     padding-left: 1rem
   }
   .panel-segment ul {
-    padding-left: 0
-  }
-}
-.ffs-con .con-how p {
-  word-wrap: break-word
-}
-.ffs-con p.string {
-  background-color: #edeff2;
-  padding: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  -webkit-touch-callout: all;
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-  user-select: all
-}
-.ffs-con .qr,
-.ffs-con .qr:active,
-.ffs-con .qr:focus,
-.ffs-con .qr:hover {
-  border: none;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 0 20px rgba(50,50,93,.4);
-  margin-bottom: 1rem;
-  margin-top: 1rem
-}
-.ffs-con .qr img {
-  border-radius: 10px;
-  vertical-align: middle;
-  max-width: 15rem
-}
-@media (max-width:600px) {
-  .ffs-con .panel {
-    display: initial
-  }
-  .ffs-con .input + .label,
-  .ffs-con .input:checked + .label {
-    display: none
-  }
-  .ffs-con .qr img {
-    max-width: 100%
+    padding-left: 1.5rem
   }
 }
 .tab {
@@ -2638,45 +2600,29 @@ input.accordion:checked ~ .btn {
   background-color: var(--color-secondary);
   color: #fff
 }
-.instructions a.qr {
-  border: none!important;
-  display: inline-block;
-  box-shadow: 0 0 5px rgba(50,50,93,.4);
-  margin: 1rem auto;
-  text-decoration: none
-}
-.instructions a.qr img {
-  vertical-align: middle;
-  width: 100%;
-  max-width: 15rem
-}
-.instructions p.string {
-  color: var(--text);
-  font-size: 1.1rem;
-  font-family: var(--font-mono);
-  background-color: #edeff2;
-  padding: 1.5rem;
-  margin: 1.5rem auto .5rem;
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
-  border-radius: var(--radius);
-  max-width: 40rem
-}
 .in-progress .progress-bar {
   margin-top: 1rem
 }
 .in-progress p.bar-work-status {
   padding-top: 0;
-  font-weight: 700
+  font-weight: 500
+}
+@media only screen and (max-width:75rem) {
+  .in-progress p.bar-work-status {
+    text-align: left;
+    float: none;
+    display: block;
+    margin-top: 1rem
+  }
+}
+@media only screen and (max-width:62rem) {
+  .in-progress p.bar-work-status {
+    font-size: 1rem
+  }
 }
 @media only screen and (max-width:62rem) {
   .in-progress p.author-list,
   .in-progress p.date-list {
-    font-size: 1rem
-  }
-  .in-progress p.bar-work-status {
     font-size: 1rem
   }
 }
@@ -2722,14 +2668,6 @@ input.accordion:checked ~ .btn {
 .ffs-cp p.bar-work-status:after,
 .ffs-wip p.bar-work-status:after {
   clear: both
-}
-@media only screen and (max-width:75rem) {
-  .in-progress p.bar-work-status {
-    text-align: left;
-    float: none;
-    display: block;
-    margin-top: 1rem
-  }
 }
 @media only screen and (max-width:62rem) {
   .ffs-proposal p.author-list,
@@ -2908,20 +2846,17 @@ input.accordion:checked ~ .btn {
     margin-top: .2rem
   }
 }
-.progress-bar span.fund-progress,
-.progress-bar span.work-progress {
+.progress-bar span {
   display: block;
   height: 10px;
   border-radius: 20px;
   box-shadow: inset 0 2px 9px rgba(255,255,255,.3),inset 0 -2px 6px rgba(0,0,0,.07);
   position: relative;
-  overflow: hidden
+  overflow: hidden;
+  background: linear-gradient(to right,var(--color-secondary) 0,var(--color-tertiary) 100%)
 }
-.progress-bar span.fund-progress {
-  background-color: var(--color-primary)
-}
-.progress-bar span.work-progress {
-  background-color: var(--color-secondary)
+.progress-bar span.completed {
+  background: linear-gradient(to right,var(--color-primary) 0,var(--color-primary-darker) 100%)
 }
 @media only screen and (max-width:41rem) {
   .ffs a.ffs-idea {
@@ -2980,6 +2915,16 @@ body {
   color: #4c4c4c;
   text-decoration: underline
 }
+.site-wrap h2.proposal-detail-title {
+  font-size: 1.55rem;
+  font-weight: 500;
+  margin-bottom: 1rem
+}
+@media only screen and (max-width:42rem) {
+  .site-wrap h2.proposal-detail-title {
+    font-size: 1.35rem
+  }
+}
 .ffs a,
 .ffs-main a,
 .ffs-proposal a {
@@ -2997,4 +2942,37 @@ body {
 .ffs-proposal a:hover {
   border-bottom: 1px solid #a1aabb;
   text-decoration: none
+}
+.donate-contribute {
+  text-align: center
+}
+.donate-contribute .qr-code {
+  border: none!important;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(50,50,93,.4);
+  margin: 1rem auto;
+  text-decoration: none
+}
+.donate-contribute .qr-code img {
+  vertical-align: middle;
+  width: 100%;
+  max-width: 15rem
+}
+.donate-contribute .address-string {
+  background-color: #edeff2;
+  padding: 1.5rem 2.4rem;
+  margin: 2rem 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text);
+  display: inline-block;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all
+}
+.donate-contribute small {
+  display: inline-block;
+  max-width: 34rem;
+  margin: 2rem auto 0
 }

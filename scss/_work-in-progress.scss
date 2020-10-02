@@ -6,17 +6,22 @@
 
 .in-progress p.bar-work-status {
    padding-top: 0;
-   font-weight: bold;
+   font-weight: 500;
+   @include break-max(75rem) {
+      text-align: left;
+      float: none;
+      display: block;
+      margin-top: 1rem;
+   }
+   @include break-max(62rem) {
+      font-size: 1rem;
+   }
 }
 
 @media only screen and (max-width: 62rem) {
 
    .in-progress p.author-list,
    .in-progress p.date-list {
-      font-size: 1rem;
-   }
-
-   .in-progress p.bar-work-status {
       font-size: 1rem;
    }
 
@@ -34,8 +39,6 @@
 @media only screen and (max-width: 41rem) {
 
    .in-progress .between-xs {
-      -ms-flex-pack: start;
-      -webkit-box-pack: start;
       justify-content: flex-start;
       text-align: start;
    }
@@ -82,16 +85,6 @@
    clear: both;
 }
 
-@media only screen and (max-width: 75rem) {
-   
-   .in-progress p.bar-work-status {
-      text-align: left;
-      float: none;
-      display: block;
-      margin-top: 1rem;
-   }    
-   
-}
 
 
 @media only screen and (max-width: 62rem) {

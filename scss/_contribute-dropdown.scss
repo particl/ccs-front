@@ -32,8 +32,6 @@ label.accordion {
    overflow:hidden;
    height:0;
    padding: 0;
-   -webkit-transition: all .5s ease;
-   -moz-transition: all .5s ease;
    transition: all .5s ease;
    padding: 0 1rem;
 }
@@ -60,32 +58,5 @@ input.accordion {
       box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
       background-color: var(--color-secondary);
       color: #ffffff;
-   }
-}
-
-
-.instructions {
-   a.qr {
-      border: none !important;
-      display: inline-block;
-      box-shadow: 0 0 5px rgba(50,50,93,.4);
-      margin: 1rem auto;
-      text-decoration: none;
-      img {
-         vertical-align: middle;
-         width: 100%;
-         max-width: 15rem;
-      }
-   }
-   p.string {
-      color: var(--text);
-      font-size: 1.1rem;
-      font-family: var(--font-mono);
-      background-color: #edeff2;
-      padding: 1.5rem;
-      margin: 1.5rem auto 0.5rem;
-      user-select: all;
-      border-radius: var(--radius);
-      max-width: 40rem;
    }
 }
