@@ -6,7 +6,7 @@ title: Particl Community Crowdfunding
   <div class="container description">
     <h1>{{page.title}}</h1>
     <p>
-      <a href="https://particl.io" target="_blank">Particl</a> is a decentralized community-driven project, and the CCS is a way for members to get involved and proposals to be funded. Learn more about <a href="{{site.baseurl}}/what-is-zcs/">what it is and what the rules are</a> and <a href="{{site.baseurl}}/how-to-zcs/">how to submit your own proposal</a> or idea.
+      <a href="https://particl.io" target="_blank">Particl</a> is a decentralized community-driven project, and the CCS is a way for members to get involved and proposals to be funded. Learn more about <a href="{{site.baseurl}}/what-is-ccs/">what it is and what the rules are</a> and <a href="{{site.baseurl}}/how-to-ccs/">how to submit your own proposal</a> or idea.
     </p>
   </div>
   <section class="container">

@@ -44,7 +44,6 @@ payouts:
 ---
 ```
 
-
 5. Underneath the front matter, write the rest of your proposal. Be sure to include what the proposal is about, who will be completing it, why it is important for the community, the milestones and projected timeline, and an expiration date for your proposal.
 6. Save, commit, and make a Merge Request to the repo. Your MR title must be descriptive and relevant to your proposal. The MR description should be copy/pasted from the proposal contents for easy viewing (front matter excluded).
 7. You're done. Go start letting people know about your proposal.
@@ -85,7 +84,7 @@ Before you begin writing your proposal, however, you must copy the following tem
 ```
 ---
 layout: fr
-network_vote: nvr
+network_vote: no
 title:
 author:
 date:
@@ -108,16 +107,12 @@ payouts:
 ```
 
 
-Remove the following if the change can be made without a network vote (hardforks require this flag to be set).
-```
-network_vote: nvr
-```
 
 Fill this template out as follows:
 
 `layout:` Do NOT touch this field.
 
-`network_vote:` Remove this field if your proposal does not require a network vote (Only set when doing hardforks)
+`network_vote:` Change value to 'yes' in this field if your proposal requires a network vote (Only set when doing hardforks)
 
 `title:` Fill this in with a descriptive title of what your proposal wants to accomplish. Copy this field into a notepad program, as the EXACT title will be used in Step 6.
 
