@@ -2976,3 +2976,9 @@ body {
   max-width: 34rem;
   margin: 2rem auto 0
 }
+.post-page img {
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-muted);
+  margin: 1rem 0 .5rem;
+  box-shadow: 0 1px 12px hsla(var(--bg-muted-hsl),.3)
+}
