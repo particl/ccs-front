@@ -56,25 +56,39 @@ payouts:
 
 First things first, you're going to need an account on [Github](https://github.com). Register for an account (use a strong password), and then navigate to the [CCS Proposals repo](https://github.com/particl/ccs-proposals). Click the "Fork" button.
 
-![Click this fork button](/img/how-to/fork.png)
+![Click this fork button](/img/how-to/01-fork.png)
 
 You should see the "Forking particl/ccs-proposals" message.
 
-![Fork success](/img/how-to/fork-success.png)
+![Fork success](/img/how-to/02-fork-success.png)
 
 When completed, you should see the repository under your username, indicating a successful fork.
 
-![Fork success 2](/img/how-to/fork-success2.png)
+![Fork success 2](/img/how-to/03-fork-success2.png)
 
 ### 2. Branches
 
 If you're not familiar with git, then this next step might not make a lot of sense to you, but it is common and recommended practice for users of git and Github. Basically, just do this, even if you don't understand it. It makes the maintainer's lives a lot simpler.
 
-Click on Branch: master. ![Click on Branches](/img/how-to/branches.png) Enter the name of the new branch in the "Find or create a branch" field, then click on Create Branch. The new branch name should be something similar to your proposal. No spaces are allowed. ![Click on New Branch.](/img/how-to/new-branch.png) You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it. ![Hooray! You're on your new branch.](/img/how-to/new-branch-success.png)
+Click on Branch: main.
+
+![Click on Branches](/img/how-to/04-branches.png)
+
+Enter the name of the new branch in the "Find or create a branch" field, then click on Create Branch. The new branch name should be something similar to your proposal. No spaces are allowed.
+
+![Click on New Branch.](/img/how-to/05-new-branch.png)
+
+You should be taken back to your repository, but now on the new branch, as evidenced by seeing the name of your new branch on the screen. A screenshot is provided below to show where you would see it.
+
+![Hooray! You're on your new branch.](/img/how-to/06-new-branch-success.png)
 
 ### 3. Make the proposal file
 
-From here, you're going to click on the "Create new file button" in your new proposal branch. ![Plus button](/img/how-to/new-file.png) On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if Sandra was to make a proposal asking for funding so I can make videos for Particl, I might title the file `sandra-make-videos-for-particl.md`.
+From here, you're going to click on the "Create new file button" in your new proposal branch.
+
+![Plus button](/img/how-to/07-new-file.png)
+
+On this new screen, fill in the "Name your file..." field with a descriptive title that includes your name, or online handle, is relevant to your proposal, and ends in `.md`. As an example, if you want to make a proposal asking for funding so you can make promotional videos for Particl, you might name the file `part-promo-videos.md`.
 
 
 ### 4. Front matter
@@ -106,7 +120,7 @@ payouts:
 ---
 ```
 
-
+![Adding a Proposal template](/img/how-to/08-writing-proposal.png)
 
 Fill this template out as follows:
 
@@ -144,7 +158,7 @@ milestones:
     status: unfinished
 ```
 
-EXACT FORMATTING MUST BE PRESERVED WITH THE SPACING. Otherwise the proposal will not work. It's the way Jekyll (on which this is built) functions. The dashes must be two spaces from the left margin.
+**EXACT FORMATTING MUST BE PRESERVED WITH THE SPACING**. Otherwise the proposal will not work. It's the way Jekyll (on which this is built) functions. The dashes must be two spaces from the left margin.
 
 Fill in the `name:` field with the name of the Milestone (for example: Complete Video 1), and the `funds:` field with the amount of PART you expect to receive for completing the milestones. Do not touch the `done:` or `status:` fields. Repeat until all the `name:` and `funds:` fields are filled in. If this confuses you, please scroll to the end of the page for an example of all of this correctly filled out.
 
@@ -164,13 +178,17 @@ It is recommended that after your proposal is written, you copy and paste it (mi
 
 After all of this is done, click the green "Commit new file" button at the bottom.
 
+![Commiting changes to a new Proposal](/img/how-to/09-commiting-changes.png)
+
 ### 6. Make a Merge Request
 
 After you click "Commit new file", you will be taken to your branch where you can see the newly created file. You should also see a "Compare & pull request" button or just "Pull request" button. Click on it to start the pull request.
 
-![File creation success and merge request button](/img/how-to/mr.png)
+![File creation success and merge request button](/img/how-to/10-mr.png)
 
-You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the "Leave a comment" text box, paste in the proposal EXACTLY AS IT APPEARS IN YOUR .md file, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort. ![Fill in title and description fields](/img/how-to/submit-mr.png)
+You will see a screen with a few things to fill out. In the Title field, put the same title that you used in the front matter of your proposal. In the "Leave a comment" text box, paste in the proposal **EXACTLY AS IT APPEARS IN YOUR .md FILE**, minus the front matter. If you followed Step 5, you should have it in a notepad program of some sort.
+
+![Fill in title and description fields](/img/how-to/11-submit-mr.png)
 
 After this is done, scroll down, and click the green Create pull request button at the bottom left of the page. You should be taken to the Pull Request page for your proposal.
 
@@ -218,16 +236,24 @@ Often times, through community critique and feedback, it is necessary to edit a 
 
 ### Navigate to your CCS Proposals repository
 
-Find your copy of `CSS Proposals` in your Github repositories and click on it.
+Find your copy of `CCS Proposals` in your Github repositories and click on it.
 
 ### Branches and files
 
-Locate the dropdown with all of your active branches, click it, and select the branch on which your proposal was made. ![Branches dropdown](/img/how-to/edit-find-branch.png)
+Locate the dropdown with all of your active branches, click it, and select the branch on which your proposal was made. 
+
+![Branches dropdown](/img/how-to/12-edit-find-branch.png)
 
 Once you are on the page with the correct branch, as evidenced by the name of the branch showing (see the last screenshot in step 2 of the step-by-step instruction to see where) find and select the file of your proposal (this is why descriptive branch and file names are important).
 
 ### Editing the file
 
-Once you are on the page of your file, on the upper right corner should be an Edit button. ![Edit button](/img/how-to/edit-edit-button.png) Select this and you should be taken to the editing screen. Amend the proposal as needed (remember to edit the front matter too if any of those variables are changing), and press the green Commit Changes button at the bottom.
+Once you are on the page of your file, on the upper right corner should be an Edit button.
 
-**Warning! Not only the changes but THE FACT that you made changes will be visible to EVERYONE! You CANNOT stealth edit your proposal. This is good for transparency. See the screenshot below.** ![Edits seen](/img/how-to/edit-editing-seen.png)
+![Edit button](/img/how-to/13-edit-button.png)
+
+Select this and you should be taken to the editing screen. Amend the proposal as needed (remember to edit the front matter too if any of those variables are changing), and press the green Commit Changes button at the bottom.
+
+**Warning! Not only the changes but THE FACT that you made changes will be visible to EVERYONE! You CANNOT stealth edit your proposal. This is good for transparency. See the screenshot below.**
+
+![Edits seen](/img/how-to/14-editing-seen.png)
