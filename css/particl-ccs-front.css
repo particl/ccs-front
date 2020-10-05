@@ -2003,7 +2003,7 @@ a.ffs-cat p {
   float: right
 }
 .ffs-breadcrumbs p.submit-idea a {
-  background-color: #4e9965;
+  background-color: var(--color-primary-darker);
   color: #fff;
   padding: .5rem .5rem;
   text-transform: uppercase;
@@ -2016,7 +2016,7 @@ a.ffs-cat p {
 .ffs-breadcrumbs p.submit-idea a:active,
 .ffs-breadcrumbs p.submit-idea a:focus,
 .ffs-breadcrumbs p.submit-idea a:hover {
-  background-color: #188039
+  background-color: var(--color-primary)
 }
 .ffs-breadcrumbs p.submit-idea a:after,
 .ffs-breadcrumbs p.submit-idea a:before {
