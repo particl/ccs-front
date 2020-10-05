@@ -20,29 +20,27 @@
 
 .ffs-breadcrumbs p.submit-idea {
    float: right;
-}
-
-.ffs-breadcrumbs p.submit-idea a {
-   background-color: #4e9965;
-   color: #fff;
-   padding: 0.5rem 0.5rem;
-   text-transform: uppercase;
-   font-weight: 700;
-   font-size: 0.8rem;
-   border-radius: 2px;
-   box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
-   transition: background .15s ease, box-shadow .15s ease;
-   &:hover,
-   &:focus,
-   &:active {
-      background-color: #188039;
+   a {
+      background-color: var(--color-primary-darker);
+      color: #fff;
+      padding: 0.5rem 0.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border-radius: 2px;
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+      transition: background .15s ease, box-shadow .15s ease;
+      &:hover,
+      &:focus,
+      &:active {
+         background-color: var(--color-primary);
+      }
+      &:after,
+      &:before {
+         display: none;
+      }
    }
-   &:after,
-   &:before {
-      display: none;
-   }
 }
-
 
 
 // task list card
