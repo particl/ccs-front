@@ -20,7 +20,7 @@ layout: base
             <div class="col-xs-12">
                {% for toplevel in site.data.proposals %}
                {% if toplevel.stage == "Work in Progress" %}
-               {% for proposal in toplevel.proposals%}
+               {% for proposal in toplevel.proposals %}
                {% if proposal.name == page.title %}
                <h2 class="proposal-detail-title">{{page.title}}</h2>
                <p class="author-list">{{page.author}}</p>
