@@ -57,6 +57,38 @@ layout: base
       </div>
    </section>
 
+   <!-- Voting state -->
+   {% if proposal.vote_results %}
+   <section class="container full">
+      <div class="info-block">
+         <div class="row">
+            <div class="col-xs-12"> 
+               <h2 class="proposal-detail-title">Voting Status</h2>
+               <p class="author-list">Vote ID {{proposal.vote_results.vote_id}}</p>
+               <p class="date-list">Starting {{proposal.vote_results.block_height_start}} and ending at {{proposal.vote_results.block_height_end}}</p>
+               <p class="date-list contributor">Yes = {{proposal.vote_results.blocks_yes}}, No = {{proposal.vote_results.blocks_no}}, Abstain = {{proposal.vote_results.blocks_abstain}}</p>
+               <!--p class="bar-fund-status">Raised <span class="progress-number-funded">{{proposal.amount-funded}}</span> of <span class="progress-number-goal">{{proposal.amount}}</span> PART</p>
+               <div class="progress-bar">
+                  <span class="fund-progress" style="width: {{proposal.percentage}}%"></span>
+               </div-->
+               <div class="contribute-dropdown">
+                  <div class="tab">
+                     <input id="tab-con" type="checkbox" name="tabs" class="accordion">
+                     <label for="tab-con" class="accordion btn">Vote</label>
+                     <div class="tab-content">
+                        <div class="donate-contribute instructions">
+                           <p><strong>Yes</strong> ./particl-cli setvote {{proposal.vote_results.vote_id}} 1 {{proposal.vote_results.block_height_start}} {{proposal.vote_results.block_height_end}} </p>
+                           <p><strong>No</strong> ./particl-cli setvote {{proposal.vote_results.vote_id}} 0 {{proposal.vote_results.block_height_start}} {{proposal.vote_results.block_height_end}}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   {%endif%}
+
    <section class="container full">
       <div class="">
          <div class="row between-xs">
