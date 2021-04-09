@@ -3,10 +3,16 @@
         "stage": "Ideas",
         "proposals": [
             {
-                "name": "Some really good idea",
-                "gitlab-url": "https://github.com/rehrar/ccs-testing/pull/1",
-                "author": "xiphon",
-                "date": "December 11, 2019"
+                "name": "Integrate Network Voting into CCS",
+                "gitlab-url": "https://github.com/particl/ccs-proposals/pull/6",
+                "author": "kewde",
+                "date": "April 8, 2021"
+            },
+            {
+                "name": "Inflation-Bug-Compensation",
+                "gitlab-url": "https://github.com/particl/ccs-proposals/pull/5",
+                "author": "kangoala",
+                "date": "March 6, 2021"
             }
         ]
     },
@@ -14,25 +20,88 @@
         "stage": "Funding Required",
         "proposals": [
             {
-                "name": "do it",
-                "donate-address": "PnzPqPNi5MBb7fM525S2MtVotb8g1Akcbg",
-                "donate-qr-code": "data:image/png;base64, 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",
-                "gitlab-url": null,
-                "local-url": "/proposals/test-1.html",
-                "contributions": 2,
+                "name": "Seeding Items to the Marketplace",
+                "donate-address": "PmFw5geDYR6QUHseUB8MFhv7fTiQzj9fWk",
+                "donate-qr-code": "data:image/png;base64, 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",
+                "gitlab-url": "https://github.com/particl/ccs-proposals/pull/3",
+                "local-url": "/proposals/marketplace listing seeding.html",
+                "contributions": 0,
+                "vote": "NO-NETWORK-VOTE-REQUIRED",
+                "milestones": 3,
+                "milestones-completed": 0,
+                "milestones-percentage": 0,
+                "percentage": 0,
+                "amount": 20000,
+                "amount-funded": 0,
+                "author": "Ludx and Cryptoguard",
+                "date": "December 3, 2020",
+                "vote_results": {
+                    "vote_id": 4,
+                    "block_height_start": 343482,
+                    "block_height_end": 770753,
+                    "finished": 0,
+                    "blocks_yes": 0,
+                    "blocks_no": 0,
+                    "blocks_abstain": 0
+                }
+            },
+            {
+                "name": "Market API documentation",
+                "donate-address": "PoPiCRPWEzVYmdT8g3dcC7xMNgUugmrUue",
+                "donate-qr-code": "data:image/png;base64, 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",
+                "gitlab-url": "https://github.com/particl/ccs-proposals/pull/4",
+                "local-url": "/proposals/market api documentation.html",
+                "contributions": 0,
+                "vote": "NO-NETWORK-VOTE-REQUIRED",
                 "milestones": 2,
                 "milestones-completed": 0,
                 "milestones-percentage": 0,
-                "percentage": 3,
-                "amount": 100,
-                "amount-funded": 2.5,
-                "author": "diego",
-                "date": "December 10, 2019"
+                "percentage": 0,
+                "amount": 1200,
+                "amount-funded": 0,
+                "author": "ffmad",
+                "date": "January 31, 2020",
+                "vote_results": {
+                    "vote_id": 3,
+                    "block_height_start": 145924,
+                    "block_height_end": 542416,
+                    "finished": 0,
+                    "blocks_yes": 0,
+                    "blocks_no": 0,
+                    "blocks_abstain": 0
+                }
             }
         ]
     },
     {
         "stage": "Work in Progress",
-        "proposals": []
+        "proposals": [
+            {
+                "name": "MAD Escrow explained by a simple GIF",
+                "donate-address": null,
+                "donate-qr-code": null,
+                "gitlab-url": "https://github.com/particl/ccs-proposals/pull/2",
+                "local-url": "/proposals/mad-escrow-GIF.html",
+                "contributions": 0,
+                "vote": "NO-NETWORK-VOTE-REQUIRED",
+                "milestones": 1,
+                "milestones-completed": 0,
+                "milestones-percentage": 0,
+                "percentage": 0,
+                "amount": 50,
+                "amount-funded": 0,
+                "author": "Ozan",
+                "date": "November 15, 2020",
+                "vote_results": {
+                    "vote_id": 2,
+                    "block_height_start": 421774,
+                    "block_height_end": 395771,
+                    "finished": 0,
+                    "blocks_yes": 0,
+                    "blocks_no": 0,
+                    "blocks_abstain": 0
+                }
+            }
+        ]
     }
 ]

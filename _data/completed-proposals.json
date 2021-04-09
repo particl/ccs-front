@@ -1,6 +1,33 @@
 [
     {
         "stage": "Completed Proposals",
-        "proposals": []
+        "proposals": [
+            {
+                "name": "General Fund",
+                "donate-address": null,
+                "donate-qr-code": null,
+                "gitlab-url": "https://github.com/particl/ccs-proposals/pull/1",
+                "local-url": "/proposals/general-fund.html",
+                "contributions": 0,
+                "vote": "NO-NETWORK-VOTE-REQUIRED",
+                "milestones": 2,
+                "milestones-completed": 0,
+                "milestones-percentage": 0,
+                "percentage": 0,
+                "amount": 1,
+                "amount-funded": 0,
+                "author": "kewde",
+                "date": "October 5, 2020",
+                "vote_results": {
+                    "vote_id": 1,
+                    "block_height_start": 616454,
+                    "block_height_end": 349521,
+                    "finished": 0,
+                    "blocks_yes": 0,
+                    "blocks_no": 0,
+                    "blocks_abstain": 0
+                }
+            }
+        ]
     }
 ]
