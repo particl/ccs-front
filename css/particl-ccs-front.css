@@ -2976,6 +2976,86 @@ body {
   max-width: 34rem;
   margin: 2rem auto 0
 }
+.ffs-fr p.date-list.votes::before {
+  background-image: url(/img/vote.svg)
+}
+.ffs-fr p.vote-id::before {
+  background-image: url(/img/proposals.svg)
+}
+.ffs-fr p.vote-yes::before {
+  background-image: url(/img/thumb-up.svg)
+}
+.ffs-fr p.vote-no::before {
+  background-image: url(/img/thumb-down.svg)
+}
+.ffs-fr p.vote-abstain::before {
+  background-image: url(/img/error.svg)
+}
+.ffs-fr hr {
+  margin: 2.5rem -2.5rem 1rem;
+  border: 0;
+  border-top: 2px solid var(--bg)
+}
+.voting-instructions {
+  text-align: left
+}
+@media only screen and (min-width:593px) {
+  .voting-instructions {
+    text-align: center
+  }
+}
+.voting-instructions .vote-option {
+  margin: 1.5rem 0;
+  width: 100%
+}
+.voting-instructions .vote-option .ico {
+  margin-right: .2rem
+}
+.voting-instructions .vote-option strong {
+  color: var(--text)
+}
+.voting-instructions .or-wrap {
+  text-align: center;
+  margin-top: 1.5rem 0;
+  width: 100%
+}
+@media only screen and (min-width:992px) {
+  .voting-instructions .or-wrap {
+    margin-top: 3.4rem
+  }
+}
+.voting-instructions .or-wrap .or {
+  display: inline-block;
+  font-size: .75rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border: 1px solid var(--bg-muted);
+  border-radius: 50%
+}
+.voting-instructions pre {
+  word-wrap: break-word;
+  font-family: var(--font-mono);
+  background-color: var(--bg-black);
+  border-radius: 4px;
+  color: var(--color-white);
+  font-size: .85rem;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  margin: .5rem 0 0;
+  padding: .6rem 1rem;
+  white-space: pre-line
+}
+.voting-instructions pre.yes {
+  color: var(--color-primary);
+  background: hsla(var(--color-primary-hsl),.1)
+}
+.voting-instructions pre.no {
+  color: var(--color-alert);
+  background: hsla(var(--color-alert-hsl),.1)
+}
 .post-page img {
   border-radius: var(--radius);
   border: 1px solid var(--bg-muted);

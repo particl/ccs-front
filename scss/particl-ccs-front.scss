@@ -104,6 +104,60 @@ body {
 }
 
 
+// --------- FUNDING REQUIRED --------- //
+
+.ffs-fr {
+  p.date-list.votes::before { background-image: url(/img/vote.svg); }
+  p.vote-id::before { background-image: url(/img/proposals.svg); }
+  p.vote-yes::before { background-image: url(/img/thumb-up.svg); }
+  p.vote-no::before { background-image: url(/img/thumb-down.svg); }
+  p.vote-abstain::before { background-image: url(/img/error.svg); }
+
+  hr {
+    margin: 2.5rem -2.5rem 1rem;
+    border: 0;
+    border-top: 2px solid var(--bg);
+  }
+}
+
+// how to vote via particl-cli block
+.voting-instructions {
+  text-align: left;
+  @include break(m) { text-align: center; }
+  .vote-option {
+    margin: 1.5rem 0;
+    width: 100%;
+    .ico { margin-right: 0.2rem; }
+    strong { color: var(--text); }
+  }
+  .or-wrap {
+    text-align: center;
+    margin-top: 1.5rem 0;
+    width: 100%;
+    @include break(t) { margin-top: 3.4rem; }
+    .or {
+      display: inline-block;
+      font-size: 0.75rem;
+      width: 2rem; height: 2rem; line-height: 2rem;
+      border: 1px solid var(--bg-muted); border-radius: 50%;
+    }
+  }
+  pre {
+    word-wrap: break-word;
+    font-family: var(--font-mono);
+    background-color: var(--bg-black);
+    border-radius: 4px;
+    color: var(--color-white);
+    font-size: 0.85rem;
+    user-select: all;
+    margin: 0.5rem 0 0;
+    padding: 0.6rem 1rem;
+    white-space: pre-line;
+    &.yes { color: var(--color-primary); background: hsla(var(--color-primary-hsl), 0.1); }
+    &.no { color: var(--color-alert); background: hsla(var(--color-alert-hsl), 0.1); }
+  }
+}
+
 // --------- POST PAGE --------- //
 // Ordinary pages (How to, What is etc.)
 

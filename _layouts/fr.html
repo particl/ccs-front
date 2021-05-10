@@ -57,6 +57,49 @@ layout: base
       </div>
    </section>
 
+   <!-- Voting state -->
+   {% if proposal.vote_results %}
+   <section class="container full">
+      <div class="info-block">
+         <div class="row">
+            <div class="col-xs-12"> 
+               <h2 class="proposal-detail-title">Voting Status</h2>
+               <p class="author-list vote-id">Vote #{{proposal.vote_results.vote_id}}</p>
+               <p class="date-list">Voting period: block {{proposal.vote_results.block_height_start}} &ndash; {{proposal.vote_results.block_height_end}}</p>
+               <p class="date-list vote-yes">{{proposal.vote_results.blocks_yes}}&times; Yes</p>
+               <p class="date-list vote-no">{{proposal.vote_results.blocks_no}}&times; No</p>
+               <p class="date-list vote-abstain">{{proposal.vote_results.blocks_abstain}}&times; Abstained</p>
+
+               <hr>
+
+               <div class="voting-instructions">
+                  <p>
+                     Vote on whether this Proposal should be funded from the Particl Treasury (yes) or if funding should be done directly by Community members only (no):
+                  </p>
+                  <div class="row">
+                     <div class="vote-option col-md-5">
+                        <img src="/img/thumb-up.svg" alt="Thumb up" class="ico">
+                        <strong>Vote Yes</strong>
+                        <pre class="yes">./particl-cli setvote {{proposal.vote_results.vote_id}} 1 {{proposal.vote_results.block_height_start}} {{proposal.vote_results.block_height_end}}</pre>
+                     </div>
+                     <div class="or-wrap col-md-2"><div class="or">OR</div></div>
+                     <div class="vote-option col-md-5">
+                        <img src="/img/thumb-down.svg" alt="Thumb down" class="ico">
+                        <strong>Vote No</strong>
+                        <pre class="no">./particl-cli setvote {{proposal.vote_results.vote_id}} 0 {{proposal.vote_results.block_height_start}} {{proposal.vote_results.block_height_end}}</pre>
+                     </div>
+                  </div>
+                  <p>
+                     Vote on this Proposal via Particl CLI (<a href="https://particl.wiki/tutorial/wallets/particl-cli/#usage">How to use particl-cli -></a>)
+                  </p>
+               </div><!-- .voting-instructions -->
+
+            </div>
+         </div>
+      </div>
+   </section>
+   {%endif%}
+
    <section class="container full">
       <div class="">
          <div class="row between-xs">

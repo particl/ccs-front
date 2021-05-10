@@ -20,6 +20,8 @@ Global SCSS config file defining site-wide settings (included in every page)
 
 // --------- BREAKPOINTS --------- //
 
+$break-m: 593px;
+$break-t: 992px;
 $break-l: 1500px;
 $break-xl: 1700px;
 $break-hd: 1920px;
@@ -146,7 +148,11 @@ $break-xhd: 2200px;
 // Usage: @include break(l|xl|xxl|hd) { .. }
 
 @mixin break($media) {
-   @if $media == l { 
+   @if $media == m { 
+      @media only screen and (min-width: $break-m) { @content; }
+   } @else if $media == t { 
+      @media only screen and (min-width: $break-t) { @content; }
+   } @else if $media == l { 
       @media only screen and (min-width: $break-l) { @content; }
    } @else if $media == xl {
       @media only screen and (min-width: $break-xl) { @content; }
