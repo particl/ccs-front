@@ -6,37 +6,40 @@ title: Work in Progress
 <div class="container ffs-breadcrumbs">
    <div class="row">
       <div class="col-xs-12">
-          <p><a href="/">Particl Crowdfunding System</a></p>
-          <p class="bread-active">{{page.title}}</p>
+         <p><a href="/">Particl Crowdfunding System</a></p>
+         <p class="bread-active">{{ page.title }}</p>
       </div>
    </div>
 </div>
 
 <section class="container in-progress">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1>{{page.title}}</h1>
-        </div>
-            {% for toplevel in site.data.proposals %}
-                {% if toplevel.stage == "Work in Progress" %}
-                    {% for proposal in toplevel.proposals%}
-                        <div class="col-xs-12">
-                            <a href="{{proposal.local-url}}" class="row middle-xs ffs-idea">
-                                <div class="col-xs-12">
-                                    <h3>{{proposal.name}}</h3>
-                                    <p class="author-list">{{proposal.author}}</p>
-                                    <p class="date-list">{{proposal.date}}</p>
-                                    <p class="date-list contributor">{{proposal.contributions}} contributors</p>
-                                    <p class="progress-number-goal">{{proposal.amount}} PART</p>
-                                    <p class="bar-work-status">Completed <span class="progress-number-funded">{{proposal.milestones-completed}}</span> of <span class="progress-number-goal">{{proposal.milestones}}</span> milestones</p>
-                                    <div class="progress-bar">
-                                    <span class="work-progress" style="width: {{proposal.milestones-percentage}}%"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    {%endfor%}
-                {%endif%}
-            {%endfor%}
-    </div>
+   <div class="row">
+
+      <div class="col-xs-12">
+         <h1>{{ page.title }}</h1>
+      </div>
+
+      {% for toplevel in site.data.proposals %}
+      {% if toplevel.stage == "Work in Progress" %}
+      {% for proposal in toplevel.proposals %}
+      <div class="col-xs-12">
+         <a href="{{ proposal.local-url }}" class="row middle-xs ffs-idea">
+            <div class="col-xs-12">
+               <h3>{{ proposal.name }}</h3>
+               <p class="author-list">{{ proposal.author }}</p>
+               <p class="date-list">{{ proposal.date }}</p>
+               <p class="date-list contributor">{{ proposal.contributions }} contributors</p>
+               <p class="progress-number-goal">{{ proposal.amount }} PART</p>
+               <p class="bar-work-status">Completed <span class="progress-number-funded">{{ proposal.milestones-completed }}</span> of <span class="progress-number-goal">{{ proposal.milestones }}</span> milestones</p>
+               <div class="progress-bar">
+                  <span class="work-progress" style="width: {{ proposal.milestones-percentage }}%"></span>
+               </div>
+            </div>
+         </a>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+
+   </div>
 </section>

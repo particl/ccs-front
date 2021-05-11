@@ -1,0 +1,62 @@
+.tab {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+}
+
+label.accordion {
+   position: relative;
+   display: block;
+   padding: 1.3rem 2rem 1.3rem 0;
+   font-weight: bold;
+   line-height: 1.7;
+   cursor: pointer;
+   margin-right: 0.5rem;
+}
+
+/*input.accordion:checked ~ .tab-content {
+   max-height: 100rem;
+   overflow: visible;
+}
+
+.tab-content {
+   max-height: 0;
+   overflow: hidden;
+   border-radius: 3px;
+   -webkit-transition: max-height 2s ease-out;
+   -o-transition: max-height 2s ease-out;
+   transition: max-height 2s ease-out;
+}*/
+
+.tab-content {
+   overflow:hidden;
+   height:0;
+   padding: 0;
+   transition: all .5s ease;
+   padding: 0 1rem;
+}
+input.accordion:checked ~ .tab-content {
+   height:auto;
+   padding: 1rem;
+}
+
+input.accordion {
+   position: absolute;
+   display: none;
+   z-index: -1;
+   &:checked {
+      & ~ .btn {
+         background-color: var(--color-tertiary);
+      }
+   }
+}
+
+.contribute-dropdown {
+   text-align: center;
+   .btn {
+      margin: 1rem auto;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
+      background-color: var(--color-secondary);
+      color: #ffffff;
+   }
+}

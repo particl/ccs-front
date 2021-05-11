@@ -1,79 +1,119 @@
-{%assign counter=0%}  
+{%assign counter=0%}
+
 <div class="mob-nav">
-              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
-           
-        <div class="slide-in-nav">
-             <div class="container slide-in">
-                 <div class="row">
-                     <div class="col-xs-12"> 
-                         <div class="text-center nav-item mob">
-                            <a href="/ideas/" class="top-link">Ideas</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="/funding-required/">Funding Required</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="/work-in-progress/">Work in Progress</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="/completed-proposals/">Completed Tasks</a>
-                         </div>
-                         <!--div class="text-center nav-item mob">
-                            <a href="/donate/index.html">Donate</a>
-                         </div-->
-                         <div class="text-center nav-item mob">
-                            <a href="/what-is-ccs/">CCS Rules</a>
-                         </div>
-                         <div class="text-center nav-item mob">
-                            <a href="https://particl.io/" target="_blank">Particl.io</a>
-                         </div>
-                     </div>                     
-                 </div>          
-             </div>
-          
+    <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+    <div class="slide-in-nav">
+        <div class="container slide-in">
+            <div class="row">
+                <nav class="col-xs-12"> 
+                    <div class="text-center nav-item mob">
+                        <a href="/ideas/" class="top-link">Ideas</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/funding-required/">Funding Required</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/work-in-progress/">Work in Progress</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/completed-proposals/">Completed Tasks</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center nav-item mob">
+                        <a href="/what-is-ccs/">CCS Intro &amp; Rules</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="/how-to-ccs/">How to CCS</a>
+                    </div>
+                    <!--div class="text-center nav-item mob">
+                        <a href="/how-to-vote/">How to vote</a>
+                    </div-->
+                    <div class="text-center nav-item mob">
+                        <a href="/donate/">Donate</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center nav-item mob">
+                        <a href="https://particl.io/" target="_blank">Particl.io</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="https://particl.news/" target="_blank">Latest News</a>
+                    </div>
+                    <div class="text-center nav-item mob">
+                        <a href="https://particl.wiki/" target="_blank">Wiki</a>
+                    </div>
+                </nav>
+            </div>
         </div>
-       </div>
-       
-        <div class="desktop-nav">
-           <nav class="container">
-              <div class="row middle-xs">
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <p class="site-name"><a href="/">Community Crowdfunding System</a></p>
-                  </div>
-                  <div class="col-lg-8 col-md-8 col-sm-8 items end-xs">
-                      <div class="row end-xs middle-xs">
-                         <div class="col-md-12">
-                            <div class="dropdown">
-                                <label for="desktopdrop">CCS Stages<div class="arrow-down"></div></label>
-                                <input class="burger-checkdropdown" id="desktopdrop" type="checkbox">
-                                <div class="dropdown-content">
-                                      <a href="/ideas/">Ideas</a>
-                                      <a href="/funding-required/">Funding Required</a>
-                                      <a href="/work-in-progress/">Work in Progress</a>
-                                      <a href="/completed-proposals/">Completed Tasks</a>
-                                </div>
-                            </div> 
-                            <a href="/what-is-ccs/">CCS Rules</a> 
-                            <a href="https://particl.io/" target="_blank">Particl.io</a> 
-                            <!--a href="/donate/" class="donate-btn">Donate</a-->
-                          </div>
-                      </div>
-                  </div>
-              </div>
-        </nav>
-        </div>
-        <div class="mob bot-nav white-nav">
-            <div class="row middle-xs">
-                <div class="col-xs-12">
-                    <p class="site-name"><a href="{% if site.lang == 'en' %}
-                    
-                    {{ site.baseurl_root }}/
-                    
-                    {% else %}
-                    
-                    {{ site.baseurl_root }}/{{site.lang}}
-                    
-                    {% endif %}">Community Crowdfunding System</a></p>
+    </div>
+</div>
+
+<div class="desktop-nav">
+    <nav class="container">
+        <div class="row middle-xs">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <p class="site-name">
+                    <a href="/">
+                        <img src="/img/particl-ccs-logo.svg" alt="Particl CCS" class="logo">
+                        Particl Crowdfunding
+                    </a>
+                </p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 items end-xs">
+                <div class="row end-xs middle-xs">
+                    <nav class="col-md-12">
+                        <div class="dropdown">
+                            <label for="stages">CCS Stages<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="stages" type="checkbox">
+                            <div class="dropdown-content">
+                                <a href="/ideas/">Ideas</a>
+                                <a href="/funding-required/">Funding Required</a>
+                                <a href="/work-in-progress/">Work in Progress</a>
+                                <a href="/completed-proposals/">Completed Tasks</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <label for="about">About CCS<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="about" type="checkbox">
+                            <div class="dropdown-content">
+                                <a href="/what-is-ccs/">Intro &amp; Rules</a>
+                                <a href="/how-to-ccs/">How to CCS</a>
+                                <!--a href="/how-to-vote/">How to vote</a-->
+                                <a href="/donate/">Donate</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <label for="particl">Particl<div class="arrow-down"></div></label>
+                            <input class="burger-checkdropdown" id="particl" type="checkbox">
+                            <div class="dropdown-content">
+                                <a href="https://particl.io" target="_blank">Particl.io</a>
+                                <a href="https://particl.news" target="_blank">Latest News</a>
+                                <a href="https://particl.wiki" target="_blank">Wiki</a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-            </div>     
-        </div>    
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="mob bot-nav white-nav">
+    <div class="row middle-xs">
+        <div class="col-xs-12">
+            <p class="site-name"><a href="{% if site.lang == 'en' %}
+
+            {{ site.baseurl_root }}/
+
+            {% else %}
+
+            {{ site.baseurl_root }}/{{site.lang}}
+
+            {% endif %}">Particl Crowdfunding</a></p>
+        </div>
+    </div>
+</div>

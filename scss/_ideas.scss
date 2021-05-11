@@ -1,0 +1,215 @@
+// page titles in lists (only visible for mobile)
+.ideas,
+.fund-required,
+.in-progress,
+.complete-proposal {
+   h1 {
+      display: none;
+      @include break-max(62rem) {
+         display: block;
+         text-align: center;
+         margin: -0.4rem 1rem 3rem;
+         font-size: 1.7rem;
+      }
+      @include break-max(30rem) {
+         margin: -1rem 1rem 2.5rem;
+         font-size: 1.5rem;
+      }
+   }
+}
+
+.ffs-breadcrumbs p.submit-idea {
+   float: right;
+   a {
+      background-color: var(--color-primary-darker);
+      color: #fff;
+      padding: 0.5rem 0.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border-radius: 2px;
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+      transition: background .15s ease, box-shadow .15s ease;
+      &:hover,
+      &:focus,
+      &:active {
+         background-color: var(--color-primary);
+      }
+      &:after,
+      &:before {
+         display: none;
+      }
+   }
+}
+
+
+// task list card
+.ffs a.ffs-idea {
+   @extend %card;
+   padding: 2.5rem;
+   border-radius: var(--radius);
+   margin-bottom: 1rem;
+   flex: 1;
+   word-wrap: break-word;
+   text-decoration: none;
+   transition: background .15s ease, box-shadow .15s ease;
+   border-bottom: none;
+   &:hover,
+   &:focus,
+   &:active {
+      @extend %card-hover;
+      border-bottom: none;
+   }
+   @include break-max(62rem) {
+      margin: 0 1rem 1rem;
+   }
+}
+
+
+.ffs p.author-list span img,
+.ffs p.date-list span img,
+.ffs-proposal p.author-list span img,
+.ffs-proposal p.date-list span img,
+.ffs-proposal p.progress-number-goal span img {
+   height: 0.8rem;
+   width: 0.8rem;
+   margin-right: 0.3rem;
+   vertical-align: baseline;
+}
+
+// Icons in cards (author, date, contributors, ..)
+.ffs,
+.ffs-proposal,
+.in-progress,
+.complete-proposal {
+   p.author-list,
+   p.date-list,
+   p.progress-number-goal,
+   p.date-list.contributor {
+      &:before {
+         content: '';
+         display: inline-block;
+         height: 0.8rem;
+         width: 0.8rem;
+         margin-right: 0.5rem;
+         //vertical-align: baseline;
+         background-size: cover;
+      }
+   }
+}
+/*
+.ffs p.author-list:before,
+.ffs p.date-list:before,
+.ffs-proposal p.author-list:before,
+.ffs-proposal p.date-list:before,
+.ffs-proposal p.progress-number-goal:before,
+.ffs-proposal p.date-list.contributor:before,
+.in-progress p.progress-number-goal:before,
+.complete-proposal p.progress-number-goal:before {
+   content: '';
+   display: inline-block;
+   height: 0.8rem;
+   width: 0.8rem;
+   margin-right: 0.3rem;
+   vertical-align: baseline;
+   background-size: cover;
+}
+*/
+
+.ffs p.author-list:before,
+.ffs-proposal p.author-list:before {
+   background-image: url(/img/circle-user.svg);
+}
+
+.ffs p.date-list:before,
+.ffs-proposal p.date-list:before {
+   background-image: url(/img/date.svg);
+}
+
+.in-progress p.progress-number-goal:before,
+.ffs-proposal p.progress-number-goal:before,
+.complete-proposal p.progress-number-goal:before {
+   background-image: url(/img/particl-amount.svg);
+}
+
+.ffs p.date-list.contributor:before,
+.ffs-proposal p.date-list.contributor:before {
+   background-image: url(/img/rocket.svg);
+}
+
+.ffs p.author-list,
+.ffs p.date-list,
+.ffs-proposal p.author-list,
+.ffs-proposal p.date-list,
+.in-progress p.progress-number-goal,
+.complete-proposal p.progress-number-goal {
+   padding-top: 0;
+   font-size: 1.1rem;
+   color: #9ca1ac;
+   line-height: 1.3;
+   display: inline;
+   vertical-align: middle;
+}
+
+.ffs-proposal p.date-list, .ffs-proposal p.progress-number-goal, .ffs p.date-list, .in-progress p.progress-number-goal, .complete-proposal p.progress-number-goal {
+   margin-left: 2rem;
+}
+
+p.author-list, p.date-list, p.progress-number-goal, p.bar-work-status {
+   box-sizing: border-box;
+   flex: 0 0 auto;
+}
+
+.ideas,
+.complete-proposal {
+   p.author-list,
+   p.date-list {
+      display: inline;
+      @include break-max(62rem) {
+         font-size: 1rem;
+      }
+      @include break-max(28rem) {
+         padding-top: 0.7rem;
+      }
+   }
+}
+
+.ideas,
+.complete-proposal {
+   p.date-list {
+      margin-left: 2rem;
+   }
+}
+
+.ffs p.list-button {
+   padding-top: 1.5rem;
+}
+
+.ffs .ideas p.list-button, .ffs .fund-required p.list-button, .ffs .in-progress p.list-button, .ffs .complete-proposal p.list-button {
+   padding-top: 0;
+   text-align: right;
+}
+
+
+@media only screen and (max-width: 48rem) {
+   .ideas p.author-list,
+   .ideas p.date-list,
+   .complete-proposal p.author-list,
+   .complete-proposal p.date-list {
+      padding-top: 0.7rem;
+   }
+}
+
+
+@media only screen and (max-width: 30rem) {
+
+   .ideas p.author-list,
+   .ideas p.date-list,
+   .complete-proposal p.author-list,
+   .complete-proposal p.date-list,
+   .ffs p.author-list,
+   .ffs p.date-list {
+      display: block;
+      margin-left: 0;
+   }
+}

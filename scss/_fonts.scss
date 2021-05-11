@@ -1,0 +1,67 @@
+// ---- Inter UI ---- //
+
+@font-face {
+  font-family: 'Inter_UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url('../fonts/Inter-UI-Regular.woff2') format('woff2'),
+       url('../fonts/Inter-UI-Regular.woff') format('woff');
+}
+  
+@font-face {
+  font-family: 'Inter_UI';
+  font-style:  italic;
+  font-weight: 400;
+  src: url('../fonts/Inter-UI-Italic.woff2') format('woff2'),
+       url('../fonts/Inter-UI-Italic.woff') format('woff');
+}
+  
+@font-face {
+  font-family: 'Inter_UI';
+  font-style:  normal;
+  font-weight: 500;
+  src: url('../fonts/Inter-UI-Medium.woff2') format('woff2'),
+       url('../fonts/Inter-UI-Medium.woff') format('woff');
+}
+  
+@font-face {
+  font-family: 'Inter_UI';
+  font-style:  normal;
+  font-weight: 700;
+  src: url('../fonts/Inter-UI-Bold.woff2') format('woff2'),
+       url('../fonts/Inter-UI-Bold.woff') format('woff');
+}
+  
+@font-face {
+  font-family: 'Inter_UI';
+  font-style:  normal;
+  font-weight: 900;
+  src: url('../fonts/Inter-UI-Black.woff2') format('woff2'),
+       url('../fonts/Inter-UI-Black.woff') format('woff');
+}
+
+
+// ---- Office Code Pro ---- //
+
+@font-face {
+  font-family: 'OfficeCodePro';
+  font-style:  normal;
+  font-weight: 400;
+  src: url('../fonts/OfficeCodePro-Medium.woff2') format('woff2'),
+       url('../fonts/OfficeCodePro-Medium.woff') format('woff');
+}
+
+
+// ---- Icons ---- //
+
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot?58817762');
+  src: url('../fonts/icons.eot?58817762#iefix') format('embedded-opentype'),
+       url('../fonts/icons.woff2?58817762') format('woff2'),
+       url('../fonts/icons.woff?58817762') format('woff'),
+       url('../fonts/icons.ttf?58817762') format('truetype'),
+       url('../fonts/icons.svg?58817762#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

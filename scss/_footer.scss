@@ -1,0 +1,131 @@
+body {
+   height: 100%;
+}
+
+.page-wrapper {
+   position: relative;
+   // min-height: 100vh;
+   background-color: var(--bg);
+}
+
+footer {
+   width: 100%;
+   background-color: var(--bg-black-lighter);
+   color: #efefef;
+   z-index: 1;
+
+   .donate {
+      h3 {
+         color: var(--color-white);
+      }
+      p {
+         color: hsla(var(--color-white-hsl), 0.6);
+      }
+   }
+
+   a.white {
+      color: #efefef;
+      text-decoration: none;
+      border-bottom: none;
+      &:hover,
+      &:focus {
+         border-bottom: 1px dotted #efefef;
+      }
+      &.gf {
+         border-bottom: 1px dotted #efefef;
+      }
+   }
+}
+
+
+.footer-wrapper {
+   padding: 4rem 1rem;
+   ul {
+      line-height: 1.7;
+   }
+   .gf-address {
+      background-color: var(--bg-black);
+      color: var(--color-primary);
+      font-family: var(--font-mono);
+      word-wrap: break-word;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 0 24px hsla(var(--bg-hsl),0.05);
+      border-radius: 2px;
+      user-select: all;
+   }
+}
+
+
+.footer-links { // github links to repos
+   background: var(--bg-black);
+   width: 100%;
+   ul {
+      margin: 2rem;
+   }
+}
+
+.footer-link {
+   margin: 0 1rem;
+}
+
+@media only screen and (max-width: 62rem) {
+
+   .page-wrapper {
+      position: relative;
+      min-height: 100vh;
+   }
+
+   footer {
+      width: 100%;
+      color: #efefef;
+      z-index: 1;
+   }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+   .page-wrapper {
+      position: initial;
+      min-height: 100vh;
+   }
+
+   footer {
+      position: initial;
+      width: 100%;
+      height: auto;
+      color: #efefef;
+      z-index: 1;
+   }
+
+   .footer-wrapper {
+      padding: 2.5rem 1rem;
+   }
+
+   .footer-wrapper div.col-xs-6 {
+      margin-bottom: 1.5rem;
+      padding-right: 1rem;
+   }
+
+}
+
+
+@media only screen and (max-width: 30rem) {
+
+   .footer-wrapper {
+      padding: 2rem;
+   }
+
+   .footer-wrapper div.col-xs-6 {
+      -ms-flex-preferred-size: 100%;
+      max-width: 100%;
+      flex-basis: 100%;
+      padding-right: 0;
+   }
+      
+   .list-inline>li {
+      display: inline-block;
+   }
+
+}

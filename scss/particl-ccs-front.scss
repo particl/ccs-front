@@ -1,0 +1,171 @@
+@import "config";
+@import "general";
+@import "flexbox";
+@import "grid";
+@import "fonts";
+@import "typography";
+@import "buttons";
+@import "navigation";
+@import "footer";
+
+// Pages
+@import "homepage";
+@import "ideas";
+@import "funding-required";
+@import "contribute-dropdown";
+@import "work-in-progress";
+@import "completed";
+
+
+
+body {
+  font-family: var(--font);
+}
+
+
+.site-wrap { // site content wrapper
+  padding: 3rem 0;
+  .info-block {
+    padding: 2.5rem;
+    border-radius: 2px;
+  }
+  h3 { // task title in card lists
+    padding-top: 0;
+    letter-spacing: 0;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-color: #a1aabb;
+    text-decoration-style: dotted;
+    margin-bottom: 0.8rem;
+    a {
+      color: #4c4c4c;
+      text-decoration: underline;
+    }
+  }
+  h2 {
+    &.proposal-detail-title { // task title in task detail page
+      font-size: 1.55rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      @include break-max(42rem) { font-size: 1.35rem; }
+    }
+  }
+}
+
+
+.ffs a,
+.ffs-proposal a,
+.ffs-main a {
+  color: #000;
+  border-bottom: 1px dotted #a1aabb;
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid #a1aabb;
+    text-decoration: none;
+  }
+}
+
+// --------- DONATION SECTIONS --------- //
+
+// Donate page + Contribute "form" for Proposals
+.donate-contribute {
+  text-align: center;
+  .qr-code {
+    border: none !important;
+    display: inline-block;
+    box-shadow: 0 0 5px rgba(50,50,93,.4);
+    margin: 1rem auto;
+    text-decoration: none;
+    img {
+       vertical-align: middle;
+       width: 100%;
+       max-width: 15rem;
+    }
+  }
+  .address-string {
+    background-color: #edeff2;
+    padding: 1.5rem 2.4rem;
+    margin: 2rem 0 1rem;
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--text);
+    display: inline-block;
+    user-select: all;
+  }
+  small {
+    display: inline-block;
+    max-width: 34rem;
+    margin: 2rem auto 0;
+  }
+}
+
+
+// --------- FUNDING REQUIRED --------- //
+
+.ffs-fr {
+  p.date-list.votes::before { background-image: url(/img/vote.svg); }
+  p.vote-id::before { background-image: url(/img/proposals.svg); }
+  p.vote-yes::before { background-image: url(/img/thumb-up.svg); }
+  p.vote-no::before { background-image: url(/img/thumb-down.svg); }
+  p.vote-abstain::before { background-image: url(/img/error.svg); }
+
+  hr {
+    margin: 2.5rem -2.5rem 1rem;
+    border: 0;
+    border-top: 2px solid var(--bg);
+  }
+}
+
+// how to vote via particl-cli block
+.voting-instructions {
+  text-align: left;
+  @include break(m) { text-align: center; }
+  .vote-option {
+    margin: 1.5rem 0;
+    width: 100%;
+    .ico { margin-right: 0.2rem; }
+    strong { color: var(--text); }
+  }
+  .or-wrap {
+    text-align: center;
+    margin-top: 1.5rem 0;
+    width: 100%;
+    @include break(t) { margin-top: 3.4rem; }
+    .or {
+      display: inline-block;
+      font-size: 0.75rem;
+      width: 2rem; height: 2rem; line-height: 2rem;
+      border: 1px solid var(--bg-muted); border-radius: 50%;
+    }
+  }
+  pre {
+    word-wrap: break-word;
+    font-family: var(--font-mono);
+    background-color: var(--bg-black);
+    border-radius: 4px;
+    color: var(--color-white);
+    font-size: 0.85rem;
+    user-select: all;
+    margin: 0.5rem 0 0;
+    padding: 0.6rem 1rem;
+    white-space: pre-line;
+    &.yes { color: var(--color-primary); background: hsla(var(--color-primary-hsl), 0.1); }
+    &.no { color: var(--color-alert); background: hsla(var(--color-alert-hsl), 0.1); }
+  }
+}
+
+// --------- POST PAGE --------- //
+// Ordinary pages (How to, What is etc.)
+
+.post-page {
+  img {
+    border-radius: var(--radius);
+    border: 1px solid var(--bg-muted);
+    margin: 1rem 0 0.5rem;
+    box-shadow: 0 1px 12px hsla(var(--bg-muted-hsl), 0.3);
+  }
+}

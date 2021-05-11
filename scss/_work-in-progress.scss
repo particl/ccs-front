@@ -1,0 +1,163 @@
+/* FFS WORK IN PROGRESS LIST */
+
+.in-progress .progress-bar {
+   margin-top: 1rem;
+}
+
+.in-progress p.bar-work-status {
+   padding-top: 0;
+   font-weight: 500;
+   @include break-max(75rem) {
+      text-align: left;
+      float: none;
+      display: block;
+      margin-top: 1rem;
+   }
+   @include break-max(62rem) {
+      font-size: 1rem;
+   }
+}
+
+@media only screen and (max-width: 62rem) {
+
+   .in-progress p.author-list,
+   .in-progress p.date-list {
+      font-size: 1rem;
+   }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+   .in-progress p.author-list {
+      font-size: 0.9rem;
+      padding-top: 0;
+   }
+
+}
+
+@media only screen and (max-width: 41rem) {
+
+   .in-progress .between-xs {
+      justify-content: flex-start;
+      text-align: start;
+   }
+
+   .in-progress p.bar-work-status,
+   .ffs-cp p.bar-work-status {
+      text-align: left;
+      float: none;
+      font-size: 0.9rem;
+      padding-top: 0;
+      margin-top: 1rem;
+   }
+
+}
+
+@media only screen and (max-width: 30rem) {
+
+   .in-progress p.author-list,
+   .in-progress p.date-list,
+   .in-progress p.progress-number-goal,
+   .complete-proposal p.progress-number-goal {
+      padding-top: 0.7rem;
+   }
+
+}
+
+/* FFS WORK IN PROGRESS SINGLE */
+
+.ffs-proposal p.author-list,
+.ffs-proposal p.date-list,
+.ffs-proposal p.progress-number-goal,
+.ffs-proposal p.bar-work-status {
+   display: inline;
+}
+
+.ffs-proposal p.bar-work-status,
+.ffs-proposal p.bar-fund-status {
+   text-align: right;
+   float: right;
+}
+
+.ffs-wip p.bar-work-status:after,
+.ffs-cp p.bar-work-status:after {
+   clear: both;
+}
+
+
+
+@media only screen and (max-width: 62rem) {
+
+   .ffs-proposal p.author-list,
+   .ffs-proposal p.date-list,
+   .ffs-proposal p.progress-number-goal,
+   .ffs-proposal p.bar-work-status {
+      font-size: 1rem;
+   }
+
+   .ffs-proposal p.bar-work-status,
+   .ffs-proposal p.bar-work-status,
+   .ffs-proposal p.bar-fund-status,
+   .fund-required p.bar-fund-status {
+      text-align: left;
+      float: none;
+      display: block;
+      margin-top: 1rem;
+   }
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+   .ffs-proposal p.author-list,
+   .ffs-proposal p.date-list,
+   .ffs-proposal p.progress-number-goal,
+   .ffs-proposal p.bar-work-status {
+      font-size: 1rem;
+   }
+
+   .ffs-wip p.date-list,
+   .ffs-wip p.progress-number-goal,
+   .ffs-cp p.date-list,
+   .ffs-cp p.progress-number-goal {
+      margin-left: 1rem;
+   }
+
+}
+
+@media only screen and (max-width: 37rem) {
+
+   .ffs-proposal,
+   .fund-required {
+      p.author-list,
+      p.date-list,
+      p.progress-number-goal {
+         padding-top: 0.5rem;
+      }
+   }
+
+   .ffs-proposal p.bar-fund-status,
+   .ffs-proposal p.bar-work-status {
+      padding-top: 0;
+   }
+
+   .ffs-wip .progress-bar,
+   .ffs-cp .progress-bar {
+      margin-top: 0.5rem;
+   }
+
+   .ffs-proposal p.author-list,
+   .ffs-proposal p.date-list,
+   .ffs-proposal p.progress-number-goal,
+   .ffs-proposal p.bar-work-status,
+   .fund-required p.author-list,
+   .fund-required p.date-list,
+   .ffs-proposal p.bar-fund-status,
+   .in-progress p.progress-number-goal,
+   .complete-proposal p.progress-number-goal {
+      display: block;
+      margin-left: 0;
+   }
+   
+}
