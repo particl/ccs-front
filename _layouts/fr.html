@@ -74,23 +74,23 @@ layout: base
 
                <div class="voting-instructions">
                   <p>
-                     Vote on whether this Proposal should be funded from the Particl Treasury (yes) or if funding should be done directly by Community members only (no):
+                     Vote on whether you want to approve (1) or reject (2) this proposal:
                   </p>
                   <div class="row">
                      <div class="vote-option col-md-5">
                         <img src="/img/thumb-up.svg" alt="Thumb up" class="ico">
-                        <strong>Vote Yes</strong>
+                        <strong>Vote to Approve</strong>
                         <pre class="yes">./particl-cli setvote {{proposal.vote_results.vote_id}} 1 {{proposal.vote_results.block_height_start}} {{proposal.vote_results.block_height_end}}</pre>
                      </div>
                      <div class="or-wrap col-md-2"><div class="or">OR</div></div>
                      <div class="vote-option col-md-5">
                         <img src="/img/thumb-down.svg" alt="Thumb down" class="ico">
-                        <strong>Vote No</strong>
+                        <strong>Vote to Reject</strong>
                         <pre class="no">./particl-cli setvote {{proposal.vote_results.vote_id}} 2 {{proposal.vote_results.block_height_start}} {{proposal.vote_results.block_height_end}}</pre>
                      </div>
                   </div>
                   <p>
-                     Vote on this Proposal via Particl CLI (<a href="https://particl.wiki/tutorial/wallets/particl-cli/#usage">How to use particl-cli -></a>)
+                     Vote using Partyman, Particl Desktop, Particl Qt, or Particl CLI (<a href="https://particl.wiki/tutorial/staking/how-to-vote/">How to Vote</a>)
                   </p>
                </div><!-- .voting-instructions -->
 
