@@ -26,11 +26,18 @@ title: Funding Required
                <h3>{{ proposal.name }}</h3>
                <p class="author-list">{{ proposal.author }}</p>
                <p class="date-list">{{ proposal.date }}</p>
+               {% if proposal.treasuryclaim %}
+               <p class="bar-work-status">Completed <span class="progress-number-funded">{{ proposal.milestones-completed }}</span> of <span class="progress-number-goal">{{ proposal.milestones }}</span> milestones</p>
+               <div class="progress-bar">
+                  <span class="work-progress" style="width: {{ proposal.milestones-percentage }}%"></span>
+               </div>
+               {%else%}
                <p class="date-list contributor">{{ proposal.contributions }} contributors</p>
                <p class="bar-fund-status">Raised <span class="progress-number-funded">{{ proposal.amount-funded }}</span> of <span class="progress-number-goal">{{ proposal.amount }}</span> PART</p>
                <div class="progress-bar">
                   <span class="fund-progress" style="width: {{ proposal.percentage }}%"></span>
                </div>
+               {% endif %}
             </div>
          </a>
       </div>
